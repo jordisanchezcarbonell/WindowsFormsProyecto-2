@@ -92,7 +92,7 @@
             this.toolStripMenuItem5,
             this.editItemToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(167, 264);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(167, 242);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening_1);
             // 
             // redTagToolStripMenuItem
@@ -151,40 +151,40 @@
             // diagonalToolStripMenuItem
             // 
             this.diagonalToolStripMenuItem.Name = "diagonalToolStripMenuItem";
-            this.diagonalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.diagonalToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.diagonalToolStripMenuItem.Text = "Diagonal";
             this.diagonalToolStripMenuItem.Click += new System.EventHandler(this.diagonalToolStripMenuItem_Click);
             // 
             // verticalToolStripMenuItem
             // 
             this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
-            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.verticalToolStripMenuItem.Text = "Vertical";
             this.verticalToolStripMenuItem.Click += new System.EventHandler(this.verticalToolStripMenuItem_Click);
             // 
             // horizontalToolStripMenuItem
             // 
             this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
-            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.horizontalToolStripMenuItem.Text = "Horizontal";
             this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.horizontalToolStripMenuItem_Click);
             // 
             // hatchToolStripMenuItem
             // 
             this.hatchToolStripMenuItem.Name = "hatchToolStripMenuItem";
-            this.hatchToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hatchToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.hatchToolStripMenuItem.Text = "Cross";
             this.hatchToolStripMenuItem.Click += new System.EventHandler(this.hatchToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(126, 6);
             // 
             // noneToolStripMenuItem
             // 
             this.noneToolStripMenuItem.Name = "noneToolStripMenuItem";
-            this.noneToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.noneToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.noneToolStripMenuItem.Text = "None";
             this.noneToolStripMenuItem.Click += new System.EventHandler(this.noneToolStripMenuItem_Click);
             // 
@@ -204,42 +204,42 @@
             // hourToolStripMenuItem
             // 
             this.hourToolStripMenuItem.Name = "hourToolStripMenuItem";
-            this.hourToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hourToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.hourToolStripMenuItem.Text = "1 houra";
             this.hourToolStripMenuItem.Click += new System.EventHandler(this.hourToolStripMenuItem_Click);
             // 
             // minutesToolStripMenuItem
             // 
             this.minutesToolStripMenuItem.Name = "minutesToolStripMenuItem";
-            this.minutesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.minutesToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.minutesToolStripMenuItem.Text = "30 minutos";
             this.minutesToolStripMenuItem.Click += new System.EventHandler(this.minutesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(133, 22);
             this.toolStripMenuItem4.Text = "15 minutos";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // minutesToolStripMenuItem1
             // 
             this.minutesToolStripMenuItem1.Name = "minutesToolStripMenuItem1";
-            this.minutesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.minutesToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
             this.minutesToolStripMenuItem1.Text = "10 minutos";
             this.minutesToolStripMenuItem1.Click += new System.EventHandler(this.minutesToolStripMenuItem1_Click);
             // 
             // minutesToolStripMenuItem2
             // 
             this.minutesToolStripMenuItem2.Name = "minutesToolStripMenuItem2";
-            this.minutesToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.minutesToolStripMenuItem2.Size = new System.Drawing.Size(133, 22);
             this.minutesToolStripMenuItem2.Text = "6 minutos";
             this.minutesToolStripMenuItem2.Click += new System.EventHandler(this.minutesToolStripMenuItem2_Click);
             // 
             // minutesToolStripMenuItem3
             // 
             this.minutesToolStripMenuItem3.Name = "minutesToolStripMenuItem3";
-            this.minutesToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.minutesToolStripMenuItem3.Size = new System.Drawing.Size(133, 22);
             this.minutesToolStripMenuItem3.Text = "5 minutos";
             this.minutesToolStripMenuItem3.Click += new System.EventHandler(this.minutesToolStripMenuItem3_Click);
             // 

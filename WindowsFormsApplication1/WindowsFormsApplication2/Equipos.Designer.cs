@@ -146,6 +146,7 @@
             this.materialSingleLineTextField1.SelectionStart = 0;
             this.materialSingleLineTextField1.Size = new System.Drawing.Size(200, 23);
             this.materialSingleLineTextField1.TabIndex = 9;
+            this.materialSingleLineTextField1.Text = "materialSingleLineTextField1";
             this.materialSingleLineTextField1.UseSystemPasswordChar = false;
             // 
             // materialSingleLineTextField2
@@ -161,6 +162,7 @@
             this.materialSingleLineTextField2.SelectionStart = 0;
             this.materialSingleLineTextField2.Size = new System.Drawing.Size(200, 23);
             this.materialSingleLineTextField2.TabIndex = 10;
+            this.materialSingleLineTextField2.Text = "materialSingleLineTextField2";
             this.materialSingleLineTextField2.UseSystemPasswordChar = false;
             // 
             // materialSingleLineTextField3
@@ -176,6 +178,7 @@
             this.materialSingleLineTextField3.SelectionStart = 0;
             this.materialSingleLineTextField3.Size = new System.Drawing.Size(200, 23);
             this.materialSingleLineTextField3.TabIndex = 11;
+            this.materialSingleLineTextField3.Text = "materialSingleLineTextField3";
             this.materialSingleLineTextField3.UseSystemPasswordChar = false;
             // 
             // materialSingleLineTextField4
@@ -191,6 +194,7 @@
             this.materialSingleLineTextField4.SelectionStart = 0;
             this.materialSingleLineTextField4.Size = new System.Drawing.Size(200, 23);
             this.materialSingleLineTextField4.TabIndex = 12;
+            this.materialSingleLineTextField4.Text = "materialSingleLineTextField4";
             this.materialSingleLineTextField4.UseSystemPasswordChar = false;
             // 
             // materialSingleLineTextField5
@@ -206,6 +210,7 @@
             this.materialSingleLineTextField5.SelectionStart = 0;
             this.materialSingleLineTextField5.Size = new System.Drawing.Size(200, 23);
             this.materialSingleLineTextField5.TabIndex = 13;
+            this.materialSingleLineTextField5.Text = "materialSingleLineTextField5";
             this.materialSingleLineTextField5.UseSystemPasswordChar = false;
             // 
             // materialSingleLineTextField6
@@ -221,6 +226,7 @@
             this.materialSingleLineTextField6.SelectionStart = 0;
             this.materialSingleLineTextField6.Size = new System.Drawing.Size(200, 23);
             this.materialSingleLineTextField6.TabIndex = 14;
+            this.materialSingleLineTextField6.Text = "materialSingleLineTextField6";
             this.materialSingleLineTextField6.UseSystemPasswordChar = false;
             this.materialSingleLineTextField6.Click += new System.EventHandler(this.materialSingleLineTextField6_Click);
             // 
@@ -281,8 +287,6 @@
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Equipos";
             this.Text = "Equipos";
             this.Load += new System.EventHandler(this.Equipos_Load);

@@ -41,7 +41,7 @@ namespace WindowsFormsApplication2
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            if(materialContextMenuStrip1.Text == "admin" || textboxcontra.Text == "1")
+            if(materialSingleLineTextField1.Text == "admin" || textboxcontra.Text == "1")
             {
                 estado = true;
                 Registro p = new Registro();
@@ -81,6 +81,21 @@ namespace WindowsFormsApplication2
         private void Login_Activated(object sender, EventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fileSystemWatcher1_Changed(object sender, System.IO.FileSystemEventArgs e)
+        {
+
         }
     }
 }

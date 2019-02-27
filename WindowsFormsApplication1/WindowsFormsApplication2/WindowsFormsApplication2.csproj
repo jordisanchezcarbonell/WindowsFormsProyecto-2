@@ -54,6 +54,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.Calendar">
+      <HintPath>..\packages\System.Windows.Forms.Calendar.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.2.4.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
@@ -75,6 +78,13 @@
     <Compile Include="Activitats.Designer.cs">
       <DependentUpon>Activitats.cs</DependentUpon>
     </Compile>
+    <Compile Include="BlowFishCS.cs" />
+    <Compile Include="DemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoForm.Designer.cs">
+      <DependentUpon>DemoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entitats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,17 +97,36 @@
     <Compile Include="Equipos.Designer.cs">
       <DependentUpon>Equipos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogo.Designer.cs">
+      <DependentUpon>FormLogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Instalaciones y Espacios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Instalaciones y Espacios.Designer.cs">
       <DependentUpon>Instalaciones y Espacios.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaInicio.cs">
+    <Compile Include="ItemInfo.cs" />
+    <Compile Include="PantallaInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pantallaInicio.Designer.cs">
-      <DependentUpon>pantallaInicio.cs</DependentUpon>
+    <Compile Include="PantallaInicio.Designer.cs">
+      <DependentUpon>PantallaInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallainicio2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallainicio2.Designer.cs">
+      <DependentUpon>Pantallainicio2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantaltest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantaltest.Designer.cs">
+      <DependentUpon>Pantaltest.cs</DependentUpon>
     </Compile>
     <Compile Include="Perfil - Copia.cs">
       <SubType>Form</SubType>
@@ -122,17 +151,29 @@
     <EmbeddedResource Include="Activitats.resx">
       <DependentUpon>Activitats.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DemoForm.resx">
+      <DependentUpon>DemoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Entitats.resx">
       <DependentUpon>Entitats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Equipos.resx">
       <DependentUpon>Equipos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLogo.resx">
+      <DependentUpon>FormLogo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Instalaciones y Espacios.resx">
       <DependentUpon>Instalaciones y Espacios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaInicio.resx">
-      <DependentUpon>pantallaInicio.cs</DependentUpon>
+    <EmbeddedResource Include="PantallaInicio.resx">
+      <DependentUpon>PantallaInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallainicio2.resx">
+      <DependentUpon>Pantallainicio2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantaltest.resx">
+      <DependentUpon>Pantaltest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Perfil - Copia.resx">
       <DependentUpon>Perfil - Copia.cs</DependentUpon>
@@ -169,6 +210,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo_omet_amb_ajuntament_nou_529.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

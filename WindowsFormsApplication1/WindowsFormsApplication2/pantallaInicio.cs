@@ -38,8 +38,8 @@ namespace WindowsFormsApplication2
                 Primary.Green500, Accent.LightBlue400,
                 TextShade.WHITE
             );
-            
 
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -81,6 +81,16 @@ namespace WindowsFormsApplication2
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

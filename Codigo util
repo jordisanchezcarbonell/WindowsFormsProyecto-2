@@ -1,0 +1,271 @@
+/*LOGIN*/
+
+
+ public static Login Selecthotelesporciudad(String usuario,String contra, ref String mensaje)
+        {
+
+            Login _usuario = new Login();
+
+
+            try
+            {
+
+                _usuario = (from p in bd.Login
+                            where p.nombre.Equals(usuario) || p.contraseña.Equals(contra)  // Tambien puede concadenar con && o || 
+                            select p).FirstOrDefault();
+
+
+                /*if (_usuario != null)
+                {
+     
+
+                    Form2 p = new Form2();
+                    p.ShowDialog();
+                }
+                else
+                {
+                    mensaje = "USUARIO NO VALIDO";
+                }*/
+
+
+
+            }
+            catch (SqlException ex)
+            {
+
+                mensaje = ORM.MensajeError(ex);
+                //mensajes = ex.Number + " " + ex.Message;
+
+            }
+
+            /*            SELECT* from dbo.hoteles
+            WHERE id_ciudad IN(SELECT id_ciudad FROM dbo.ciudades WHERE dbo.ciudades.id_ciudad= dbo.hoteles.id_ciudad)*/
+            return _usuario;
+
+
+
+        }
+        
+        
+        _______________________________________________________________________________________________________________
+        
+        INSERT (REGISTRO)
+        
+         public static String InsertLogin(String Nombre, String Password)
+        {
+
+            String mensaje = "";
+
+            Login newLOGIN = new Login();
+            newLOGIN.nombre = Nombre;
+            newLOGIN.contraseña = Password;
+
+
+            ORM.bd.Login.Add(newLOGIN);
+
+            mensaje = ORM.SaveChanges();
+
+            return mensaje;
+
+
+        }
+
+        public static String MensajeError(SqlException sqlEx)
+        {
+            String mensaje;
+
+            switch (sqlEx.Number)
+            {
+
+                case -1:
+                    mensaje = "Error de conexión con el servidor";
+                    break;
+                case 547:
+                    mensaje = "Tiene datos relacionados";
+                    break;
+
+                case 2601:
+                    mensaje = "Datos duplicados";
+                    break;
+                case 2627:
+                    mensaje = "Datos duplicados";
+                    break;
+
+                case 4060:
+                    mensaje = "No se encuentra la base de datos";
+                    break;
+
+
+                case 18456:
+                    mensaje = "Usuario o contraseña incorrectos";
+                    break;
+
+                default:
+                    mensaje = sqlEx.Number + " -" + sqlEx.Message;
+                    break;
+            }
+
+
+
+
+            return mensaje;
+        }
+
+        //SEGUNDA FORMA DEL SELECT
+
+        public static void RejectChanges()
+        {
+            foreach (DbEntityEntry entry in bd.ChangeTracker.Entries())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Modified:
+                        entry.State = EntityState.Unchanged;
+                        break;
+                    case EntityState.Added:
+                        entry.State = EntityState.Detached;
+                        break;
+                    case EntityState.Detached:
+                        entry.Reload();
+                        break;
+
+                    default: break;
+
+
+
+                }
+
+
+            }
+
+        }
+        public static String SaveChanges()
+        {
+            String mensaje = "";
+            try
+            {
+                bd.SaveChanges();
+
+            }
+            catch (DbUpdateException ex)
+            {
+                RejectChanges();
+                SqlException sqlEx = (SqlException)ex.InnerException.InnerException;
+                mensaje = MensajeError(sqlEx);
+            }
+
+            return mensaje;
+
+        }
+    }
+    
+    ________________________________________________________________________________________________________________
+    using BlowFishCS;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplicationTestblofish
+{
+    public partial class Form1 : Form
+    {
+        BlowFish b = new BlowFish("04B915BA43FEB5B6");
+        String mensaje="";
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            
+     
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string cipherText = b.Encrypt_CBC(textBoxDec.Text);
+
+            textBoxdes.Text = cipherText;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string cipherText = b.Decrypt_CBC(textBoxcod2.Text);
+
+            textBoxdes2.Text = cipherText;
+        }
+
+        private void buttonlogin_Click(object sender, EventArgs e)
+        {
+
+             //ORM.Selecthotelesporciudad(textBoxuser.Text, textBoxpass.Text,ref mensaje);
+
+            if(ORM.Selecthotelesporciudad(textBoxuser.Text, b.Encrypt_CBC(textBoxpass.Text), ref mensaje)==null)
+            {
+                MessageBox.Show("El usuario indicado no existe", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
+
+            }
+
+            else
+            {
+                Form2 p = new Form2();
+                p.ShowDialog();
+
+            }
+
+            // string cipherText = b.Encrypt_CBC(textBoxpass.Text);
+
+            /*  string cipherText = b.Decrypt_CBC(textBoxpass.Text);
+
+              TEST.SelectPoblacion(textBoxuser.Text, cipherText, ref mensaje);
+
+
+              if (!mensaje.Equals(""))
+              {
+                  MessageBox.Show(mensaje, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+              }*/
+
+
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+        
+
+           
+
+            mensaje = ORM.InsertLogin(textBoxuser.Text, b.Encrypt_CBC(textBoxpass.Text));
+
+
+            if (!mensaje.Equals(""))
+            {
+                MessageBox.Show(mensaje, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+
+
+            }
+            else
+            {
+
+                MessageBox.Show("Se ha dado de alta", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+    }
+}
+
+    
+    

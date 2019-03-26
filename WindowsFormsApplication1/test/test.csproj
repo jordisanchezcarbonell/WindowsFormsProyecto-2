@@ -120,6 +120,8 @@
       <DependentUpon>EntitiEspai.tt</DependentUpon>
     </Compile>
     <Compile Include="BD\Entidades.cs" />
+    <Compile Include="BD\HorarisInstalacions.cs" />
+    <Compile Include="BD\Instalacions.cs" />
     <Compile Include="BD\ORM.cs" />
     <Compile Include="BD\blowfish.cs" />
     <Compile Include="Categoria.cs">
@@ -177,11 +179,11 @@
     <Compile Include="Equipo.cs">
       <DependentUpon>EntitiEspai.tt</DependentUpon>
     </Compile>
-    <Compile Include="Equipos.cs">
+    <Compile Include="Instalacions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Equipos.Designer.cs">
-      <DependentUpon>Equipos.cs</DependentUpon>
+    <Compile Include="Instalacions.Designer.cs">
+      <DependentUpon>Instalacions.cs</DependentUpon>
     </Compile>
     <Compile Include="Espacio.cs">
       <DependentUpon>EntitiEspai.tt</DependentUpon>
@@ -281,8 +283,8 @@
     <EmbeddedResource Include="Entitats.resx">
       <DependentUpon>Entitats.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Equipos.resx">
-      <DependentUpon>Equipos.cs</DependentUpon>
+    <EmbeddedResource Include="Instalacions.resx">
+      <DependentUpon>Instalacions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estilo.resx">
       <DependentUpon>Estilo.cs</DependentUpon>

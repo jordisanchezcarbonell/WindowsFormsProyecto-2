@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace COMPLETE_FLAT_UI
 {
-    public partial class Equipos : Estilo
+    public partial class Instalacions : Estilo
     {
-        public Equipos()
+        public Instalacions()
         {
             InitializeComponent();
         }
 
         private void Equipos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
         {
 
         }

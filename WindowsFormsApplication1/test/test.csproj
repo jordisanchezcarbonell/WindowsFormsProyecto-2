@@ -120,6 +120,7 @@
       <DependentUpon>EntitiEspai.tt</DependentUpon>
     </Compile>
     <Compile Include="BD\Entidades.cs" />
+    <Compile Include="BD\EntitatsORM.cs" />
     <Compile Include="BD\ORM.cs" />
     <Compile Include="BD\blowfish.cs" />
     <Compile Include="Categoria.cs">

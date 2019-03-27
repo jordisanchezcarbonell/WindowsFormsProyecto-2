@@ -58,6 +58,8 @@
             this.nifDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.equipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialSingleLineTextFieldRepetirContrasenya = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabelRepetirContrasenya = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDadesEntitats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).BeginInit();
             this.SuspendLayout();
@@ -94,7 +96,7 @@
             this.materialLabelAdreca.Depth = 0;
             this.materialLabelAdreca.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabelAdreca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabelAdreca.Location = new System.Drawing.Point(74, 182);
+            this.materialLabelAdreca.Location = new System.Drawing.Point(74, 178);
             this.materialLabelAdreca.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelAdreca.Name = "materialLabelAdreca";
             this.materialLabelAdreca.Size = new System.Drawing.Size(56, 19);
@@ -147,11 +149,11 @@
             this.equipoDataGridViewTextBoxColumn,
             this.telefonosDataGridViewTextBoxColumn});
             this.dataGridViewDadesEntitats.DataSource = this.bindingSourceEntitats;
-            this.dataGridViewDadesEntitats.Location = new System.Drawing.Point(82, 298);
+            this.dataGridViewDadesEntitats.Location = new System.Drawing.Point(78, 355);
             this.dataGridViewDadesEntitats.Name = "dataGridViewDadesEntitats";
             this.dataGridViewDadesEntitats.ReadOnly = true;
             this.dataGridViewDadesEntitats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewDadesEntitats.Size = new System.Drawing.Size(646, 176);
+            this.dataGridViewDadesEntitats.Size = new System.Drawing.Size(646, 198);
             this.dataGridViewDadesEntitats.TabIndex = 5;
             this.dataGridViewDadesEntitats.SelectionChanged += new System.EventHandler(this.dataGridViewDadesEntitats_SelectionChanged);
             // 
@@ -246,7 +248,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.materialSingleLineTextFieldAdreca.Depth = 0;
             this.materialSingleLineTextFieldAdreca.Hint = "";
-            this.materialSingleLineTextFieldAdreca.Location = new System.Drawing.Point(200, 182);
+            this.materialSingleLineTextFieldAdreca.Location = new System.Drawing.Point(200, 178);
             this.materialSingleLineTextFieldAdreca.MaxLength = 32767;
             this.materialSingleLineTextFieldAdreca.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldAdreca.Name = "materialSingleLineTextFieldAdreca";
@@ -467,11 +469,45 @@
             this.telefonosDataGridViewTextBoxColumn.ReadOnly = true;
             this.telefonosDataGridViewTextBoxColumn.Visible = false;
             // 
+            // materialSingleLineTextFieldRepetirContrasenya
+            // 
+            this.materialSingleLineTextFieldRepetirContrasenya.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialSingleLineTextFieldRepetirContrasenya.Depth = 0;
+            this.materialSingleLineTextFieldRepetirContrasenya.Hint = "";
+            this.materialSingleLineTextFieldRepetirContrasenya.Location = new System.Drawing.Point(243, 301);
+            this.materialSingleLineTextFieldRepetirContrasenya.MaxLength = 32767;
+            this.materialSingleLineTextFieldRepetirContrasenya.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextFieldRepetirContrasenya.Name = "materialSingleLineTextFieldRepetirContrasenya";
+            this.materialSingleLineTextFieldRepetirContrasenya.PasswordChar = '\0';
+            this.materialSingleLineTextFieldRepetirContrasenya.SelectedText = "";
+            this.materialSingleLineTextFieldRepetirContrasenya.SelectionLength = 0;
+            this.materialSingleLineTextFieldRepetirContrasenya.SelectionStart = 0;
+            this.materialSingleLineTextFieldRepetirContrasenya.Size = new System.Drawing.Size(285, 23);
+            this.materialSingleLineTextFieldRepetirContrasenya.TabIndex = 18;
+            this.materialSingleLineTextFieldRepetirContrasenya.TabStop = false;
+            this.materialSingleLineTextFieldRepetirContrasenya.UseSystemPasswordChar = false;
+            // 
+            // materialLabelRepetirContrasenya
+            // 
+            this.materialLabelRepetirContrasenya.AutoSize = true;
+            this.materialLabelRepetirContrasenya.Depth = 0;
+            this.materialLabelRepetirContrasenya.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabelRepetirContrasenya.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialLabelRepetirContrasenya.Location = new System.Drawing.Point(78, 301);
+            this.materialLabelRepetirContrasenya.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabelRepetirContrasenya.Name = "materialLabelRepetirContrasenya";
+            this.materialLabelRepetirContrasenya.Size = new System.Drawing.Size(142, 19);
+            this.materialLabelRepetirContrasenya.TabIndex = 17;
+            this.materialLabelRepetirContrasenya.Text = "Repetir contrasenya";
+            // 
             // Entitats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 486);
+            this.ClientSize = new System.Drawing.Size(800, 576);
+            this.Controls.Add(this.materialSingleLineTextFieldRepetirContrasenya);
+            this.Controls.Add(this.materialLabelRepetirContrasenya);
             this.Controls.Add(this.materialSingleLineTextFieldContrasenya);
             this.Controls.Add(this.materialLabelContrasenya);
             this.Controls.Add(this.materialRaisedButtonNetejarCamps);
@@ -537,6 +573,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nifDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonosDataGridViewTextBoxColumn;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldRepetirContrasenya;
+        private MaterialSkin.Controls.MaterialLabel materialLabelRepetirContrasenya;
     }
 
 }

@@ -53,18 +53,33 @@ namespace COMPLETE_FLAT_UI
 
         private void materialRaisedButtonAfegir_Click(object sender, EventArgs e)
         {
-            //Faig un insert a la base de dades passant-li com a paràmetres el contingut dels camps del formulari:
-            string missatge = BD.EntitatsORM.InsertEntitat(materialSingleLineTextFieldNom.Text, materialSingleLineTextFieldTemporada.Text,
-                materialSingleLineTextFieldAdreca.Text, materialSingleLineTextFieldNif.Text, materialSingleLineTextFieldCorreo.Text,
-                materialSingleLineTextFieldContrasenya.Text);
-
-            if (missatge.Equals(""))
+            //Comprovo que les contrasenyes siguin iguals, i que tinguin 8 caràcters
+            if (materialSingleLineTextFieldContrasenya.TextLength == materialSingleLineTextFieldRepetirContrasenya.TextLength
+                 && materialSingleLineTextFieldContrasenya.TextLength == 8)
             {
-                carregarDadesGrid();
-            }
+
+                //Faig un insert a la base de dades passant-li com a paràmetres el contingut dels camps del formulari:
+                string missatge = BD.EntitatsORM.InsertEntitat(materialSingleLineTextFieldNom.Text, materialSingleLineTextFieldTemporada.Text,
+                    materialSingleLineTextFieldAdreca.Text, materialSingleLineTextFieldNif.Text, materialSingleLineTextFieldCorreo.Text,
+                    materialSingleLineTextFieldContrasenya.Text);
+
+                if (missatge.Equals(""))
+                {
+                    carregarDadesGrid();
+                }
+                else
+                {
+                    MessageBox.Show(missatge, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } 
             else
             {
-                MessageBox.Show(missatge, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Les contrasenyes han de coincidir i han de tenir 8 caràcters de longitud", 
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                //Netejo els camps de les contrasenyes:
+                materialSingleLineTextFieldContrasenya.Clear();
+                materialSingleLineTextFieldRepetirContrasenya.Clear();
             }
         }
 

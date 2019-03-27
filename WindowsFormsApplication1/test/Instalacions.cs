@@ -19,7 +19,7 @@ namespace COMPLETE_FLAT_UI
 
         private void Equipos_Load(object sender, EventArgs e)
         {
-
+            //rtest
         }
 
         private void materialRaisedButton2_Click(object sender, EventArgs e)

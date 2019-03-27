@@ -12,15 +12,12 @@ namespace COMPLETE_FLAT_UI
     using System;
     using System.Collections.Generic;
     
-    public partial class Horario_Act_Dem
+    public partial class sysdiagrams
     {
-        public int id { get; set; }
-        public Nullable<int> id_Act_Demandada { get; set; }
-        public int id_dia_semana { get; set; }
-        public System.TimeSpan hora_inicio { get; set; }
-        public System.TimeSpan hora_final { get; set; }
-    
-        public virtual Act_demandadas Act_demandadas { get; set; }
-        public virtual Dias_Semana Dias_Semana { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

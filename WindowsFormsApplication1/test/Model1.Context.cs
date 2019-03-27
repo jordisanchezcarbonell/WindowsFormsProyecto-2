@@ -13,10 +13,10 @@ namespace COMPLETE_FLAT_UI
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ProyectoBDJordiEntities : DbContext
+    public partial class ProyectoBDJordiEntities1 : DbContext
     {
-        public ProyectoBDJordiEntities()
-            : base("name=ProyectoBDJordiEntities")
+        public ProyectoBDJordiEntities1()
+            : base("name=ProyectoBDJordiEntities1")
         {
         }
     
@@ -42,8 +42,9 @@ namespace COMPLETE_FLAT_UI
         public virtual DbSet<Instalacion> Instalacion { get; set; }
         public virtual DbSet<Instalacion_Horario> Instalacion_Horario { get; set; }
         public virtual DbSet<Sexo> Sexo { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Telefonos> Telefonos { get; set; }
-        public virtual DbSet<Tipo_Actitivades> Tipo_Actitivades { get; set; }
+        public virtual DbSet<Tipo_Actividades> Tipo_Actividades { get; set; }
         public virtual DbSet<Tipo_gestion> Tipo_gestion { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     }

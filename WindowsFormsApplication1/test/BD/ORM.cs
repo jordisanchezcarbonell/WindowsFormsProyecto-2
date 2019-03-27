@@ -12,7 +12,7 @@ namespace COMPLETE_FLAT_UI.BD
     class ORM
     {
 
-        public static ProyectoBDJordiEntities bd = new ProyectoBDJordiEntities();
+        public static ProyectoBDJordiEntities1 bd = new ProyectoBDJordiEntities1();
         public static String MensajeError(SqlException sqlEx)
         {
             String mensaje;

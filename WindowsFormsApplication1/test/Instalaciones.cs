@@ -22,5 +22,22 @@ namespace COMPLETE_FLAT_UI
 
 
         }
+
+        private void Instalaciones_Load_1(object sender, EventArgs e)
+        {
+          //  bindingSourceInstalaciones.DataSource = BD.Instalacions.SelectAllInstalaciones();
+            bindingSource1.DataSource = BD.Instalacions.SelectAllInstalaciones();
+
+        }
+
+        private void materialSingleLineTextFieldTitulo_TextChanged(object sender, EventArgs e)
+        {
+            bindingSourceInstalaciones.DataSource = BD.Instalacions.SelectInstalacionesByNombre(materialSingleLineTextFieldTitulo.Text);
+        }
+
+        private void materialSingleLineTextFieldTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

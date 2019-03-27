@@ -29,169 +29,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialLabelNom = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextFieldNom = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialLabelEsport = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabelCompeticio = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabelCategoriaEdat = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabelCategoria = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabelSexe = new MaterialSkin.Controls.MaterialLabel();
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.materialRaisedButtonAfegir = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButtonModificar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButtonEsborrar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceInstalaciones = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxEsport = new System.Windows.Forms.ComboBox();
-            this.comboBoxTipusCompeticio = new System.Windows.Forms.ComboBox();
-            this.comboBoxCategoriaEdat = new System.Windows.Forms.ComboBox();
-            this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
-            this.comboBoxSexe = new System.Windows.Forms.ComboBox();
+            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextFieldTitulo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabelHorari = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabelTipusGestio = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabelAdreca = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabelNom = new MaterialSkin.Controls.MaterialLabel();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idtipogestionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.espacioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.instalacionHorarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipogestionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalaciones)).BeginInit();
             this.SuspendLayout();
-            // 
-            // materialLabelNom
-            // 
-            this.materialLabelNom.AutoSize = true;
-            this.materialLabelNom.Depth = 0;
-            this.materialLabelNom.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelNom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabelNom.Location = new System.Drawing.Point(61, 82);
-            this.materialLabelNom.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabelNom.Name = "materialLabelNom";
-            this.materialLabelNom.Size = new System.Drawing.Size(42, 19);
-            this.materialLabelNom.TabIndex = 0;
-            this.materialLabelNom.Text = "Nom";
-            // 
-            // materialSingleLineTextFieldNom
-            // 
-            this.materialSingleLineTextFieldNom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialSingleLineTextFieldNom.Depth = 0;
-            this.materialSingleLineTextFieldNom.Hint = "";
-            this.materialSingleLineTextFieldNom.Location = new System.Drawing.Point(214, 77);
-            this.materialSingleLineTextFieldNom.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextFieldNom.Name = "materialSingleLineTextFieldNom";
-            this.materialSingleLineTextFieldNom.PasswordChar = '\0';
-            this.materialSingleLineTextFieldNom.SelectedText = "";
-            this.materialSingleLineTextFieldNom.SelectionLength = 0;
-            this.materialSingleLineTextFieldNom.SelectionStart = 0;
-            this.materialSingleLineTextFieldNom.Size = new System.Drawing.Size(201, 23);
-            this.materialSingleLineTextFieldNom.TabIndex = 1;
-            this.materialSingleLineTextFieldNom.UseSystemPasswordChar = false;
-            // 
-            // materialLabelEsport
-            // 
-            this.materialLabelEsport.AutoSize = true;
-            this.materialLabelEsport.Depth = 0;
-            this.materialLabelEsport.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelEsport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabelEsport.Location = new System.Drawing.Point(61, 115);
-            this.materialLabelEsport.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabelEsport.Name = "materialLabelEsport";
-            this.materialLabelEsport.Size = new System.Drawing.Size(53, 19);
-            this.materialLabelEsport.TabIndex = 2;
-            this.materialLabelEsport.Text = "Esport";
-            // 
-            // materialLabelCompeticio
-            // 
-            this.materialLabelCompeticio.AutoSize = true;
-            this.materialLabelCompeticio.Depth = 0;
-            this.materialLabelCompeticio.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelCompeticio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabelCompeticio.Location = new System.Drawing.Point(61, 148);
-            this.materialLabelCompeticio.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabelCompeticio.Name = "materialLabelCompeticio";
-            this.materialLabelCompeticio.Size = new System.Drawing.Size(146, 19);
-            this.materialLabelCompeticio.TabIndex = 3;
-            this.materialLabelCompeticio.Text = "Tipus de competició";
-            // 
-            // materialLabelCategoriaEdat
-            // 
-            this.materialLabelCategoriaEdat.AutoSize = true;
-            this.materialLabelCategoriaEdat.Depth = 0;
-            this.materialLabelCategoriaEdat.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelCategoriaEdat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabelCategoriaEdat.Location = new System.Drawing.Point(61, 178);
-            this.materialLabelCategoriaEdat.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabelCategoriaEdat.Name = "materialLabelCategoriaEdat";
-            this.materialLabelCategoriaEdat.Size = new System.Drawing.Size(132, 19);
-            this.materialLabelCategoriaEdat.TabIndex = 4;
-            this.materialLabelCategoriaEdat.Text = "Categoria per edat";
-            // 
-            // materialLabelCategoria
-            // 
-            this.materialLabelCategoria.AutoSize = true;
-            this.materialLabelCategoria.Depth = 0;
-            this.materialLabelCategoria.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabelCategoria.Location = new System.Drawing.Point(61, 207);
-            this.materialLabelCategoria.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabelCategoria.Name = "materialLabelCategoria";
-            this.materialLabelCategoria.Size = new System.Drawing.Size(74, 19);
-            this.materialLabelCategoria.TabIndex = 5;
-            this.materialLabelCategoria.Text = "Categoria";
-            // 
-            // materialLabelSexe
-            // 
-            this.materialLabelSexe.AutoSize = true;
-            this.materialLabelSexe.Depth = 0;
-            this.materialLabelSexe.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelSexe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabelSexe.Location = new System.Drawing.Point(61, 238);
-            this.materialLabelSexe.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabelSexe.Name = "materialLabelSexe";
-            this.materialLabelSexe.Size = new System.Drawing.Size(41, 19);
-            this.materialLabelSexe.TabIndex = 6;
-            this.materialLabelSexe.Text = "Sexe";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.direccionDataGridViewTextBoxColumn,
+            this.idtipogestionDataGridViewTextBoxColumn,
+            this.espacioDataGridViewTextBoxColumn,
+            this.instalacionHorarioDataGridViewTextBoxColumn,
+            this.tipogestionDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.bindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(54, 265);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(706, 209);
             this.dataGridView1.TabIndex = 12;
             // 
-            // materialRaisedButtonAfegir
+            // bindingSource1
             // 
-            this.materialRaisedButtonAfegir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialRaisedButtonAfegir.Depth = 0;
-            this.materialRaisedButtonAfegir.Location = new System.Drawing.Point(489, 100);
-            this.materialRaisedButtonAfegir.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButtonAfegir.Name = "materialRaisedButtonAfegir";
-            this.materialRaisedButtonAfegir.Primary = true;
-            this.materialRaisedButtonAfegir.Size = new System.Drawing.Size(85, 23);
-            this.materialRaisedButtonAfegir.TabIndex = 13;
-            this.materialRaisedButtonAfegir.Text = "Afegir";
-            this.materialRaisedButtonAfegir.UseVisualStyleBackColor = true;
+            this.bindingSource1.DataSource = typeof(COMPLETE_FLAT_UI.Instalacion);
             // 
-            // materialRaisedButtonModificar
+            // bindingSourceInstalaciones
             // 
-            this.materialRaisedButtonModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialRaisedButtonModificar.Depth = 0;
-            this.materialRaisedButtonModificar.Location = new System.Drawing.Point(489, 154);
-            this.materialRaisedButtonModificar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButtonModificar.Name = "materialRaisedButtonModificar";
-            this.materialRaisedButtonModificar.Primary = true;
-            this.materialRaisedButtonModificar.Size = new System.Drawing.Size(85, 23);
-            this.materialRaisedButtonModificar.TabIndex = 14;
-            this.materialRaisedButtonModificar.Text = "Modificar";
-            this.materialRaisedButtonModificar.UseVisualStyleBackColor = true;
-            // 
-            // materialRaisedButtonEsborrar
-            // 
-            this.materialRaisedButtonEsborrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialRaisedButtonEsborrar.Depth = 0;
-            this.materialRaisedButtonEsborrar.Location = new System.Drawing.Point(489, 210);
-            this.materialRaisedButtonEsborrar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButtonEsborrar.Name = "materialRaisedButtonEsborrar";
-            this.materialRaisedButtonEsborrar.Primary = true;
-            this.materialRaisedButtonEsborrar.Size = new System.Drawing.Size(85, 23);
-            this.materialRaisedButtonEsborrar.TabIndex = 15;
-            this.materialRaisedButtonEsborrar.Text = "Esborrar";
-            this.materialRaisedButtonEsborrar.UseVisualStyleBackColor = true;
+            this.bindingSourceInstalaciones.DataSource = typeof(COMPLETE_FLAT_UI.Instalacion);
             // 
             // comboBoxEsport
             // 
@@ -199,108 +94,264 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxEsport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEsport.FormattingEnabled = true;
-            this.comboBoxEsport.Location = new System.Drawing.Point(214, 116);
-            this.comboBoxEsport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxEsport.Location = new System.Drawing.Point(206, 173);
+            this.comboBoxEsport.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxEsport.Name = "comboBoxEsport";
             this.comboBoxEsport.Size = new System.Drawing.Size(202, 21);
-            this.comboBoxEsport.TabIndex = 16;
+            this.comboBoxEsport.TabIndex = 29;
             // 
-            // comboBoxTipusCompeticio
+            // materialRaisedButton3
             // 
-            this.comboBoxTipusCompeticio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxTipusCompeticio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTipusCompeticio.FormattingEnabled = true;
-            this.comboBoxTipusCompeticio.Location = new System.Drawing.Point(214, 146);
-            this.comboBoxTipusCompeticio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxTipusCompeticio.Name = "comboBoxTipusCompeticio";
-            this.comboBoxTipusCompeticio.Size = new System.Drawing.Size(202, 21);
-            this.comboBoxTipusCompeticio.TabIndex = 17;
+            this.materialRaisedButton3.AutoSize = true;
+            this.materialRaisedButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton3.Depth = 0;
+            this.materialRaisedButton3.Icon = null;
+            this.materialRaisedButton3.Location = new System.Drawing.Point(491, 191);
+            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton3.Name = "materialRaisedButton3";
+            this.materialRaisedButton3.Primary = true;
+            this.materialRaisedButton3.Size = new System.Drawing.Size(65, 36);
+            this.materialRaisedButton3.TabIndex = 28;
+            this.materialRaisedButton3.Text = "Borra";
+            this.materialRaisedButton3.UseVisualStyleBackColor = true;
             // 
-            // comboBoxCategoriaEdat
+            // materialRaisedButton2
             // 
-            this.comboBoxCategoriaEdat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxCategoriaEdat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCategoriaEdat.FormattingEnabled = true;
-            this.comboBoxCategoriaEdat.Location = new System.Drawing.Point(214, 178);
-            this.comboBoxCategoriaEdat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxCategoriaEdat.Name = "comboBoxCategoriaEdat";
-            this.comboBoxCategoriaEdat.Size = new System.Drawing.Size(202, 21);
-            this.comboBoxCategoriaEdat.TabIndex = 18;
+            this.materialRaisedButton2.AutoSize = true;
+            this.materialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Icon = null;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(491, 135);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(85, 36);
+            this.materialRaisedButton2.TabIndex = 27;
+            this.materialRaisedButton2.Text = "Modifica";
+            this.materialRaisedButton2.UseVisualStyleBackColor = true;
             // 
-            // comboBoxCategoria
+            // materialRaisedButton1
             // 
-            this.comboBoxCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCategoria.FormattingEnabled = true;
-            this.comboBoxCategoria.Location = new System.Drawing.Point(214, 206);
-            this.comboBoxCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxCategoria.Name = "comboBoxCategoria";
-            this.comboBoxCategoria.Size = new System.Drawing.Size(202, 21);
-            this.comboBoxCategoria.TabIndex = 19;
+            this.materialRaisedButton1.AutoSize = true;
+            this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Icon = null;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(493, 83);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(83, 36);
+            this.materialRaisedButton1.TabIndex = 26;
+            this.materialRaisedButton1.Text = "Agregar";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
             // 
-            // comboBoxSexe
+            // materialSingleLineTextField4
             // 
-            this.comboBoxSexe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxSexe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSexe.FormattingEnabled = true;
-            this.comboBoxSexe.Location = new System.Drawing.Point(214, 236);
-            this.comboBoxSexe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxSexe.Name = "comboBoxSexe";
-            this.comboBoxSexe.Size = new System.Drawing.Size(202, 21);
-            this.comboBoxSexe.TabIndex = 20;
+            this.materialSingleLineTextField4.Depth = 0;
+            this.materialSingleLineTextField4.Hint = "";
+            this.materialSingleLineTextField4.Location = new System.Drawing.Point(206, 204);
+            this.materialSingleLineTextField4.MaxLength = 32767;
+            this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField4.Name = "materialSingleLineTextField4";
+            this.materialSingleLineTextField4.PasswordChar = '\0';
+            this.materialSingleLineTextField4.SelectedText = "";
+            this.materialSingleLineTextField4.SelectionLength = 0;
+            this.materialSingleLineTextField4.SelectionStart = 0;
+            this.materialSingleLineTextField4.Size = new System.Drawing.Size(200, 23);
+            this.materialSingleLineTextField4.TabIndex = 25;
+            this.materialSingleLineTextField4.TabStop = false;
+            this.materialSingleLineTextField4.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextField2
+            // 
+            this.materialSingleLineTextField2.Depth = 0;
+            this.materialSingleLineTextField2.Hint = "";
+            this.materialSingleLineTextField2.Location = new System.Drawing.Point(206, 135);
+            this.materialSingleLineTextField2.MaxLength = 32767;
+            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
+            this.materialSingleLineTextField2.PasswordChar = '\0';
+            this.materialSingleLineTextField2.SelectedText = "";
+            this.materialSingleLineTextField2.SelectionLength = 0;
+            this.materialSingleLineTextField2.SelectionStart = 0;
+            this.materialSingleLineTextField2.Size = new System.Drawing.Size(200, 23);
+            this.materialSingleLineTextField2.TabIndex = 24;
+            this.materialSingleLineTextField2.TabStop = false;
+            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextFieldTitulo
+            // 
+            this.materialSingleLineTextFieldTitulo.Depth = 0;
+            this.materialSingleLineTextFieldTitulo.Hint = "";
+            this.materialSingleLineTextFieldTitulo.Location = new System.Drawing.Point(206, 100);
+            this.materialSingleLineTextFieldTitulo.MaxLength = 32767;
+            this.materialSingleLineTextFieldTitulo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextFieldTitulo.Name = "materialSingleLineTextFieldTitulo";
+            this.materialSingleLineTextFieldTitulo.PasswordChar = '\0';
+            this.materialSingleLineTextFieldTitulo.SelectedText = "";
+            this.materialSingleLineTextFieldTitulo.SelectionLength = 0;
+            this.materialSingleLineTextFieldTitulo.SelectionStart = 0;
+            this.materialSingleLineTextFieldTitulo.Size = new System.Drawing.Size(200, 23);
+            this.materialSingleLineTextFieldTitulo.TabIndex = 23;
+            this.materialSingleLineTextFieldTitulo.TabStop = false;
+            this.materialSingleLineTextFieldTitulo.UseSystemPasswordChar = false;
+            this.materialSingleLineTextFieldTitulo.Click += new System.EventHandler(this.materialSingleLineTextFieldTitulo_Click);
+            // 
+            // materialLabelHorari
+            // 
+            this.materialLabelHorari.AutoSize = true;
+            this.materialLabelHorari.Depth = 0;
+            this.materialLabelHorari.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabelHorari.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialLabelHorari.Location = new System.Drawing.Point(57, 208);
+            this.materialLabelHorari.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabelHorari.Name = "materialLabelHorari";
+            this.materialLabelHorari.Size = new System.Drawing.Size(51, 19);
+            this.materialLabelHorari.TabIndex = 22;
+            this.materialLabelHorari.Text = "Horari";
+            // 
+            // materialLabelTipusGestio
+            // 
+            this.materialLabelTipusGestio.AutoSize = true;
+            this.materialLabelTipusGestio.Depth = 0;
+            this.materialLabelTipusGestio.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabelTipusGestio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialLabelTipusGestio.Location = new System.Drawing.Point(57, 172);
+            this.materialLabelTipusGestio.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabelTipusGestio.Name = "materialLabelTipusGestio";
+            this.materialLabelTipusGestio.Size = new System.Drawing.Size(112, 19);
+            this.materialLabelTipusGestio.TabIndex = 21;
+            this.materialLabelTipusGestio.Text = "Tipus de gestió";
+            // 
+            // materialLabelAdreca
+            // 
+            this.materialLabelAdreca.AutoSize = true;
+            this.materialLabelAdreca.Depth = 0;
+            this.materialLabelAdreca.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabelAdreca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialLabelAdreca.Location = new System.Drawing.Point(57, 135);
+            this.materialLabelAdreca.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabelAdreca.Name = "materialLabelAdreca";
+            this.materialLabelAdreca.Size = new System.Drawing.Size(56, 19);
+            this.materialLabelAdreca.TabIndex = 20;
+            this.materialLabelAdreca.Text = "Adreça";
+            // 
+            // materialLabelNom
+            // 
+            this.materialLabelNom.AutoSize = true;
+            this.materialLabelNom.Depth = 0;
+            this.materialLabelNom.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabelNom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialLabelNom.Location = new System.Drawing.Point(57, 100);
+            this.materialLabelNom.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabelNom.Name = "materialLabelNom";
+            this.materialLabelNom.Size = new System.Drawing.Size(42, 19);
+            this.materialLabelNom.TabIndex = 19;
+            this.materialLabelNom.Text = "Nom";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nom";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "Adreça";
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idtipogestionDataGridViewTextBoxColumn
+            // 
+            this.idtipogestionDataGridViewTextBoxColumn.DataPropertyName = "id_tipo_gestion";
+            this.idtipogestionDataGridViewTextBoxColumn.HeaderText = "id_tipo_gestion";
+            this.idtipogestionDataGridViewTextBoxColumn.Name = "idtipogestionDataGridViewTextBoxColumn";
+            this.idtipogestionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idtipogestionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // espacioDataGridViewTextBoxColumn
+            // 
+            this.espacioDataGridViewTextBoxColumn.DataPropertyName = "Espacio";
+            this.espacioDataGridViewTextBoxColumn.HeaderText = "Espais";
+            this.espacioDataGridViewTextBoxColumn.Name = "espacioDataGridViewTextBoxColumn";
+            this.espacioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.espacioDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // instalacionHorarioDataGridViewTextBoxColumn
+            // 
+            this.instalacionHorarioDataGridViewTextBoxColumn.DataPropertyName = "Instalacion_Horario";
+            this.instalacionHorarioDataGridViewTextBoxColumn.HeaderText = "Horari";
+            this.instalacionHorarioDataGridViewTextBoxColumn.Name = "instalacionHorarioDataGridViewTextBoxColumn";
+            this.instalacionHorarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tipogestionDataGridViewTextBoxColumn
+            // 
+            this.tipogestionDataGridViewTextBoxColumn.DataPropertyName = "Tipo_gestion";
+            this.tipogestionDataGridViewTextBoxColumn.HeaderText = "Tipus de gestió";
+            this.tipogestionDataGridViewTextBoxColumn.Name = "tipogestionDataGridViewTextBoxColumn";
+            this.tipogestionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Instalaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 486);
-            this.Controls.Add(this.comboBoxSexe);
-            this.Controls.Add(this.comboBoxCategoria);
-            this.Controls.Add(this.comboBoxCategoriaEdat);
-            this.Controls.Add(this.comboBoxTipusCompeticio);
             this.Controls.Add(this.comboBoxEsport);
-            this.Controls.Add(this.materialRaisedButtonEsborrar);
-            this.Controls.Add(this.materialRaisedButtonModificar);
-            this.Controls.Add(this.materialRaisedButtonAfegir);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.materialLabelSexe);
-            this.Controls.Add(this.materialLabelCategoria);
-            this.Controls.Add(this.materialLabelCategoriaEdat);
-            this.Controls.Add(this.materialLabelCompeticio);
-            this.Controls.Add(this.materialLabelEsport);
-            this.Controls.Add(this.materialSingleLineTextFieldNom);
+            this.Controls.Add(this.materialRaisedButton3);
+            this.Controls.Add(this.materialRaisedButton2);
+            this.Controls.Add(this.materialRaisedButton1);
+            this.Controls.Add(this.materialSingleLineTextField4);
+            this.Controls.Add(this.materialSingleLineTextField2);
+            this.Controls.Add(this.materialSingleLineTextFieldTitulo);
+            this.Controls.Add(this.materialLabelHorari);
+            this.Controls.Add(this.materialLabelTipusGestio);
+            this.Controls.Add(this.materialLabelAdreca);
             this.Controls.Add(this.materialLabelNom);
+            this.Controls.Add(this.dataGridView1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Instalaciones";
             this.Text = "Instal·lacions i espais";
+            this.Load += new System.EventHandler(this.Instalaciones_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialLabel materialLabelNom;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldNom;
-        private MaterialSkin.Controls.MaterialLabel materialLabelEsport;
-        private MaterialSkin.Controls.MaterialLabel materialLabelCompeticio;
-        private MaterialSkin.Controls.MaterialLabel materialLabelCategoriaEdat;
-        private MaterialSkin.Controls.MaterialLabel materialLabelCategoria;
-        private MaterialSkin.Controls.MaterialLabel materialLabelSexe;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonAfegir;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonModificar;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonEsborrar;
         private System.Windows.Forms.ComboBox comboBoxEsport;
-        private System.Windows.Forms.ComboBox comboBoxTipusCompeticio;
-        private System.Windows.Forms.ComboBox comboBoxCategoriaEdat;
-        private System.Windows.Forms.ComboBox comboBoxCategoria;
-        private System.Windows.Forms.ComboBox comboBoxSexe;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldTitulo;
+        private MaterialSkin.Controls.MaterialLabel materialLabelHorari;
+        private MaterialSkin.Controls.MaterialLabel materialLabelTipusGestio;
+        private MaterialSkin.Controls.MaterialLabel materialLabelAdreca;
+        private MaterialSkin.Controls.MaterialLabel materialLabelNom;
+        private System.Windows.Forms.BindingSource bindingSourceInstalaciones;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idtipogestionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn espacioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn instalacionHorarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipogestionDataGridViewTextBoxColumn;
     }
 }

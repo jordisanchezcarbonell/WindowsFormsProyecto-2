@@ -41,7 +41,7 @@ namespace COMPLETE_FLAT_UI
             string missatgeRetornat = BD.EntitatsORM.SelectAllEntitats(ref llistaEntitats);
             
             
-            if (!missatgeRetornat.Equals(""))
+            if (missatgeRetornat.Equals(""))
             {
                 bindingSourceEntitats.DataSource = llistaEntitats;
             } else
@@ -55,15 +55,87 @@ namespace COMPLETE_FLAT_UI
         {
             //Faig un insert a la base de dades passant-li com a paràmetres el contingut dels camps del formulari:
             string missatge = BD.EntitatsORM.InsertEntitat(materialSingleLineTextFieldNom.Text, materialSingleLineTextFieldTemporada.Text,
-                materialSingleLineTextFieldAdreca.Text, materialSingleLineTextFieldNif.Text, materialSingleLineTextFieldCorreo.Text);
+                materialSingleLineTextFieldAdreca.Text, materialSingleLineTextFieldNif.Text, materialSingleLineTextFieldCorreo.Text,
+                materialSingleLineTextFieldContrasenya.Text);
 
             if (missatge.Equals(""))
             {
                 carregarDadesGrid();
-            } else
+            }
+            else
             {
                 MessageBox.Show(missatge, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+
+        private void materialRaisedButtonModificar_Click(object sender, EventArgs e)
+        {
+            //Crido al mètode per fer un update, i gestiono la frase que em torna el mètode per fer l'update:
+            Entidad entitatRecuperada = (Entidad)dataGridViewDadesEntitats.CurrentRow.DataBoundItem;
+            entitatRecuperada.nombre = materialSingleLineTextFieldNom.Text;
+            entitatRecuperada.temporada = int.Parse(materialSingleLineTextFieldTemporada.Text);
+            entitatRecuperada.direccion = materialSingleLineTextFieldAdreca.Text;
+            entitatRecuperada.nif = materialSingleLineTextFieldNif.Text;
+            entitatRecuperada.correo = materialSingleLineTextFieldCorreo.Text;
+            entitatRecuperada.contrasenya = materialSingleLineTextFieldContrasenya.Text;
+
+            string missatge = BD.EntitatsORM.UpdateEntitat(entitatRecuperada.id, entitatRecuperada.nombre,
+                entitatRecuperada.temporada, entitatRecuperada.direccion, entitatRecuperada.nif, 
+                entitatRecuperada.correo, entitatRecuperada.contrasenya);
+
+            if (missatge.Equals(""))
+            {
+                carregarDadesGrid();
+            }
+            else
+            {
+                MessageBox.Show(missatge, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void materialRaisedButtonEsborrar_Click(object sender, EventArgs e)
+        {
+            //Recupero l'objecte clicat i l'esborro de la base de dades:
+            Entidad entitatEsborrar = (Entidad)dataGridViewDadesEntitats.CurrentRow.DataBoundItem;
+            string missatge = BD.EntitatsORM.deleteEntitat(entitatEsborrar.id);
+
+            //En funció del missatge retornat pel mètode delete, recarrego la grid o mostro un missatge
+            if (missatge.Equals(""))
+            {
+                carregarDadesGrid();
+            }
+            else
+            {
+                MessageBox.Show(missatge, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataGridViewDadesEntitats_SelectionChanged(object sender, EventArgs e)
+        {
+            //Recupero l'objecte clicat i poso les dades als camps
+            Entidad entitatClicada = (Entidad)dataGridViewDadesEntitats.CurrentRow.DataBoundItem;
+            materialSingleLineTextFieldNom.Text = entitatClicada.nombre;
+            materialSingleLineTextFieldTemporada.Text = entitatClicada.temporada.ToString();
+            materialSingleLineTextFieldAdreca.Text = entitatClicada.direccion;
+            materialSingleLineTextFieldNif.Text = entitatClicada.nif;
+            materialSingleLineTextFieldCorreo.Text = entitatClicada.correo;
+            materialSingleLineTextFieldContrasenya.Text = entitatClicada.contrasenya;
+        }
+
+        private void materialRaisedButtonNetejarCamps_Click(object sender, EventArgs e)
+        {
+            //Netejo els camps i desselecciono la línia seleccionada (ha d'estar en aquest ordre, sinó no funciona)
+            dataGridViewDadesEntitats.ClearSelection();
+            dataGridViewDadesEntitats.CurrentCell = null;
+
+            materialSingleLineTextFieldNom.Clear();
+            materialSingleLineTextFieldTemporada.Clear();
+            materialSingleLineTextFieldAdreca.Clear();
+            materialSingleLineTextFieldNif.Clear();
+            materialSingleLineTextFieldCorreo.Clear();
+            materialSingleLineTextFieldContrasenya.Clear();
         }
     }
 }

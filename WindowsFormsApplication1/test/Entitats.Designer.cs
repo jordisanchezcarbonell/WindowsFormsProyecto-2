@@ -31,13 +31,13 @@
             this.materialLabelNif = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabelCorreo = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridViewDadesEntitats = new System.Windows.Forms.DataGridView();
+            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.temporadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
             this.materialSingleLineTextFieldNom = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextFieldTemporada = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextFieldAdreca = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -46,7 +46,18 @@
             this.materialRaisedButtonAfegir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonModificar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonEsborrar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButtonVeureEquips = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonNetejarCamps = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialSingleLineTextFieldContrasenya = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabelContrasenya = new MaterialSkin.Controls.MaterialLabel();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contrasenyaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.temporadaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nifDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.equipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDadesEntitats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).BeginInit();
             this.SuspendLayout();
@@ -57,11 +68,10 @@
             this.materialLabelNom.Depth = 0;
             this.materialLabelNom.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabelNom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabelNom.Location = new System.Drawing.Point(99, 102);
-            this.materialLabelNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabelNom.Location = new System.Drawing.Point(74, 118);
             this.materialLabelNom.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelNom.Name = "materialLabelNom";
-            this.materialLabelNom.Size = new System.Drawing.Size(52, 24);
+            this.materialLabelNom.Size = new System.Drawing.Size(42, 19);
             this.materialLabelNom.TabIndex = 0;
             this.materialLabelNom.Text = "Nom";
             // 
@@ -71,11 +81,10 @@
             this.materialLabelTemporada.Depth = 0;
             this.materialLabelTemporada.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabelTemporada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabelTemporada.Location = new System.Drawing.Point(99, 139);
-            this.materialLabelTemporada.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabelTemporada.Location = new System.Drawing.Point(74, 148);
             this.materialLabelTemporada.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelTemporada.Name = "materialLabelTemporada";
-            this.materialLabelTemporada.Size = new System.Drawing.Size(107, 24);
+            this.materialLabelTemporada.Size = new System.Drawing.Size(85, 19);
             this.materialLabelTemporada.TabIndex = 1;
             this.materialLabelTemporada.Text = "Temporada";
             // 
@@ -85,11 +94,10 @@
             this.materialLabelAdreca.Depth = 0;
             this.materialLabelAdreca.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabelAdreca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabelAdreca.Location = new System.Drawing.Point(99, 181);
-            this.materialLabelAdreca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabelAdreca.Location = new System.Drawing.Point(74, 182);
             this.materialLabelAdreca.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelAdreca.Name = "materialLabelAdreca";
-            this.materialLabelAdreca.Size = new System.Drawing.Size(69, 24);
+            this.materialLabelAdreca.Size = new System.Drawing.Size(56, 19);
             this.materialLabelAdreca.TabIndex = 2;
             this.materialLabelAdreca.Text = "Adreça";
             // 
@@ -99,11 +107,10 @@
             this.materialLabelNif.Depth = 0;
             this.materialLabelNif.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabelNif.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabelNif.Location = new System.Drawing.Point(99, 223);
-            this.materialLabelNif.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabelNif.Location = new System.Drawing.Point(74, 88);
             this.materialLabelNif.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelNif.Name = "materialLabelNif";
-            this.materialLabelNif.Size = new System.Drawing.Size(36, 24);
+            this.materialLabelNif.Size = new System.Drawing.Size(29, 19);
             this.materialLabelNif.TabIndex = 3;
             this.materialLabelNif.Text = "Nif";
             // 
@@ -113,11 +120,10 @@
             this.materialLabelCorreo.Depth = 0;
             this.materialLabelCorreo.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabelCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabelCorreo.Location = new System.Drawing.Point(104, 262);
-            this.materialLabelCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabelCorreo.Location = new System.Drawing.Point(74, 213);
             this.materialLabelCorreo.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelCorreo.Name = "materialLabelCorreo";
-            this.materialLabelCorreo.Size = new System.Drawing.Size(66, 24);
+            this.materialLabelCorreo.Size = new System.Drawing.Size(55, 19);
             this.materialLabelCorreo.TabIndex = 4;
             this.materialLabelCorreo.Text = "Correo";
             // 
@@ -131,19 +137,27 @@
             this.dataGridViewDadesEntitats.AutoGenerateColumns = false;
             this.dataGridViewDadesEntitats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDadesEntitats.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.temporadaDataGridViewTextBoxColumn,
-            this.direccionDataGridViewTextBoxColumn,
-            this.nifDataGridViewTextBoxColumn,
-            this.correoDataGridViewTextBoxColumn});
+            this.idDataGridViewTextBoxColumn1,
+            this.nombreDataGridViewTextBoxColumn1,
+            this.correoDataGridViewTextBoxColumn1,
+            this.contrasenyaDataGridViewTextBoxColumn,
+            this.temporadaDataGridViewTextBoxColumn1,
+            this.direccionDataGridViewTextBoxColumn1,
+            this.nifDataGridViewTextBoxColumn1,
+            this.equipoDataGridViewTextBoxColumn,
+            this.telefonosDataGridViewTextBoxColumn});
             this.dataGridViewDadesEntitats.DataSource = this.bindingSourceEntitats;
-            this.dataGridViewDadesEntitats.Location = new System.Drawing.Point(108, 312);
-            this.dataGridViewDadesEntitats.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewDadesEntitats.Location = new System.Drawing.Point(82, 298);
             this.dataGridViewDadesEntitats.Name = "dataGridViewDadesEntitats";
             this.dataGridViewDadesEntitats.ReadOnly = true;
-            this.dataGridViewDadesEntitats.Size = new System.Drawing.Size(861, 217);
+            this.dataGridViewDadesEntitats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewDadesEntitats.Size = new System.Drawing.Size(646, 176);
             this.dataGridViewDadesEntitats.TabIndex = 5;
+            this.dataGridViewDadesEntitats.SelectionChanged += new System.EventHandler(this.dataGridViewDadesEntitats_SelectionChanged);
+            // 
+            // bindingSourceEntitats
+            // 
+            this.bindingSourceEntitats.DataSource = typeof(COMPLETE_FLAT_UI.Entidad);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -187,10 +201,6 @@
             this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
             this.correoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // bindingSourceEntitats
-            // 
-            this.bindingSourceEntitats.DataSource = typeof(COMPLETE_FLAT_UI.Entidad);
-            // 
             // materialSingleLineTextFieldNom
             // 
             this.materialSingleLineTextFieldNom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -198,8 +208,7 @@
             this.materialSingleLineTextFieldNom.Depth = 0;
             this.materialSingleLineTextFieldNom.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.materialSingleLineTextFieldNom.Hint = "";
-            this.materialSingleLineTextFieldNom.Location = new System.Drawing.Point(267, 96);
-            this.materialSingleLineTextFieldNom.Margin = new System.Windows.Forms.Padding(4);
+            this.materialSingleLineTextFieldNom.Location = new System.Drawing.Point(200, 113);
             this.materialSingleLineTextFieldNom.MaxLength = 32767;
             this.materialSingleLineTextFieldNom.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldNom.Name = "materialSingleLineTextFieldNom";
@@ -207,7 +216,7 @@
             this.materialSingleLineTextFieldNom.SelectedText = "";
             this.materialSingleLineTextFieldNom.SelectionLength = 0;
             this.materialSingleLineTextFieldNom.SelectionStart = 0;
-            this.materialSingleLineTextFieldNom.Size = new System.Drawing.Size(437, 28);
+            this.materialSingleLineTextFieldNom.Size = new System.Drawing.Size(328, 23);
             this.materialSingleLineTextFieldNom.TabIndex = 6;
             this.materialSingleLineTextFieldNom.TabStop = false;
             this.materialSingleLineTextFieldNom.UseSystemPasswordChar = false;
@@ -218,8 +227,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.materialSingleLineTextFieldTemporada.Depth = 0;
             this.materialSingleLineTextFieldTemporada.Hint = "";
-            this.materialSingleLineTextFieldTemporada.Location = new System.Drawing.Point(267, 133);
-            this.materialSingleLineTextFieldTemporada.Margin = new System.Windows.Forms.Padding(4);
+            this.materialSingleLineTextFieldTemporada.Location = new System.Drawing.Point(200, 143);
             this.materialSingleLineTextFieldTemporada.MaxLength = 32767;
             this.materialSingleLineTextFieldTemporada.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldTemporada.Name = "materialSingleLineTextFieldTemporada";
@@ -227,7 +235,7 @@
             this.materialSingleLineTextFieldTemporada.SelectedText = "";
             this.materialSingleLineTextFieldTemporada.SelectionLength = 0;
             this.materialSingleLineTextFieldTemporada.SelectionStart = 0;
-            this.materialSingleLineTextFieldTemporada.Size = new System.Drawing.Size(437, 28);
+            this.materialSingleLineTextFieldTemporada.Size = new System.Drawing.Size(328, 23);
             this.materialSingleLineTextFieldTemporada.TabIndex = 7;
             this.materialSingleLineTextFieldTemporada.TabStop = false;
             this.materialSingleLineTextFieldTemporada.UseSystemPasswordChar = false;
@@ -238,8 +246,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.materialSingleLineTextFieldAdreca.Depth = 0;
             this.materialSingleLineTextFieldAdreca.Hint = "";
-            this.materialSingleLineTextFieldAdreca.Location = new System.Drawing.Point(267, 181);
-            this.materialSingleLineTextFieldAdreca.Margin = new System.Windows.Forms.Padding(4);
+            this.materialSingleLineTextFieldAdreca.Location = new System.Drawing.Point(200, 182);
             this.materialSingleLineTextFieldAdreca.MaxLength = 32767;
             this.materialSingleLineTextFieldAdreca.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldAdreca.Name = "materialSingleLineTextFieldAdreca";
@@ -247,7 +254,7 @@
             this.materialSingleLineTextFieldAdreca.SelectedText = "";
             this.materialSingleLineTextFieldAdreca.SelectionLength = 0;
             this.materialSingleLineTextFieldAdreca.SelectionStart = 0;
-            this.materialSingleLineTextFieldAdreca.Size = new System.Drawing.Size(437, 28);
+            this.materialSingleLineTextFieldAdreca.Size = new System.Drawing.Size(328, 23);
             this.materialSingleLineTextFieldAdreca.TabIndex = 8;
             this.materialSingleLineTextFieldAdreca.TabStop = false;
             this.materialSingleLineTextFieldAdreca.UseSystemPasswordChar = false;
@@ -258,8 +265,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.materialSingleLineTextFieldNif.Depth = 0;
             this.materialSingleLineTextFieldNif.Hint = "";
-            this.materialSingleLineTextFieldNif.Location = new System.Drawing.Point(267, 217);
-            this.materialSingleLineTextFieldNif.Margin = new System.Windows.Forms.Padding(4);
+            this.materialSingleLineTextFieldNif.Location = new System.Drawing.Point(200, 83);
             this.materialSingleLineTextFieldNif.MaxLength = 32767;
             this.materialSingleLineTextFieldNif.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldNif.Name = "materialSingleLineTextFieldNif";
@@ -267,7 +273,7 @@
             this.materialSingleLineTextFieldNif.SelectedText = "";
             this.materialSingleLineTextFieldNif.SelectionLength = 0;
             this.materialSingleLineTextFieldNif.SelectionStart = 0;
-            this.materialSingleLineTextFieldNif.Size = new System.Drawing.Size(437, 28);
+            this.materialSingleLineTextFieldNif.Size = new System.Drawing.Size(328, 23);
             this.materialSingleLineTextFieldNif.TabIndex = 9;
             this.materialSingleLineTextFieldNif.TabStop = false;
             this.materialSingleLineTextFieldNif.UseSystemPasswordChar = false;
@@ -278,8 +284,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.materialSingleLineTextFieldCorreo.Depth = 0;
             this.materialSingleLineTextFieldCorreo.Hint = "";
-            this.materialSingleLineTextFieldCorreo.Location = new System.Drawing.Point(267, 262);
-            this.materialSingleLineTextFieldCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.materialSingleLineTextFieldCorreo.Location = new System.Drawing.Point(200, 213);
             this.materialSingleLineTextFieldCorreo.MaxLength = 32767;
             this.materialSingleLineTextFieldCorreo.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldCorreo.Name = "materialSingleLineTextFieldCorreo";
@@ -287,7 +292,7 @@
             this.materialSingleLineTextFieldCorreo.SelectedText = "";
             this.materialSingleLineTextFieldCorreo.SelectionLength = 0;
             this.materialSingleLineTextFieldCorreo.SelectionStart = 0;
-            this.materialSingleLineTextFieldCorreo.Size = new System.Drawing.Size(437, 28);
+            this.materialSingleLineTextFieldCorreo.Size = new System.Drawing.Size(328, 23);
             this.materialSingleLineTextFieldCorreo.TabIndex = 10;
             this.materialSingleLineTextFieldCorreo.TabStop = false;
             this.materialSingleLineTextFieldCorreo.UseSystemPasswordChar = false;
@@ -299,12 +304,11 @@
             this.materialRaisedButtonAfegir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonAfegir.Depth = 0;
             this.materialRaisedButtonAfegir.Icon = null;
-            this.materialRaisedButtonAfegir.Location = new System.Drawing.Point(804, 102);
-            this.materialRaisedButtonAfegir.Margin = new System.Windows.Forms.Padding(4);
+            this.materialRaisedButtonAfegir.Location = new System.Drawing.Point(582, 120);
             this.materialRaisedButtonAfegir.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonAfegir.Name = "materialRaisedButtonAfegir";
             this.materialRaisedButtonAfegir.Primary = true;
-            this.materialRaisedButtonAfegir.Size = new System.Drawing.Size(80, 36);
+            this.materialRaisedButtonAfegir.Size = new System.Drawing.Size(67, 36);
             this.materialRaisedButtonAfegir.TabIndex = 11;
             this.materialRaisedButtonAfegir.Text = "Afegir";
             this.materialRaisedButtonAfegir.UseVisualStyleBackColor = true;
@@ -317,16 +321,16 @@
             this.materialRaisedButtonModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonModificar.Depth = 0;
             this.materialRaisedButtonModificar.Icon = null;
-            this.materialRaisedButtonModificar.Location = new System.Drawing.Point(815, 158);
-            this.materialRaisedButtonModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.materialRaisedButtonModificar.Location = new System.Drawing.Point(584, 165);
             this.materialRaisedButtonModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonModificar.Name = "materialRaisedButtonModificar";
             this.materialRaisedButtonModificar.Primary = true;
             this.materialRaisedButtonModificar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialRaisedButtonModificar.Size = new System.Drawing.Size(113, 36);
+            this.materialRaisedButtonModificar.Size = new System.Drawing.Size(93, 36);
             this.materialRaisedButtonModificar.TabIndex = 12;
             this.materialRaisedButtonModificar.Text = "Modificar";
             this.materialRaisedButtonModificar.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonModificar.Click += new System.EventHandler(this.materialRaisedButtonModificar_Click);
             // 
             // materialRaisedButtonEsborrar
             // 
@@ -335,39 +339,142 @@
             this.materialRaisedButtonEsborrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonEsborrar.Depth = 0;
             this.materialRaisedButtonEsborrar.Icon = null;
-            this.materialRaisedButtonEsborrar.Location = new System.Drawing.Point(813, 217);
-            this.materialRaisedButtonEsborrar.Margin = new System.Windows.Forms.Padding(4);
+            this.materialRaisedButtonEsborrar.Location = new System.Drawing.Point(584, 213);
             this.materialRaisedButtonEsborrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonEsborrar.Name = "materialRaisedButtonEsborrar";
             this.materialRaisedButtonEsborrar.Primary = true;
-            this.materialRaisedButtonEsborrar.Size = new System.Drawing.Size(108, 36);
+            this.materialRaisedButtonEsborrar.Size = new System.Drawing.Size(90, 36);
             this.materialRaisedButtonEsborrar.TabIndex = 13;
             this.materialRaisedButtonEsborrar.Text = "Esborrar";
             this.materialRaisedButtonEsborrar.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonEsborrar.Click += new System.EventHandler(this.materialRaisedButtonEsborrar_Click);
             // 
-            // materialRaisedButtonVeureEquips
+            // materialRaisedButtonNetejarCamps
             // 
-            this.materialRaisedButtonVeureEquips.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialRaisedButtonVeureEquips.AutoSize = true;
-            this.materialRaisedButtonVeureEquips.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButtonVeureEquips.Depth = 0;
-            this.materialRaisedButtonVeureEquips.Icon = null;
-            this.materialRaisedButtonVeureEquips.Location = new System.Drawing.Point(823, 556);
-            this.materialRaisedButtonVeureEquips.Margin = new System.Windows.Forms.Padding(4);
-            this.materialRaisedButtonVeureEquips.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButtonVeureEquips.Name = "materialRaisedButtonVeureEquips";
-            this.materialRaisedButtonVeureEquips.Primary = true;
-            this.materialRaisedButtonVeureEquips.Size = new System.Drawing.Size(138, 36);
-            this.materialRaisedButtonVeureEquips.TabIndex = 14;
-            this.materialRaisedButtonVeureEquips.Text = "Veure equips";
-            this.materialRaisedButtonVeureEquips.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonNetejarCamps.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialRaisedButtonNetejarCamps.AutoSize = true;
+            this.materialRaisedButtonNetejarCamps.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButtonNetejarCamps.Depth = 0;
+            this.materialRaisedButtonNetejarCamps.Icon = null;
+            this.materialRaisedButtonNetejarCamps.Location = new System.Drawing.Point(696, 150);
+            this.materialRaisedButtonNetejarCamps.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonNetejarCamps.Name = "materialRaisedButtonNetejarCamps";
+            this.materialRaisedButtonNetejarCamps.Primary = true;
+            this.materialRaisedButtonNetejarCamps.Size = new System.Drawing.Size(80, 36);
+            this.materialRaisedButtonNetejarCamps.TabIndex = 14;
+            this.materialRaisedButtonNetejarCamps.Text = "Netejar";
+            this.materialRaisedButtonNetejarCamps.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonNetejarCamps.Click += new System.EventHandler(this.materialRaisedButtonNetejarCamps_Click);
+            // 
+            // materialSingleLineTextFieldContrasenya
+            // 
+            this.materialSingleLineTextFieldContrasenya.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialSingleLineTextFieldContrasenya.Depth = 0;
+            this.materialSingleLineTextFieldContrasenya.Hint = "";
+            this.materialSingleLineTextFieldContrasenya.Location = new System.Drawing.Point(200, 251);
+            this.materialSingleLineTextFieldContrasenya.MaxLength = 32767;
+            this.materialSingleLineTextFieldContrasenya.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextFieldContrasenya.Name = "materialSingleLineTextFieldContrasenya";
+            this.materialSingleLineTextFieldContrasenya.PasswordChar = '\0';
+            this.materialSingleLineTextFieldContrasenya.SelectedText = "";
+            this.materialSingleLineTextFieldContrasenya.SelectionLength = 0;
+            this.materialSingleLineTextFieldContrasenya.SelectionStart = 0;
+            this.materialSingleLineTextFieldContrasenya.Size = new System.Drawing.Size(328, 23);
+            this.materialSingleLineTextFieldContrasenya.TabIndex = 16;
+            this.materialSingleLineTextFieldContrasenya.TabStop = false;
+            this.materialSingleLineTextFieldContrasenya.UseSystemPasswordChar = false;
+            // 
+            // materialLabelContrasenya
+            // 
+            this.materialLabelContrasenya.AutoSize = true;
+            this.materialLabelContrasenya.Depth = 0;
+            this.materialLabelContrasenya.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabelContrasenya.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialLabelContrasenya.Location = new System.Drawing.Point(78, 251);
+            this.materialLabelContrasenya.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabelContrasenya.Name = "materialLabelContrasenya";
+            this.materialLabelContrasenya.Size = new System.Drawing.Size(93, 19);
+            this.materialLabelContrasenya.TabIndex = 15;
+            this.materialLabelContrasenya.Text = "Contrasenya";
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // nombreDataGridViewTextBoxColumn1
+            // 
+            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nom";
+            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
+            this.nombreDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // correoDataGridViewTextBoxColumn1
+            // 
+            this.correoDataGridViewTextBoxColumn1.DataPropertyName = "correo";
+            this.correoDataGridViewTextBoxColumn1.HeaderText = "Correu";
+            this.correoDataGridViewTextBoxColumn1.Name = "correoDataGridViewTextBoxColumn1";
+            this.correoDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // contrasenyaDataGridViewTextBoxColumn
+            // 
+            this.contrasenyaDataGridViewTextBoxColumn.DataPropertyName = "contrasenya";
+            this.contrasenyaDataGridViewTextBoxColumn.HeaderText = "Contrasenya";
+            this.contrasenyaDataGridViewTextBoxColumn.Name = "contrasenyaDataGridViewTextBoxColumn";
+            this.contrasenyaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // temporadaDataGridViewTextBoxColumn1
+            // 
+            this.temporadaDataGridViewTextBoxColumn1.DataPropertyName = "temporada";
+            this.temporadaDataGridViewTextBoxColumn1.HeaderText = "Temporada";
+            this.temporadaDataGridViewTextBoxColumn1.Name = "temporadaDataGridViewTextBoxColumn1";
+            this.temporadaDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.temporadaDataGridViewTextBoxColumn1.Width = 70;
+            // 
+            // direccionDataGridViewTextBoxColumn1
+            // 
+            this.direccionDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.direccionDataGridViewTextBoxColumn1.DataPropertyName = "direccion";
+            this.direccionDataGridViewTextBoxColumn1.HeaderText = "Adreça";
+            this.direccionDataGridViewTextBoxColumn1.Name = "direccionDataGridViewTextBoxColumn1";
+            this.direccionDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // nifDataGridViewTextBoxColumn1
+            // 
+            this.nifDataGridViewTextBoxColumn1.DataPropertyName = "nif";
+            this.nifDataGridViewTextBoxColumn1.HeaderText = "Nif";
+            this.nifDataGridViewTextBoxColumn1.Name = "nifDataGridViewTextBoxColumn1";
+            this.nifDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nifDataGridViewTextBoxColumn1.Width = 70;
+            // 
+            // equipoDataGridViewTextBoxColumn
+            // 
+            this.equipoDataGridViewTextBoxColumn.DataPropertyName = "Equipo";
+            this.equipoDataGridViewTextBoxColumn.HeaderText = "Equipo";
+            this.equipoDataGridViewTextBoxColumn.Name = "equipoDataGridViewTextBoxColumn";
+            this.equipoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.equipoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // telefonosDataGridViewTextBoxColumn
+            // 
+            this.telefonosDataGridViewTextBoxColumn.DataPropertyName = "Telefonos";
+            this.telefonosDataGridViewTextBoxColumn.HeaderText = "Telefonos";
+            this.telefonosDataGridViewTextBoxColumn.Name = "telefonosDataGridViewTextBoxColumn";
+            this.telefonosDataGridViewTextBoxColumn.ReadOnly = true;
+            this.telefonosDataGridViewTextBoxColumn.Visible = false;
             // 
             // Entitats
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 598);
-            this.Controls.Add(this.materialRaisedButtonVeureEquips);
+            this.ClientSize = new System.Drawing.Size(800, 486);
+            this.Controls.Add(this.materialSingleLineTextFieldContrasenya);
+            this.Controls.Add(this.materialLabelContrasenya);
+            this.Controls.Add(this.materialRaisedButtonNetejarCamps);
             this.Controls.Add(this.materialRaisedButtonEsborrar);
             this.Controls.Add(this.materialRaisedButtonModificar);
             this.Controls.Add(this.materialRaisedButtonAfegir);
@@ -382,7 +489,7 @@
             this.Controls.Add(this.materialLabelAdreca);
             this.Controls.Add(this.materialLabelTemporada);
             this.Controls.Add(this.materialLabelNom);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Entitats";
@@ -411,7 +518,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonAfegir;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonModificar;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonEsborrar;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonVeureEquips;
         private System.Windows.Forms.BindingSource bindingSourceEntitats;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
@@ -419,6 +525,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nifDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonNetejarCamps;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldContrasenya;
+        private MaterialSkin.Controls.MaterialLabel materialLabelContrasenya;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contrasenyaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn temporadaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nifDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonosDataGridViewTextBoxColumn;
     }
 
 }

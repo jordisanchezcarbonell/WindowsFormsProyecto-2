@@ -34,7 +34,7 @@ namespace COMPLETE_FLAT_UI.BD
         }
 
 
-        public static string InsertEntitat(string nom, string temporada, string adreca, string nif, string correu)
+        public static string InsertEntitat(string nom, string temporada, string adreca, string nif, string correu, string contrasenya)
         {
             string missatgeRetornar = "";
 
@@ -45,6 +45,7 @@ namespace COMPLETE_FLAT_UI.BD
             novaEntitat.direccion = adreca;
             novaEntitat.nif = nif;
             novaEntitat.correo = correu;
+            novaEntitat.contrasenya = contrasenya;
 
             //Afegeixo l'objecte a la base de dades i guardo els canvis:
             ORM.bd.Entidad.Add(novaEntitat);
@@ -54,7 +55,7 @@ namespace COMPLETE_FLAT_UI.BD
         }
 
 
-        public static string UpdateEntitat(int id, string nom, string temporada, string adreca, string nif, string correu)
+        public static string UpdateEntitat(int id, string nom, int temporada, string adreca, string nif, string correu, string contrasenya)
         {
             string missatgeRetornar = "";
 
@@ -62,10 +63,11 @@ namespace COMPLETE_FLAT_UI.BD
             //per paràmetre:
             Entidad entitatModificar = ORM.bd.Entidad.Find(id);
             entitatModificar.nombre = nom;
-            entitatModificar.temporada = int.Parse(temporada);
+            entitatModificar.temporada = temporada;
             entitatModificar.direccion = adreca;
             entitatModificar.nif = nif;
             entitatModificar.correo = correu;
+            entitatModificar.contrasenya = contrasenya;
 
             missatgeRetornar = ORM.SaveChanges();
 
@@ -73,13 +75,13 @@ namespace COMPLETE_FLAT_UI.BD
         }
 
         
-        public static string deleteEntitat(string nif)
+        public static string deleteEntitat(int id)
         {
             string missatge = "";
 
             //Busco amb el nif la entitat que vull esborrar, i l'esborro. Després guardo els canvis a la base de dades
             //Si em retorna una string buida, voldrà dir que la operació ha anat bé.
-            Entidad entitatEsborrar = ORM.bd.Entidad.Find(nif);
+            Entidad entitatEsborrar = ORM.bd.Entidad.Find(id);
             ORM.bd.Entidad.Remove(entitatEsborrar);
 
             missatge = ORM.SaveChanges();

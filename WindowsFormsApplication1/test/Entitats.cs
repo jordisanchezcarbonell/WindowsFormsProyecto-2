@@ -25,10 +25,12 @@ namespace COMPLETE_FLAT_UI
             this.Close();
         }
 
+
         private void Entitats_Load(object sender, EventArgs e)
         {
-
+            carregarDadesGrid();
         }
+
 
         public void carregarDadesGrid()
         {
@@ -37,28 +39,18 @@ namespace COMPLETE_FLAT_UI
 
             //Crido al mètode per obtenir totes les entitats i ho adjudico al bindingSource corresponenet:
             string missatgeRetornat = BD.EntitatsORM.SelectAllEntitats(ref llistaEntitats);
-                //Aquí ha d'anar el binding source
             
-
-
-            //Creo la llista de ciutats que passaré per referència:
-            List<ciudades> llistaCiutats = new List<ciudades>();
-
-            //Demano les dades a la classe estàtica i les guardo a la varigable que passo per referència:
-            string missatgeRetornat = BD.CiudadesORM.SelectAllCiudades(ref llistaCiutats);
-            ciudadesBindingSource.DataSource = llistaCiutats;
-
+            
             if (!missatgeRetornat.Equals(""))
             {
-                MessageBox.Show(missatgeRetornat, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else
+                bindingSourceEntitats.DataSource = llistaEntitats;
+            } else
             {
-                //Crido al mètode que en funció del valor que estigui seleccionat a la combo, mostrarà els hotels d'aquella ciutat
-                recuperarHotelsPerCiutatSeleccionada();
+                MessageBox.Show(missatgeRetornat, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
+
 
 
     }

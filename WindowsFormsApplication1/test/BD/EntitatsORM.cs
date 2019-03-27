@@ -34,6 +34,45 @@ namespace COMPLETE_FLAT_UI.BD
         }
 
 
+        public static string InsertEntitat(string nom, string temporada, string adreca, string nif, string correu)
+        {
+            string missatgeRetornar = "";
+
+            Entidad novaEntitat = new Entidad();
+            novaEntitat.nombre = nom;
+            novaEntitat.temporada = int.Parse(temporada);
+            novaEntitat.direccion = adreca;
+            novaEntitat.nif = nif;
+            novaEntitat.correo = correu;
+
+            ORM.bd.Entidad.Add(novaEntitat);
+            //Aquí va: missatgeRetornar = ORM.saveChanges();
+
+            return missatgeRetornar;
+        }
+
+
+        public static string UpdateEntitat(int id, string nom, string temporada, string adreca, string nif, string correu)
+        {
+            string missatgeRetornar = "";
+
+            Entidad entitatModificar = ORM.bd.Entidad.Find(id);
+            entitatModificar.nombre = nom;
+            entitatModificar.temporada = int.Parse(temporada);
+            entitatModificar.direccion = adreca;
+            entitatModificar.nif = nif;
+            entitatModificar.correo = correu;
+
+            //Aquí va: missatgeRetornar = ORM.saveChanges();
+
+            return missatgeRetornar;
+        }
+
+
+        //Continuar amb el deleteEntitat i després afegir els mètodes saveChanges i rejectChanges al fitxer ORM
+
+        
+
 
 
     }

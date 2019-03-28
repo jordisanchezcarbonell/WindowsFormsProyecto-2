@@ -122,6 +122,7 @@
     <Compile Include="BD\EntitatsORM.cs" />
     <Compile Include="BD\ORM.cs" />
     <Compile Include="BD\blowfish.cs" />
+    <Compile Include="BD\TelefonsORM.cs" />
     <Compile Include="Categoria.cs">
       <DependentUpon>ModelEntiEspais.tt</DependentUpon>
     </Compile>
@@ -257,6 +258,12 @@
     <Compile Include="Telefonos.cs">
       <DependentUpon>ModelEntiEspais.tt</DependentUpon>
     </Compile>
+    <Compile Include="Telefons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telefons.Designer.cs">
+      <DependentUpon>Telefons.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tipo_Actividades.cs">
       <DependentUpon>ModelEntiEspais.tt</DependentUpon>
     </Compile>
@@ -315,6 +322,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Telefons.resx">
+      <DependentUpon>Telefons.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="ModelEntiEspais.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelEntiEspais.Designer.cs</LastGenOutput>
@@ -324,6 +334,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Entidad.datasource" />
+    <None Include="Properties\DataSources\Telefonos.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

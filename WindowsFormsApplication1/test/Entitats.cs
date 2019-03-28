@@ -192,6 +192,10 @@ namespace COMPLETE_FLAT_UI
             netejarCampsDesseleccionarGrid();
         }
 
-        
+        private void materialRaisedButtonTelefons_Click(object sender, EventArgs e)
+        {
+            Telefons telefons = new Telefons();
+            telefons.ShowDialog();
+        }
     }
 }

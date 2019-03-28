@@ -34,14 +34,14 @@ namespace COMPLETE_FLAT_UI.BD
         }
 
 
-        public static string InsertEntitat(string nom, string temporada, string adreca, string nif, string correu, string contrasenya)
+        public static string InsertEntitat(string nom, int temporada, string adreca, string nif, string correu, string contrasenya)
         {
             string missatgeRetornar = "";
 
             //Creo un nou objecte entitat,i li guardo els paràmetres que rebo amb el mètode
             Entidad novaEntitat = new Entidad();
             novaEntitat.nombre = nom;
-            novaEntitat.temporada = int.Parse(temporada);
+            novaEntitat.temporada = temporada;
             novaEntitat.direccion = adreca;
             novaEntitat.nif = nif;
             novaEntitat.correo = correu;

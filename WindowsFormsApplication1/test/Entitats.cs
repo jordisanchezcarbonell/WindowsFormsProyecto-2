@@ -53,23 +53,44 @@ namespace COMPLETE_FLAT_UI
 
         private void materialRaisedButtonAfegir_Click(object sender, EventArgs e)
         {
-            //Comprovo que les contrasenyes siguin iguals, i que tinguin 8 caràcters
+            //Variable on guardaré el número de temporada si he pogut convertir correctament de string a int:
+            int numTemporada;
+            
+            //Comprovo que les contrasenyes siguin iguals, que tinguin 8 caràcters
             if (materialSingleLineTextFieldContrasenya.TextLength == materialSingleLineTextFieldRepetirContrasenya.TextLength
                  && materialSingleLineTextFieldContrasenya.TextLength == 8)
             {
 
-                //Faig un insert a la base de dades passant-li com a paràmetres el contingut dels camps del formulari:
-                string missatge = BD.EntitatsORM.InsertEntitat(materialSingleLineTextFieldNom.Text, materialSingleLineTextFieldTemporada.Text,
-                    materialSingleLineTextFieldAdreca.Text, materialSingleLineTextFieldNif.Text, materialSingleLineTextFieldCorreo.Text,
-                    materialSingleLineTextFieldContrasenya.Text);
-
-                if (missatge.Equals(""))
+                //Un cop he comprovat la contrasenya, comprovo que el que hi ha al camp temporada sigui un número (int):
+                if (int.TryParse(materialSingleLineTextFieldTemporada.Text, out numTemporada))
                 {
-                    carregarDadesGrid();
+
+                    NumeroNif numeroNif = new NumeroNif(materialSingleLineTextFieldNif.Text);
+                    if (numeroNif.EsCorrecto)
+                    {
+                        //Faig un insert a la base de dades passant-li com a paràmetres el contingut dels camps del formulari:
+                        string missatge = BD.EntitatsORM.InsertEntitat(materialSingleLineTextFieldNom.Text, numTemporada,
+                            materialSingleLineTextFieldAdreca.Text, materialSingleLineTextFieldNif.Text, materialSingleLineTextFieldCorreo.Text,
+                            materialSingleLineTextFieldContrasenya.Text);
+
+                        if (missatge.Equals(""))
+                        {
+                            carregarDadesGrid();
+                        }
+                        else
+                        {
+                            MessageBox.Show(missatge, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El format del NIF és erroni", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show(missatge, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El camp temporada només admet números", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    materialSingleLineTextFieldTemporada.Clear();
                 }
             } 
             else
@@ -129,6 +150,11 @@ namespace COMPLETE_FLAT_UI
 
         private void dataGridViewDadesEntitats_SelectionChanged(object sender, EventArgs e)
         {
+            //Creo una variable que tindrà 8 caràcters, que serà la que mostraré sempre al camp contrasenya. Així
+            //aconsegueixo que quan es cliqui un registre de la grid, els camps contrasenya s'omplin amb el mateix número
+            //de puntets, i no es pugui saber la llargada de la contrasenya.
+            string contrasenyaMostrar = "12345678";
+            
             //Recupero l'objecte clicat i poso les dades als camps
             Entidad entitatClicada = (Entidad)dataGridViewDadesEntitats.CurrentRow.DataBoundItem;
             materialSingleLineTextFieldNom.Text = entitatClicada.nombre;
@@ -136,10 +162,16 @@ namespace COMPLETE_FLAT_UI
             materialSingleLineTextFieldAdreca.Text = entitatClicada.direccion;
             materialSingleLineTextFieldNif.Text = entitatClicada.nif;
             materialSingleLineTextFieldCorreo.Text = entitatClicada.correo;
-            materialSingleLineTextFieldContrasenya.Text = entitatClicada.contrasenya;
+            materialSingleLineTextFieldContrasenya.Text = contrasenyaMostrar;
+            materialSingleLineTextFieldRepetirContrasenya.Text = contrasenyaMostrar;
         }
 
         private void materialRaisedButtonNetejarCamps_Click(object sender, EventArgs e)
+        {
+            netejarCampsDesseleccionarGrid();
+        }
+
+        private void netejarCampsDesseleccionarGrid()
         {
             //Netejo els camps i desselecciono la línia seleccionada (ha d'estar en aquest ordre, sinó no funciona)
             dataGridViewDadesEntitats.ClearSelection();
@@ -151,6 +183,15 @@ namespace COMPLETE_FLAT_UI
             materialSingleLineTextFieldNif.Clear();
             materialSingleLineTextFieldCorreo.Clear();
             materialSingleLineTextFieldContrasenya.Clear();
+            materialSingleLineTextFieldRepetirContrasenya.Clear();
         }
+
+        private void dataGridViewDadesEntitats_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            //Aquest mètode s'activa un cop s'ha connectat amb la base de dades i s'ha omplert la grid
+            netejarCampsDesseleccionarGrid();
+        }
+
+        
     }
 }

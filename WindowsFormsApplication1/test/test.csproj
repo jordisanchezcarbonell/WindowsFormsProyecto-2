@@ -124,6 +124,7 @@
     <Compile Include="BD\Instalacions.cs" />
     <Compile Include="BD\ORM.cs" />
     <Compile Include="BD\blowfish.cs" />
+    <Compile Include="BD\TipusGestio.cs" />
     <Compile Include="Categoria.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

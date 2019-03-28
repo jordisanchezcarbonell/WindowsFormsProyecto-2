@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a779092977574663a1ae29f4517b6d49" Name="Diagram1">
+      <Diagram DiagramId="a779092977574663a1ae29f4517b6d49" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="ProyectoBDJordiModel.Act_concedida" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ProyectoBDJordiModel.Act_demandadas" Width="1.5" PointX="8.25" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ProyectoBDJordiModel.Admin" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
@@ -20,7 +20,6 @@
         <EntityTypeShape EntityType="ProyectoBDJordiModel.Horario_Act_Con" Width="1.5" PointX="10.5" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ProyectoBDJordiModel.Horario_Act_Dem" Width="1.5" PointX="13.5" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ProyectoBDJordiModel.Instalacion" Width="1.5" PointX="3.75" PointY="19.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoBDJordiModel.Instalacion_Horario" Width="1.5" PointX="10.5" PointY="10.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ProyectoBDJordiModel.Sexo" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ProyectoBDJordiModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="12.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ProyectoBDJordiModel.Telefonos" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
@@ -43,13 +42,14 @@
         <AssociationConnector Association="ProyectoBDJordiModel.FK_Equipo_Deportes" ManuallyRouted="false" />
         <AssociationConnector Association="ProyectoBDJordiModel.FK_Horario_Act_Con_Dia_Semana" ManuallyRouted="false" />
         <AssociationConnector Association="ProyectoBDJordiModel.FK_Horario_Act_Dem_Dia_Sem" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoBDJordiModel.FK_Instalacion_Horario_Dia_Semana" ManuallyRouted="false" />
         <AssociationConnector Association="ProyectoBDJordiModel.FK_Equipo_Entidad" ManuallyRouted="false" />
         <AssociationConnector Association="ProyectoBDJordiModel.FK_Telefonos_Entidad" ManuallyRouted="false" />
         <AssociationConnector Association="ProyectoBDJordiModel.FK_Equipo_Sexo" ManuallyRouted="false" />
         <AssociationConnector Association="ProyectoBDJordiModel.FK_Espacio_Instalacion" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoBDJordiModel.FK_Instalacion_Horario_Instalacion" ManuallyRouted="false" />
         <AssociationConnector Association="ProyectoBDJordiModel.FK_Instalacion_Tipo_gestion" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ProyectoBDJordiModel.Instalacion_Horario" Width="1.5" PointX="10.5" PointY="10.375" />
+        <AssociationConnector Association="ProyectoBDJordiModel.FK_Instalacion_Horario_Dia_Semana" />
+        <AssociationConnector Association="ProyectoBDJordiModel.FK_Instalacion_Horario_Instalacion" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

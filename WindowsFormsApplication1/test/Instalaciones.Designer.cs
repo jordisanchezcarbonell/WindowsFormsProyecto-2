@@ -31,8 +31,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceInstalaciones = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxEsport = new System.Windows.Forms.ComboBox();
             this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -52,8 +53,9 @@
             this.instalacionHorarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipogestionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalaciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -73,25 +75,33 @@
             this.espacioDataGridViewTextBoxColumn,
             this.instalacionHorarioDataGridViewTextBoxColumn,
             this.tipogestionDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.bindingSource1;
+            this.dataGridView1.DataSource = this.bindingSourceInstalaciones;
             this.dataGridView1.Location = new System.Drawing.Point(54, 265);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(706, 209);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // bindingSource1
+            // bindingSource2
             // 
-            this.bindingSource1.DataSource = typeof(COMPLETE_FLAT_UI.Instalacion);
+            this.bindingSource2.DataSource = typeof(COMPLETE_FLAT_UI.Tipo_gestion);
             // 
             // bindingSourceInstalaciones
             // 
             this.bindingSourceInstalaciones.DataSource = typeof(COMPLETE_FLAT_UI.Instalacion);
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(COMPLETE_FLAT_UI.Tipo_gestion);
+            this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
+            // 
             // comboBoxEsport
             // 
             this.comboBoxEsport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxEsport.DataSource = this.bindingSource1;
+            this.comboBoxEsport.DisplayMember = "nombre";
             this.comboBoxEsport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEsport.FormattingEnabled = true;
             this.comboBoxEsport.Location = new System.Drawing.Point(206, 173);
@@ -99,6 +109,7 @@
             this.comboBoxEsport.Name = "comboBoxEsport";
             this.comboBoxEsport.Size = new System.Drawing.Size(202, 21);
             this.comboBoxEsport.TabIndex = 29;
+            this.comboBoxEsport.ValueMember = "id";
             // 
             // materialRaisedButton3
             // 
@@ -300,6 +311,7 @@
             this.tipogestionDataGridViewTextBoxColumn.HeaderText = "Tipus de gestió";
             this.tipogestionDataGridViewTextBoxColumn.Name = "tipogestionDataGridViewTextBoxColumn";
             this.tipogestionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipogestionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Instalaciones
             // 
@@ -324,8 +336,9 @@
             this.Text = "Instal·lacions i espais";
             this.Load += new System.EventHandler(this.Instalaciones_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,6 +359,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabelNom;
         private System.Windows.Forms.BindingSource bindingSourceInstalaciones;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.BindingSource bindingSource2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;

@@ -8,7 +8,7 @@ namespace COMPLETE_FLAT_UI.BD
 {
     class HorarisInstalacions
     {
-        public static void InsertHorariInstalacio(int idInstalacio, int idDia, TimeSpan horaInici, TimeSpan horaFi)
+        public static void InsertHorariInstalacio(int idInstalacio, int idDia, DateTime horaInici, DateTime horaFi)
         {
             Instalacion_Horario horari = new Instalacion_Horario();
             horari.id_instalacion = idInstalacio;

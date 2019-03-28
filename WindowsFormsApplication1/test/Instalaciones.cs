@@ -12,6 +12,7 @@ namespace COMPLETE_FLAT_UI
 {
     public partial class Instalaciones : Estilo
     {
+        Instalacion instalacion;
         public Instalaciones()
         {
             InitializeComponent();
@@ -25,17 +26,30 @@ namespace COMPLETE_FLAT_UI
 
         private void Instalaciones_Load_1(object sender, EventArgs e)
         {
-          //  bindingSourceInstalaciones.DataSource = BD.Instalacions.SelectAllInstalaciones();
-            bindingSource1.DataSource = BD.Instalacions.SelectAllInstalaciones();
+     
+            // bindingSourceInstalaciones.DataSource = BD.Instalacions.SelectAllInstalaciones();
+            bindingSourceInstalaciones.DataSource = BD.Instalacions.SelectAllInstalaciones();
+             bindingSource1.DataSource = BD.TipusGestio.SelectAllTipoGestion();
 
+            
         }
 
         private void materialSingleLineTextFieldTitulo_TextChanged(object sender, EventArgs e)
         {
-            bindingSourceInstalaciones.DataSource = BD.Instalacions.SelectInstalacionesByNombre(materialSingleLineTextFieldTitulo.Text);
+            //bindingSourceInstalaciones.DataSource = BD.Instalacions.SelectInstalacionesByNombre(materialSingleLineTextFieldTitulo.Text);
         }
 
         private void materialSingleLineTextFieldTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

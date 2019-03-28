@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ProyectoBDJordiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ProyectoBDJordiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Act_concedida">
           <Key>
             <PropertyRef Name="id" />
@@ -152,8 +152,8 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_instalacion" Type="int" />
           <Property Name="id_dia_semana" Type="int" Nullable="false" />
-          <Property Name="hora_inicio" Type="time" Precision="7" Nullable="false" />
-          <Property Name="hora_final" Type="time" Precision="7" Nullable="false" />
+          <Property Name="hora_inicio" Type="datetime" Nullable="false" />
+          <Property Name="hora_final" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Sexo">
           <Key>
@@ -596,8 +596,7 @@
             <End Role="Telefonos" EntitySet="Telefonos" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ProyectoBDJordiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -693,7 +692,7 @@
           <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Horario_Act_Con" Relationship="Self.FK_Horario_Act_Con_Dia_Semana" FromRole="Dias_Semana" ToRole="Horario_Act_Con" />
           <NavigationProperty Name="Horario_Act_Dem" Relationship="Self.FK_Horario_Act_Dem_Dia_Sem" FromRole="Dias_Semana" ToRole="Horario_Act_Dem" />
-          <NavigationProperty Name="Instalacion_Horario" Relationship="Self.FK_Instalacion_Horario_Dia_Semana" FromRole="Dias_Semana" ToRole="Instalacion_Horario" />
+          <NavigationProperty Name="Instalacion_Horario" Relationship="ProyectoBDJordiModel.FK_Instalacion_Horario_Dia_Semana" FromRole="Dias_Semana" ToRole="Instalacion_Horario" />
         </EntityType>
         <EntityType Name="Entidad">
           <Key>
@@ -776,20 +775,8 @@
           <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="id_tipo_gestion" Type="Int32" />
           <NavigationProperty Name="Espacio" Relationship="Self.FK_Espacio_Instalacion" FromRole="Instalacion" ToRole="Espacio" />
-          <NavigationProperty Name="Instalacion_Horario" Relationship="Self.FK_Instalacion_Horario_Instalacion" FromRole="Instalacion" ToRole="Instalacion_Horario" />
           <NavigationProperty Name="Tipo_gestion" Relationship="Self.FK_Instalacion_Tipo_gestion" FromRole="Instalacion" ToRole="Tipo_gestion" />
-        </EntityType>
-        <EntityType Name="Instalacion_Horario">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="id_instalacion" Type="Int32" />
-          <Property Name="id_dia_semana" Type="Int32" Nullable="false" />
-          <Property Name="hora_inicio" Type="Time" Nullable="false" Precision="7" />
-          <Property Name="hora_final" Type="Time" Nullable="false" Precision="7" />
-          <NavigationProperty Name="Dias_Semana" Relationship="Self.FK_Instalacion_Horario_Dia_Semana" FromRole="Instalacion_Horario" ToRole="Dias_Semana" />
-          <NavigationProperty Name="Instalacion" Relationship="Self.FK_Instalacion_Horario_Instalacion" FromRole="Instalacion_Horario" ToRole="Instalacion" />
+          <NavigationProperty Name="Instalacion_Horario" Relationship="ProyectoBDJordiModel.FK_Instalacion_Horario_Instalacion" FromRole="Instalacion" ToRole="Instalacion_Horario" />
         </EntityType>
         <EntityType Name="Sexo">
           <Key>
@@ -1038,18 +1025,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Instalacion_Horario_Dia_Semana">
-          <End Role="Dias_Semana" Type="Self.Dias_Semana" Multiplicity="1" />
-          <End Role="Instalacion_Horario" Type="Self.Instalacion_Horario" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Dias_Semana">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Instalacion_Horario">
-              <PropertyRef Name="id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Equipo_Entidad">
           <End Role="Entidad" Type="Self.Entidad" Multiplicity="0..1" />
           <End Role="Equipo" Type="Self.Equipo" Multiplicity="*" />
@@ -1098,18 +1073,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Instalacion_Horario_Instalacion">
-          <End Role="Instalacion" Type="Self.Instalacion" Multiplicity="0..1" />
-          <End Role="Instalacion_Horario" Type="Self.Instalacion_Horario" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Instalacion">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Instalacion_Horario">
-              <PropertyRef Name="id_instalacion" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Instalacion_Tipo_gestion">
           <End Role="Tipo_gestion" Type="Self.Tipo_gestion" Multiplicity="0..1" />
           <End Role="Instalacion" Type="Self.Instalacion" Multiplicity="*" />
@@ -1138,7 +1101,6 @@
           <EntitySet Name="Horario_Act_Con" EntityType="Self.Horario_Act_Con" />
           <EntitySet Name="Horario_Act_Dem" EntityType="Self.Horario_Act_Dem" />
           <EntitySet Name="Instalacion" EntityType="Self.Instalacion" />
-          <EntitySet Name="Instalacion_Horario" EntityType="Self.Instalacion_Horario" />
           <EntitySet Name="Sexo" EntityType="Self.Sexo" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Telefonos" EntityType="Self.Telefonos" />
@@ -1209,10 +1171,6 @@
             <End Role="Dias_Semana" EntitySet="Dias_Semana" />
             <End Role="Horario_Act_Dem" EntitySet="Horario_Act_Dem" />
           </AssociationSet>
-          <AssociationSet Name="FK_Instalacion_Horario_Dia_Semana" Association="Self.FK_Instalacion_Horario_Dia_Semana">
-            <End Role="Dias_Semana" EntitySet="Dias_Semana" />
-            <End Role="Instalacion_Horario" EntitySet="Instalacion_Horario" />
-          </AssociationSet>
           <AssociationSet Name="FK_Equipo_Entidad" Association="Self.FK_Equipo_Entidad">
             <End Role="Entidad" EntitySet="Entidad" />
             <End Role="Equipo" EntitySet="Equipo" />
@@ -1229,15 +1187,56 @@
             <End Role="Instalacion" EntitySet="Instalacion" />
             <End Role="Espacio" EntitySet="Espacio" />
           </AssociationSet>
-          <AssociationSet Name="FK_Instalacion_Horario_Instalacion" Association="Self.FK_Instalacion_Horario_Instalacion">
-            <End Role="Instalacion" EntitySet="Instalacion" />
-            <End Role="Instalacion_Horario" EntitySet="Instalacion_Horario" />
-          </AssociationSet>
           <AssociationSet Name="FK_Instalacion_Tipo_gestion" Association="Self.FK_Instalacion_Tipo_gestion">
             <End Role="Tipo_gestion" EntitySet="Tipo_gestion" />
             <End Role="Instalacion" EntitySet="Instalacion" />
           </AssociationSet>
+          <EntitySet Name="Instalacion_Horario" EntityType="ProyectoBDJordiModel.Instalacion_Horario" />
+          <AssociationSet Name="FK_Instalacion_Horario_Dia_Semana" Association="ProyectoBDJordiModel.FK_Instalacion_Horario_Dia_Semana">
+            <End Role="Dias_Semana" EntitySet="Dias_Semana" />
+            <End Role="Instalacion_Horario" EntitySet="Instalacion_Horario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Instalacion_Horario_Instalacion" Association="ProyectoBDJordiModel.FK_Instalacion_Horario_Instalacion">
+            <End Role="Instalacion" EntitySet="Instalacion" />
+            <End Role="Instalacion_Horario" EntitySet="Instalacion_Horario" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Instalacion_Horario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_instalacion" Type="Int32" />
+          <Property Name="id_dia_semana" Type="Int32" Nullable="false" />
+          <Property Name="hora_inicio" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="hora_final" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Dias_Semana" Relationship="ProyectoBDJordiModel.FK_Instalacion_Horario_Dia_Semana" FromRole="Instalacion_Horario" ToRole="Dias_Semana" />
+          <NavigationProperty Name="Instalacion" Relationship="ProyectoBDJordiModel.FK_Instalacion_Horario_Instalacion" FromRole="Instalacion_Horario" ToRole="Instalacion" />
+        </EntityType>
+        <Association Name="FK_Instalacion_Horario_Dia_Semana">
+          <End Type="ProyectoBDJordiModel.Dias_Semana" Role="Dias_Semana" Multiplicity="1" />
+          <End Type="ProyectoBDJordiModel.Instalacion_Horario" Role="Instalacion_Horario" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Dias_Semana">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Instalacion_Horario">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Instalacion_Horario_Instalacion">
+          <End Type="ProyectoBDJordiModel.Instalacion" Role="Instalacion" Multiplicity="0..1" />
+          <End Type="ProyectoBDJordiModel.Instalacion_Horario" Role="Instalacion_Horario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Instalacion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Instalacion_Horario">
+              <PropertyRef Name="id_instalacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1399,17 +1398,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Instalacion_Horario">
-            <EntityTypeMapping TypeName="ProyectoBDJordiModel.Instalacion_Horario">
-              <MappingFragment StoreEntitySet="Instalacion_Horario">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="id_instalacion" ColumnName="id_instalacion" />
-                <ScalarProperty Name="id_dia_semana" ColumnName="id_dia_semana" />
-                <ScalarProperty Name="hora_inicio" ColumnName="hora_inicio" />
-                <ScalarProperty Name="hora_final" ColumnName="hora_final" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Sexo">
             <EntityTypeMapping TypeName="ProyectoBDJordiModel.Sexo">
               <MappingFragment StoreEntitySet="Sexo">
@@ -1462,6 +1450,17 @@
                 <ScalarProperty Name="nom" ColumnName="nom" />
                 <ScalarProperty Name="correu" ColumnName="correu" />
                 <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Instalacion_Horario">
+            <EntityTypeMapping TypeName="ProyectoBDJordiModel.Instalacion_Horario">
+              <MappingFragment StoreEntitySet="Instalacion_Horario">
+                <ScalarProperty Name="hora_final" ColumnName="hora_final" />
+                <ScalarProperty Name="hora_inicio" ColumnName="hora_inicio" />
+                <ScalarProperty Name="id_dia_semana" ColumnName="id_dia_semana" />
+                <ScalarProperty Name="id_instalacion" ColumnName="id_instalacion" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

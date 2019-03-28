@@ -32,34 +32,50 @@ namespace COMPLETE_FLAT_UI.BD
             return _instalaciones;
         }
 
-        public static void InsertInstalacion(String nom, String adreca, int idTipoGestion)
+        public static String InsertInstalacion(String nom, String adreca, int idTipoGestion)
         {
+            String mensaje = "";
             Instalacion instalacion = new Instalacion();
             instalacion.nombre = nom;
             instalacion.direccion = adreca;
             instalacion.id_tipo_gestion = idTipoGestion;
 
+            ORM.bd.Instalacion.Add(instalacion);
+
             ORM.SaveChanges();
+
+            mensaje = ORM.SaveChanges();
+
+            return mensaje;
+
         }
 
-        public static void UpdateInstalacion(int id, String nom, String adreca, int idTipoGestion)
+     
+        public static String UpdateInstalacion(int id, String nom, String adreca, int idTipoGestion)
         {
+            String mensaje = "";
             Instalacion instalacion = ORM.bd.Instalacion.Find(id);
 
             instalacion.nombre = nom;
             instalacion.direccion = adreca;
             instalacion.id_tipo_gestion = idTipoGestion;
+            mensaje = ORM.SaveChanges();
 
-            ORM.SaveChanges();
+            return mensaje;
         }
 
-        public static void DeleteInstalacion(int id)
+        public static String DeleteInstalacion(Instalacion id)
         {
-            Instalacion instalacion = ORM.bd.Instalacion.Find(id);
+            String mensaje = "";
+            //Instalacion instalacion = ORM.bd.Instalacion.Find(id);
 
-            ORM.bd.Instalacion.Remove(instalacion);
+            ORM.bd.Instalacion.Remove(id);
 
-            ORM.SaveChanges();
+            mensaje = ORM.SaveChanges();
+
+            return mensaje;
+
+           
         }
 
 

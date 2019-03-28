@@ -12,10 +12,17 @@ namespace COMPLETE_FLAT_UI
 {
     public partial class Instalaciones : Estilo
     {
-        Instalacion instalacion;
+
+        String mensaje = "";
         public Instalaciones()
         {
             InitializeComponent();
+        }
+        private void cargardatos()
+        {
+
+            bindingSourceInstalaciones.DataSource = BD.Instalacions.SelectAllInstalaciones();
+            bindingSource1.DataSource = BD.TipusGestio.SelectAllTipoGestion();
         }
 
         private void Instalaciones_Load(object sender, EventArgs e)
@@ -26,12 +33,11 @@ namespace COMPLETE_FLAT_UI
 
         private void Instalaciones_Load_1(object sender, EventArgs e)
         {
-     
-            // bindingSourceInstalaciones.DataSource = BD.Instalacions.SelectAllInstalaciones();
-            bindingSourceInstalaciones.DataSource = BD.Instalacions.SelectAllInstalaciones();
-             bindingSource1.DataSource = BD.TipusGestio.SelectAllTipoGestion();
 
-            
+            // bindingSourceInstalaciones.DataSource = BD.Instalacions.SelectAllInstalaciones();
+            cargardatos();
+
+
         }
 
         private void materialSingleLineTextFieldTitulo_TextChanged(object sender, EventArgs e)
@@ -50,6 +56,86 @@ namespace COMPLETE_FLAT_UI
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Instalaciones_Activated(object sender, EventArgs e)
+        {
+            cargardatos();
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            if (materialSingleLineTextFieldTitulo.Text != "")
+            {
+                //(String nom, String adreca, int idTipoGestion)//
+
+
+                mensaje = BD.Instalacions.InsertInstalacion(materialSingleLineTextFieldTitulo.Text, materialSingleLineTextFieldAdreca.Text, (int)comboBoxEsport.SelectedValue);
+
+                if (!mensaje.Equals(""))
+                {
+
+                    MessageBox.Show(mensaje, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    MessageBox.Show("SE HA DADO DE ALTA", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Posa el nom indicat", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void materialRaisedButton3_Click(object sender, EventArgs e)
+        {
+            DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el Registro?", "Eliminar Registro", MessageBoxButtons.YesNo);
+            if (resul == DialogResult.Yes)
+            {
+
+
+                //aqui el codigo para eliminar el registro
+                mensaje = BD.Instalacions.DeleteInstalacion((Instalacion)dataGridView1.CurrentRow.DataBoundItem);
+
+                if (!mensaje.Equals(""))
+                {
+                    MessageBox.Show(mensaje, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                }
+                else
+                {
+                    MessageBox.Show(mensaje, "BORRADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
+
+            }
+        }
+
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        {
+            mensaje = BD.Instalacions.UpdateInstalacion((int)dataGridView1.CurrentRow.Cells[0].Value, materialSingleLineTextFieldTitulo.Text, materialSingleLineTextFieldAdreca.Text, (int)comboBoxEsport.SelectedValue);
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.materialSingleLineTextFieldTitulo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            materialSingleLineTextFieldAdreca.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            comboBoxEsport.SelectedValue = dataGridView1.CurrentRow.Cells[2].Value;
+            
+
+        }
+
+        private void materialSingleLineTextFieldAdreca_Click(object sender, EventArgs e)
         {
 
         }

@@ -98,6 +98,7 @@ namespace COMPLETE_FLAT_UI
 
                 if (!mensaje.Equals(""))
                 {
+                    //aaa
                     MessageBox.Show(mensaje, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 

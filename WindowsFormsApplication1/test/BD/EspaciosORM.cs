@@ -8,7 +8,7 @@ namespace COMPLETE_FLAT_UI.BD
 {
     class EspaciosORM
     {
-        public static List<Espacio> SelectAllInstalaciones()
+        public static List<Espacio> SelectAllEspacios()
         {
             List<Espacio> _espacios =
                 (from e in ORM.bd.Espacio

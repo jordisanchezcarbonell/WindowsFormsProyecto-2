@@ -341,7 +341,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Instalaciones";
-            this.Text = "Instal·lacions i espais";
+            this.Text = "Instalacions";
             this.Activated += new System.EventHandler(this.Instalaciones_Activated);
             this.Load += new System.EventHandler(this.Instalaciones_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -128,7 +128,7 @@
             this.materialLabelExterior.AutoSize = true;
             this.materialLabelExterior.Depth = 0;
             this.materialLabelExterior.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelExterior.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabelExterior.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialLabelExterior.Location = new System.Drawing.Point(70, 232);
             this.materialLabelExterior.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelExterior.Name = "materialLabelExterior";
@@ -141,7 +141,7 @@
             this.materialLabelPreu.AutoSize = true;
             this.materialLabelPreu.Depth = 0;
             this.materialLabelPreu.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelPreu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabelPreu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialLabelPreu.Location = new System.Drawing.Point(70, 179);
             this.materialLabelPreu.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelPreu.Name = "materialLabelPreu";
@@ -154,7 +154,7 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialLabel2.Location = new System.Drawing.Point(70, 132);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
@@ -175,7 +175,7 @@
             this.actconcedidaDataGridViewTextBoxColumn,
             this.actdemandadasDataGridViewTextBoxColumn,
             this.instalacionDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.bindingSource1;
+            this.dataGridView1.DataSource = this.bindingSourceEspacios;
             this.dataGridView1.Location = new System.Drawing.Point(74, 270);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(641, 275);
@@ -239,7 +239,7 @@
             this.materialLabelInstalacion.AutoSize = true;
             this.materialLabelInstalacion.Depth = 0;
             this.materialLabelInstalacion.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelInstalacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabelInstalacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialLabelInstalacion.Location = new System.Drawing.Point(70, 86);
             this.materialLabelInstalacion.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelInstalacion.Name = "materialLabelInstalacion";

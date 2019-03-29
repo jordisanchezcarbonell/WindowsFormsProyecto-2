@@ -68,12 +68,12 @@ namespace COMPLETE_FLAT_UI
 
         private void materialRaisedButtonAgregar_Click(object sender, EventArgs e)
         {
-            if (materialSingleLineTextFieldTitulo.Text != "")
+            if (materialSingleLineTextFieldNombre.Text != "")
             {
                 //(String nom, String adreca, int idTipoGestion)//
 
 
-                mensaje = BD.Instalacions.InsertInstalacion(materialSingleLineTextFieldTitulo.Text, materialSingleLineTextFieldAdreca.Text, (int)comboBoxEsport.SelectedValue);
+                mensaje = BD.Instalacions.InsertInstalacion(materialSingleLineTextFieldNombre.Text, materialSingleLineTextFieldAdreca.Text, (int)comboBoxEsport.SelectedValue);
 
                 if (!mensaje.Equals(""))
                 {
@@ -103,7 +103,7 @@ namespace COMPLETE_FLAT_UI
 
 
                 //aqui el codigo para eliminar el registro
-                mensaje = BD.Instalacions.DeleteInstalacion((Instalacion)dataGridView1.CurrentRow.DataBoundItem);
+                mensaje = BD.Instalacions.DeleteInstalacion((Instalacion)dataGridViewInstalaciones.CurrentRow.DataBoundItem);
 
                 if (!mensaje.Equals(""))
                 {
@@ -124,14 +124,14 @@ namespace COMPLETE_FLAT_UI
 
         private void materialRaisedButtonModificar_Click(object sender, EventArgs e)
         {
-            mensaje = BD.Instalacions.UpdateInstalacion((int)dataGridView1.CurrentRow.Cells[0].Value, materialSingleLineTextFieldTitulo.Text, materialSingleLineTextFieldAdreca.Text, (int)comboBoxEsport.SelectedValue);
+            mensaje = BD.Instalacions.UpdateInstalacion((int)dataGridViewInstalaciones.CurrentRow.Cells[0].Value, materialSingleLineTextFieldNombre.Text, materialSingleLineTextFieldAdreca.Text, (int)comboBoxEsport.SelectedValue);
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewInstalaciones_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.materialSingleLineTextFieldTitulo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            materialSingleLineTextFieldAdreca.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            comboBoxEsport.SelectedValue = dataGridView1.CurrentRow.Cells[2].Value;
+            this.materialSingleLineTextFieldNombre.Text = dataGridViewInstalaciones.CurrentRow.Cells[1].Value.ToString();
+            materialSingleLineTextFieldAdreca.Text = dataGridViewInstalaciones.CurrentRow.Cells[3].Value.ToString();
+            comboBoxEsport.SelectedValue = dataGridViewInstalaciones.CurrentRow.Cells[2].Value;
             
 
         }

@@ -94,6 +94,7 @@
             this.materialSingleLineTextFieldPrecio.TabIndex = 31;
             this.materialSingleLineTextFieldPrecio.TabStop = false;
             this.materialSingleLineTextFieldPrecio.UseSystemPasswordChar = false;
+            this.materialSingleLineTextFieldPrecio.Click += new System.EventHandler(this.materialSingleLineTextFieldPrecio_Click);
             // 
             // materialSingleLineTextFieldNombre
             // 
@@ -268,6 +269,7 @@
             this.materialRaisedButtonBorrar.TabIndex = 41;
             this.materialRaisedButtonBorrar.Text = "Borra";
             this.materialRaisedButtonBorrar.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonBorrar.Click += new System.EventHandler(this.materialRaisedButtonBorrar_Click);
             // 
             // materialRaisedButtonModificar
             // 
@@ -283,6 +285,7 @@
             this.materialRaisedButtonModificar.TabIndex = 40;
             this.materialRaisedButtonModificar.Text = "Modifica";
             this.materialRaisedButtonModificar.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonModificar.Click += new System.EventHandler(this.materialRaisedButtonModificar_Click);
             // 
             // materialRaisedButtonAgregar
             // 
@@ -298,6 +301,7 @@
             this.materialRaisedButtonAgregar.TabIndex = 39;
             this.materialRaisedButtonAgregar.Text = "Agregar";
             this.materialRaisedButtonAgregar.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonAgregar.Click += new System.EventHandler(this.materialRaisedButtonAgregar_Click);
             // 
             // Espacios
             // 

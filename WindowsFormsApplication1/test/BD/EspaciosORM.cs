@@ -18,13 +18,14 @@ namespace COMPLETE_FLAT_UI.BD
 
             return _espacios;
         }
-        public static String InsertEspacio(String nom, double preu, int idInstalacio)
+        public static String InsertEspacio(String nom, double preu, int idInstalacio, Boolean exterior)
         {
             String mensaje = "";
             Espacio espacio = new Espacio();
             espacio.nombre = nom;
             espacio.precio = preu;
             espacio.id_instalacion = idInstalacio;
+            espacio.exterior = exterior;
 
             ORM.bd.Espacio.Add(espacio);
 
@@ -37,25 +38,25 @@ namespace COMPLETE_FLAT_UI.BD
         }
 
 
-        public static String UpdateEspacio(int id, String nom, String adreca, int idTipoGestion)
+        public static String UpdateEspacio(int id, String nom, Double preu, Boolean exterior)
         {
             String mensaje = "";
-            Instalacion instalacion = ORM.bd.Instalacion.Find(id);
+            Espacio espacio = ORM.bd.Espacio.Find(id);
 
-            instalacion.nombre = nom;
-            instalacion.direccion = adreca;
-            instalacion.id_tipo_gestion = idTipoGestion;
+            espacio.nombre = nom;
+            espacio.precio = preu;
+            espacio.exterior = exterior;
             mensaje = ORM.SaveChanges();
 
             return mensaje;
         }
 
-        public static String DeleteInstalacion(Instalacion id)
+        public static String DeleteEspacio(Espacio id)
         {
             String mensaje = "";
-            //Instalacion instalacion = ORM.bd.Instalacion.Find(id);
+            Espacio espacio = ORM.bd.Espacio.Find(id);
 
-            ORM.bd.Instalacion.Remove(id);
+            ORM.bd.Espacio.Remove(id);
 
             mensaje = ORM.SaveChanges();
 

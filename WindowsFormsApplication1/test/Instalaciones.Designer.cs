@@ -30,7 +30,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewInstalaciones = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_tipo_gestion = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -42,38 +42,38 @@
             this.materialRaisedButtonModificar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonAgregar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialSingleLineTextFieldAdreca = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextFieldTitulo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextFieldNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabelTipusGestio = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabelAdreca = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabelNom = new MaterialSkin.Controls.MaterialLabel();
             this.bindingSourceDiasSemana = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstalaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTipoGestion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiasSemana)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewInstalaciones
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridViewInstalaciones.AllowUserToAddRows = false;
+            this.dataGridViewInstalaciones.AllowUserToDeleteRows = false;
+            this.dataGridViewInstalaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewInstalaciones.AutoGenerateColumns = false;
+            this.dataGridViewInstalaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInstalaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nombreDataGridViewTextBoxColumn,
             this.id_tipo_gestion,
             this.direccion});
-            this.dataGridView1.DataSource = this.bindingSourceInstalaciones;
-            this.dataGridView1.Location = new System.Drawing.Point(54, 265);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(706, 209);
-            this.dataGridView1.TabIndex = 12;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridViewInstalaciones.DataSource = this.bindingSourceInstalaciones;
+            this.dataGridViewInstalaciones.Location = new System.Drawing.Point(54, 265);
+            this.dataGridViewInstalaciones.Name = "dataGridViewInstalaciones";
+            this.dataGridViewInstalaciones.Size = new System.Drawing.Size(706, 209);
+            this.dataGridViewInstalaciones.TabIndex = 12;
+            this.dataGridViewInstalaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridViewInstalaciones.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInstalaciones_CellDoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -195,23 +195,23 @@
             this.materialSingleLineTextFieldAdreca.UseSystemPasswordChar = false;
             this.materialSingleLineTextFieldAdreca.Click += new System.EventHandler(this.materialSingleLineTextFieldAdreca_Click);
             // 
-            // materialSingleLineTextFieldTitulo
+            // materialSingleLineTextFieldNombre
             // 
-            this.materialSingleLineTextFieldTitulo.Depth = 0;
-            this.materialSingleLineTextFieldTitulo.Hint = "";
-            this.materialSingleLineTextFieldTitulo.Location = new System.Drawing.Point(206, 100);
-            this.materialSingleLineTextFieldTitulo.MaxLength = 32767;
-            this.materialSingleLineTextFieldTitulo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextFieldTitulo.Name = "materialSingleLineTextFieldTitulo";
-            this.materialSingleLineTextFieldTitulo.PasswordChar = '\0';
-            this.materialSingleLineTextFieldTitulo.SelectedText = "";
-            this.materialSingleLineTextFieldTitulo.SelectionLength = 0;
-            this.materialSingleLineTextFieldTitulo.SelectionStart = 0;
-            this.materialSingleLineTextFieldTitulo.Size = new System.Drawing.Size(200, 23);
-            this.materialSingleLineTextFieldTitulo.TabIndex = 23;
-            this.materialSingleLineTextFieldTitulo.TabStop = false;
-            this.materialSingleLineTextFieldTitulo.UseSystemPasswordChar = false;
-            this.materialSingleLineTextFieldTitulo.Click += new System.EventHandler(this.materialSingleLineTextFieldTitulo_Click);
+            this.materialSingleLineTextFieldNombre.Depth = 0;
+            this.materialSingleLineTextFieldNombre.Hint = "";
+            this.materialSingleLineTextFieldNombre.Location = new System.Drawing.Point(206, 100);
+            this.materialSingleLineTextFieldNombre.MaxLength = 32767;
+            this.materialSingleLineTextFieldNombre.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextFieldNombre.Name = "materialSingleLineTextFieldNombre";
+            this.materialSingleLineTextFieldNombre.PasswordChar = '\0';
+            this.materialSingleLineTextFieldNombre.SelectedText = "";
+            this.materialSingleLineTextFieldNombre.SelectionLength = 0;
+            this.materialSingleLineTextFieldNombre.SelectionStart = 0;
+            this.materialSingleLineTextFieldNombre.Size = new System.Drawing.Size(200, 23);
+            this.materialSingleLineTextFieldNombre.TabIndex = 23;
+            this.materialSingleLineTextFieldNombre.TabStop = false;
+            this.materialSingleLineTextFieldNombre.UseSystemPasswordChar = false;
+            this.materialSingleLineTextFieldNombre.Click += new System.EventHandler(this.materialSingleLineTextFieldTitulo_Click);
             // 
             // materialLabelTipusGestio
             // 
@@ -266,18 +266,18 @@
             this.Controls.Add(this.materialRaisedButtonModificar);
             this.Controls.Add(this.materialRaisedButtonAgregar);
             this.Controls.Add(this.materialSingleLineTextFieldAdreca);
-            this.Controls.Add(this.materialSingleLineTextFieldTitulo);
+            this.Controls.Add(this.materialSingleLineTextFieldNombre);
             this.Controls.Add(this.materialLabelTipusGestio);
             this.Controls.Add(this.materialLabelAdreca);
             this.Controls.Add(this.materialLabelNom);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewInstalaciones);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Instalaciones";
             this.Text = "Instalacions";
             this.Activated += new System.EventHandler(this.Instalaciones_Activated);
             this.Load += new System.EventHandler(this.Instalaciones_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstalaciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTipoGestion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalaciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiasSemana)).EndInit();
@@ -287,13 +287,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewInstalaciones;
         private System.Windows.Forms.ComboBox comboBoxEsport;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonBorrar;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonModificar;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonAgregar;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldAdreca;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldTitulo;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldNombre;
         private MaterialSkin.Controls.MaterialLabel materialLabelTipusGestio;
         private MaterialSkin.Controls.MaterialLabel materialLabelAdreca;
         private MaterialSkin.Controls.MaterialLabel materialLabelNom;

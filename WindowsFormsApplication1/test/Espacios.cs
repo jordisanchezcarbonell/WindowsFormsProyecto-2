@@ -12,6 +12,7 @@ namespace COMPLETE_FLAT_UI
 {
     public partial class Espacios : Estilo
     {
+        String mensaje = "";
         public Espacios()
         {
             InitializeComponent();
@@ -42,6 +43,74 @@ namespace COMPLETE_FLAT_UI
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialRaisedButtonAgregar_Click(object sender, EventArgs e)
+        {
+            if (materialSingleLineTextFieldNombre.Text != "")
+            {
+                //(String nom, String adreca, int idTipoGestion)//
+
+
+                mensaje = BD.EspaciosORM.InsertEspacio(materialSingleLineTextFieldNombre.Text, Double.Parse(materialSingleLineTextFieldPrecio.Text), (int)comboBoxInstalacion.SelectedValue, (Boolean)comboBoxExterior.SelectedValue);
+
+                if (!mensaje.Equals(""))
+                {
+
+                    MessageBox.Show(mensaje, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    MessageBox.Show("SE HA DADO DE ALTA", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Posa el nom indicat", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void materialRaisedButtonModificar_Click(object sender, EventArgs e)
+        {
+            mensaje = BD.EspaciosORM.UpdateEspacio((int)dataGridViewEspacios.CurrentRow.Cells[0].Value, materialSingleLineTextFieldNombre.Text, Double.Parse(materialSingleLineTextFieldPrecio.Text), (Boolean)comboBoxInstalacion.SelectedValue);
+        }
+
+
+
+        private void materialSingleLineTextFieldPrecio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialRaisedButtonBorrar_Click(object sender, EventArgs e)
+        {
+            DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el Registro?", "Eliminar Registro", MessageBoxButtons.YesNo);
+            if (resul == DialogResult.Yes)
+            {
+
+
+                //aqui el codigo para eliminar el registro
+                mensaje = BD.EspaciosORM.DeleteEspacio((Espacio)dataGridViewEspacios.CurrentRow.DataBoundItem);
+
+                if (!mensaje.Equals(""))
+                {
+                    MessageBox.Show(mensaje, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                }
+                else
+                {
+                    MessageBox.Show(mensaje, "BORRADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
+
+            }
         }
     }
 }

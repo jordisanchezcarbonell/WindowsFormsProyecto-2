@@ -67,7 +67,7 @@ namespace COMPLETE_FLAT_UI.BD
         public static String DeleteInstalacion(Instalacion id)
         {
             String mensaje = "";
-            //Instalacion instalacion = ORM.bd.Instalacion.Find(id);
+            Instalacion instalacion = ORM.bd.Instalacion.Find(id);
 
             ORM.bd.Instalacion.Remove(id);
 

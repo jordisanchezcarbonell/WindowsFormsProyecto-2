@@ -22,7 +22,8 @@ namespace COMPLETE_FLAT_UI
         {
 
             bindingSourceInstalaciones.DataSource = BD.Instalacions.SelectAllInstalaciones();
-            bindingSource1.DataSource = BD.TipusGestio.SelectAllTipoGestion();
+            bindingSourceTipoGestion.DataSource = BD.TipusGestio.SelectAllTipoGestion();
+            bindingSourceDiasSemana.DataSource = BD.DiasORM.SelectAllDias();
         }
 
         private void Instalaciones_Load(object sender, EventArgs e)
@@ -65,7 +66,7 @@ namespace COMPLETE_FLAT_UI
             cargardatos();
         }
 
-        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        private void materialRaisedButtonAgregar_Click(object sender, EventArgs e)
         {
             if (materialSingleLineTextFieldTitulo.Text != "")
             {
@@ -94,7 +95,7 @@ namespace COMPLETE_FLAT_UI
             }
         }
 
-        private void materialRaisedButton3_Click(object sender, EventArgs e)
+        private void materialRaisedButtonBorrar_Click(object sender, EventArgs e)
         {
             DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el Registro?", "Eliminar Registro", MessageBoxButtons.YesNo);
             if (resul == DialogResult.Yes)
@@ -121,7 +122,7 @@ namespace COMPLETE_FLAT_UI
             }
         }
 
-        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        private void materialRaisedButtonModificar_Click(object sender, EventArgs e)
         {
             mensaje = BD.Instalacions.UpdateInstalacion((int)dataGridView1.CurrentRow.Cells[0].Value, materialSingleLineTextFieldTitulo.Text, materialSingleLineTextFieldAdreca.Text, (int)comboBoxEsport.SelectedValue);
         }

@@ -119,6 +119,7 @@
     <Compile Include="Admin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="BD\DiasORM.cs" />
     <Compile Include="BD\Entidades.cs" />
     <Compile Include="BD\EspaciosORM.cs" />
     <Compile Include="BD\HorarisInstalacions.cs" />

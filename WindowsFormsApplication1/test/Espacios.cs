@@ -28,13 +28,13 @@ namespace COMPLETE_FLAT_UI
            
         }
 
-        private void comboBoxEsport_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxInstalacion_SelectedIndexChanged(object sender, EventArgs e)
         {
             Instalacion int2;
             //QWEQWE
-            if (comboBoxEsport.SelectedItem != null)
+            if (comboBoxInstalacion.SelectedItem != null)
             {
-                int2 = (Instalacion)comboBoxEsport.SelectedItem;
+                int2 = (Instalacion)comboBoxInstalacion.SelectedItem;
                 bindingSourceEspacios.DataSource = int2.Espacio.ToList();
             }
         }

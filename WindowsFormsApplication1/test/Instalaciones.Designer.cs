@@ -34,27 +34,23 @@
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_tipo_gestion = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceTipoGestion = new System.Windows.Forms.BindingSource(this.components);
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceInstalaciones = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxEsport = new System.Windows.Forms.ComboBox();
-            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonBorrar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonModificar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonAgregar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialSingleLineTextFieldAdreca = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextFieldTitulo = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialLabelHorari = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabelTipusGestio = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabelAdreca = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabelNom = new MaterialSkin.Controls.MaterialLabel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.comboBoxDia = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDiasSemana = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTipoGestion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalaciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiasSemana)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -94,7 +90,7 @@
             // id_tipo_gestion
             // 
             this.id_tipo_gestion.DataPropertyName = "id_tipo_gestion";
-            this.id_tipo_gestion.DataSource = this.bindingSource1;
+            this.id_tipo_gestion.DataSource = this.bindingSourceTipoGestion;
             this.id_tipo_gestion.DisplayMember = "nombre";
             this.id_tipo_gestion.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.id_tipo_gestion.HeaderText = "id_tipo_gestion";
@@ -103,10 +99,10 @@
             this.id_tipo_gestion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.id_tipo_gestion.ValueMember = "id";
             // 
-            // bindingSource1
+            // bindingSourceTipoGestion
             // 
-            this.bindingSource1.DataSource = typeof(COMPLETE_FLAT_UI.Tipo_gestion);
-            this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
+            this.bindingSourceTipoGestion.DataSource = typeof(COMPLETE_FLAT_UI.Tipo_gestion);
+            this.bindingSourceTipoGestion.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
             // 
             // direccion
             // 
@@ -122,7 +118,7 @@
             // 
             this.comboBoxEsport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxEsport.DataSource = this.bindingSource1;
+            this.comboBoxEsport.DataSource = this.bindingSourceTipoGestion;
             this.comboBoxEsport.DisplayMember = "nombre";
             this.comboBoxEsport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEsport.FormattingEnabled = true;
@@ -133,53 +129,53 @@
             this.comboBoxEsport.TabIndex = 29;
             this.comboBoxEsport.ValueMember = "id";
             // 
-            // materialRaisedButton3
+            // materialRaisedButtonBorrar
             // 
-            this.materialRaisedButton3.AutoSize = true;
-            this.materialRaisedButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Icon = null;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(491, 191);
-            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton3.Name = "materialRaisedButton3";
-            this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(65, 36);
-            this.materialRaisedButton3.TabIndex = 28;
-            this.materialRaisedButton3.Text = "Borra";
-            this.materialRaisedButton3.UseVisualStyleBackColor = true;
-            this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
+            this.materialRaisedButtonBorrar.AutoSize = true;
+            this.materialRaisedButtonBorrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButtonBorrar.Depth = 0;
+            this.materialRaisedButtonBorrar.Icon = null;
+            this.materialRaisedButtonBorrar.Location = new System.Drawing.Point(626, 211);
+            this.materialRaisedButtonBorrar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonBorrar.Name = "materialRaisedButtonBorrar";
+            this.materialRaisedButtonBorrar.Primary = true;
+            this.materialRaisedButtonBorrar.Size = new System.Drawing.Size(65, 36);
+            this.materialRaisedButtonBorrar.TabIndex = 28;
+            this.materialRaisedButtonBorrar.Text = "Borra";
+            this.materialRaisedButtonBorrar.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonBorrar.Click += new System.EventHandler(this.materialRaisedButtonBorrar_Click);
             // 
-            // materialRaisedButton2
+            // materialRaisedButtonModificar
             // 
-            this.materialRaisedButton2.AutoSize = true;
-            this.materialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Icon = null;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(491, 135);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(85, 36);
-            this.materialRaisedButton2.TabIndex = 27;
-            this.materialRaisedButton2.Text = "Modifica";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
-            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
+            this.materialRaisedButtonModificar.AutoSize = true;
+            this.materialRaisedButtonModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButtonModificar.Depth = 0;
+            this.materialRaisedButtonModificar.Icon = null;
+            this.materialRaisedButtonModificar.Location = new System.Drawing.Point(626, 155);
+            this.materialRaisedButtonModificar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonModificar.Name = "materialRaisedButtonModificar";
+            this.materialRaisedButtonModificar.Primary = true;
+            this.materialRaisedButtonModificar.Size = new System.Drawing.Size(85, 36);
+            this.materialRaisedButtonModificar.TabIndex = 27;
+            this.materialRaisedButtonModificar.Text = "Modifica";
+            this.materialRaisedButtonModificar.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonModificar.Click += new System.EventHandler(this.materialRaisedButtonModificar_Click);
             // 
-            // materialRaisedButton1
+            // materialRaisedButtonAgregar
             // 
-            this.materialRaisedButton1.AutoSize = true;
-            this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Icon = null;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(493, 83);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(83, 36);
-            this.materialRaisedButton1.TabIndex = 26;
-            this.materialRaisedButton1.Text = "Agregar";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
-            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
+            this.materialRaisedButtonAgregar.AutoSize = true;
+            this.materialRaisedButtonAgregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButtonAgregar.Depth = 0;
+            this.materialRaisedButtonAgregar.Icon = null;
+            this.materialRaisedButtonAgregar.Location = new System.Drawing.Point(628, 103);
+            this.materialRaisedButtonAgregar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonAgregar.Name = "materialRaisedButtonAgregar";
+            this.materialRaisedButtonAgregar.Primary = true;
+            this.materialRaisedButtonAgregar.Size = new System.Drawing.Size(83, 36);
+            this.materialRaisedButtonAgregar.TabIndex = 26;
+            this.materialRaisedButtonAgregar.Text = "Agregar";
+            this.materialRaisedButtonAgregar.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonAgregar.Click += new System.EventHandler(this.materialRaisedButtonAgregar_Click);
             // 
             // materialSingleLineTextFieldAdreca
             // 
@@ -216,19 +212,6 @@
             this.materialSingleLineTextFieldTitulo.TabStop = false;
             this.materialSingleLineTextFieldTitulo.UseSystemPasswordChar = false;
             this.materialSingleLineTextFieldTitulo.Click += new System.EventHandler(this.materialSingleLineTextFieldTitulo_Click);
-            // 
-            // materialLabelHorari
-            // 
-            this.materialLabelHorari.AutoSize = true;
-            this.materialLabelHorari.Depth = 0;
-            this.materialLabelHorari.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelHorari.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabelHorari.Location = new System.Drawing.Point(57, 208);
-            this.materialLabelHorari.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabelHorari.Name = "materialLabelHorari";
-            this.materialLabelHorari.Size = new System.Drawing.Size(83, 19);
-            this.materialLabelHorari.TabIndex = 22;
-            this.materialLabelHorari.Text = "Horari Inici";
             // 
             // materialLabelTipusGestio
             // 
@@ -269,71 +252,21 @@
             this.materialLabelNom.TabIndex = 19;
             this.materialLabelNom.Text = "Nom";
             // 
-            // dateTimePicker1
+            // bindingSourceDiasSemana
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(206, 208);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(96, 20);
-            this.dateTimePicker1.TabIndex = 30;
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabel1.Location = new System.Drawing.Point(57, 243);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(87, 19);
-            this.materialLabel1.TabIndex = 31;
-            this.materialLabel1.Text = "Horari Final";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(206, 243);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(96, 20);
-            this.dateTimePicker2.TabIndex = 32;
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabel2.Location = new System.Drawing.Point(326, 210);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(31, 19);
-            this.materialLabel2.TabIndex = 33;
-            this.materialLabel2.Text = "Dia";
-            // 
-            // comboBoxDia
-            // 
-            this.comboBoxDia.FormattingEnabled = true;
-            this.comboBoxDia.Location = new System.Drawing.Point(364, 207);
-            this.comboBoxDia.Name = "comboBoxDia";
-            this.comboBoxDia.Size = new System.Drawing.Size(103, 21);
-            this.comboBoxDia.TabIndex = 34;
+            this.bindingSourceDiasSemana.DataSource = typeof(COMPLETE_FLAT_UI.Dias_Semana);
             // 
             // Instalaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 486);
-            this.Controls.Add(this.comboBoxDia);
-            this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.comboBoxEsport);
-            this.Controls.Add(this.materialRaisedButton3);
-            this.Controls.Add(this.materialRaisedButton2);
-            this.Controls.Add(this.materialRaisedButton1);
+            this.Controls.Add(this.materialRaisedButtonBorrar);
+            this.Controls.Add(this.materialRaisedButtonModificar);
+            this.Controls.Add(this.materialRaisedButtonAgregar);
             this.Controls.Add(this.materialSingleLineTextFieldAdreca);
             this.Controls.Add(this.materialSingleLineTextFieldTitulo);
-            this.Controls.Add(this.materialLabelHorari);
             this.Controls.Add(this.materialLabelTipusGestio);
             this.Controls.Add(this.materialLabelAdreca);
             this.Controls.Add(this.materialLabelNom);
@@ -345,8 +278,9 @@
             this.Activated += new System.EventHandler(this.Instalaciones_Activated);
             this.Load += new System.EventHandler(this.Instalaciones_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTipoGestion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiasSemana)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,25 +289,20 @@
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBoxEsport;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonBorrar;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonModificar;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonAgregar;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldAdreca;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldTitulo;
-        private MaterialSkin.Controls.MaterialLabel materialLabelHorari;
         private MaterialSkin.Controls.MaterialLabel materialLabelTipusGestio;
         private MaterialSkin.Controls.MaterialLabel materialLabelAdreca;
         private MaterialSkin.Controls.MaterialLabel materialLabelNom;
-        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.BindingSource bindingSourceTipoGestion;
         private System.Windows.Forms.BindingSource bindingSourceInstalaciones;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private System.Windows.Forms.ComboBox comboBoxDia;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn id_tipo_gestion;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private System.Windows.Forms.BindingSource bindingSourceDiasSemana;
     }
 }

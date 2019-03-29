@@ -18,18 +18,56 @@ namespace COMPLETE_FLAT_UI.BD
 
             return _espacios;
         }
-
-     /*   public static List<Espacio> SelectEspaciosByInstalacion(int id_instalacion)
+        public static String InsertEspacio(String nom, double preu, int idInstalacio)
         {
-            List<Espacio> _espacios =
-                (from e in ORM.bd.Espacio
-                 where e.id_instalacion.Contains(id_instalacion)
-                 // orderby e.nombre
-                 select e
-                 ).ToList();
+            String mensaje = "";
+            Espacio espacio = new Espacio();
+            espacio.nombre = nom;
+            espacio.precio = preu;
+            espacio.id_instalacion = idInstalacio;
 
-            return _espacios;
+            ORM.bd.Espacio.Add(espacio);
+
+            ORM.SaveChanges();
+
+            mensaje = ORM.SaveChanges();
+
+            return mensaje;
+
         }
-        */
+
+
+        public static String UpdateEspacio(int id, String nom, String adreca, int idTipoGestion)
+        {
+            String mensaje = "";
+            Instalacion instalacion = ORM.bd.Instalacion.Find(id);
+
+            instalacion.nombre = nom;
+            instalacion.direccion = adreca;
+            instalacion.id_tipo_gestion = idTipoGestion;
+            mensaje = ORM.SaveChanges();
+
+            return mensaje;
+        }
+
+        public static String DeleteInstalacion(Instalacion id)
+        {
+            String mensaje = "";
+            //Instalacion instalacion = ORM.bd.Instalacion.Find(id);
+
+            ORM.bd.Instalacion.Remove(id);
+
+            mensaje = ORM.SaveChanges();
+
+            return mensaje;
+
+
+        }
+
+
     }
+
+
+
 }
+

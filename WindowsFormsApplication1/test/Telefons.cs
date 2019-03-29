@@ -21,6 +21,7 @@ namespace COMPLETE_FLAT_UI
         private void Telefons_Load(object sender, EventArgs e)
         {
             carregarDadesGrid();
+            netejarCamps();
         }
 
 
@@ -66,12 +67,13 @@ namespace COMPLETE_FLAT_UI
                 && comboBoxEntitats.SelectedValue != null)
             {
                 string missatge = BD.TelefonsORM.InsertTelefon(materialSingleLineTextFieldTelefon.Text,
-                    materialSingleLineTextFieldRao.Text, int.Parse(comboBoxEntitats.ValueMember));
+                    materialSingleLineTextFieldRao.Text, int.Parse(comboBoxEntitats.SelectedValue.ToString()));
 
                 //Si no ha retornat res, recarrego la grid. Sinó mostro un missatge d'error:
                 if (missatge.Equals(""))
                 {
                     carregarDadesGrid();
+                    netejarCamps();
                 }
                 else
                 {
@@ -87,7 +89,7 @@ namespace COMPLETE_FLAT_UI
             Telefonos telefonModificar = (Telefonos)dataGridViewTelefons.CurrentRow.DataBoundItem;
             telefonModificar.telefono = materialSingleLineTextFieldTelefon.Text;
             telefonModificar.razon = materialSingleLineTextFieldRao.Text;
-            telefonModificar.id_entidad = int.Parse(comboBoxEntitats.ValueMember);
+            telefonModificar.id_entidad = int.Parse(comboBoxEntitats.SelectedValue.ToString());
 
             //Faig l'update i recarrego la grid o mostro un missatge d'error en funció del resultat del update:
             string missatge = BD.TelefonsORM.UpdateTelefon(telefonModificar.id, telefonModificar.telefono,
@@ -107,7 +109,7 @@ namespace COMPLETE_FLAT_UI
         {
             //Recupero l'objecte Telefonos seleccionat a la base de dades i l'esborro:
             Telefonos telefonEsborrar = (Telefonos)dataGridViewTelefons.CurrentRow.DataBoundItem;
-            string missatge = BD.EntitatsORM.deleteEntitat(telefonEsborrar.id);
+            string missatge = BD.TelefonsORM.deleteTelefon(telefonEsborrar.id);
 
             //En funció del missatge retornat pel mètode delete, recarrego la grid o mostro un missatge
             if (missatge.Equals(""))
@@ -120,9 +122,31 @@ namespace COMPLETE_FLAT_UI
             }
         }
 
+
         private void materialRaisedButtonTancar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+
+        private void netejarCamps()
+        {
+            materialSingleLineTextFieldTelefon.Clear();
+            materialSingleLineTextFieldRao.Clear();
+
+            dataGridViewTelefons.ClearSelection();
+            dataGridViewTelefons.CurrentCell = null;
+            comboBoxEntitats.SelectedIndex = -1;
+        }
+
+        private void dataGridViewTelefons_SelectionChanged(object sender, EventArgs e)
+        {
+            Telefonos telefonModificar = (Telefonos)dataGridViewTelefons.CurrentRow.DataBoundItem;
+            materialSingleLineTextFieldTelefon.Text = telefonModificar.telefono;
+            materialSingleLineTextFieldRao.Text = telefonModificar.razon;
+
+            //Utilitzo el .SelectedValue perquè és el que està vinculat amb el DisplayMember
+            comboBoxEntitats.SelectedValue = telefonModificar.id_entidad;
         }
     }
 }

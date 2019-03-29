@@ -31,7 +31,7 @@ namespace COMPLETE_FLAT_UI
         private void comboBoxEsport_SelectedIndexChanged(object sender, EventArgs e)
         {
             Instalacion int2;
-
+            //QWEQWE
             if (comboBoxEsport.SelectedItem != null)
             {
                 int2 = (Instalacion)comboBoxEsport.SelectedItem;

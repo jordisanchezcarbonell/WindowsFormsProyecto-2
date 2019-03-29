@@ -31,7 +31,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_tipo_gestion = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceInstalaciones = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxEsport = new System.Windows.Forms.ComboBox();
             this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -48,10 +52,6 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.comboBoxDia = new System.Windows.Forms.ComboBox();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_tipo_gestion = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalaciones)).BeginInit();
@@ -79,10 +79,40 @@
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // id_tipo_gestion
+            // 
+            this.id_tipo_gestion.DataPropertyName = "id_tipo_gestion";
+            this.id_tipo_gestion.DataSource = this.bindingSource1;
+            this.id_tipo_gestion.DisplayMember = "nombre";
+            this.id_tipo_gestion.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.id_tipo_gestion.HeaderText = "id_tipo_gestion";
+            this.id_tipo_gestion.Name = "id_tipo_gestion";
+            this.id_tipo_gestion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.id_tipo_gestion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.id_tipo_gestion.ValueMember = "id";
+            // 
             // bindingSource1
             // 
             this.bindingSource1.DataSource = typeof(COMPLETE_FLAT_UI.Tipo_gestion);
             this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
+            // 
+            // direccion
+            // 
+            this.direccion.DataPropertyName = "direccion";
+            this.direccion.HeaderText = "direccion";
+            this.direccion.Name = "direccion";
             // 
             // bindingSourceInstalaciones
             // 
@@ -286,36 +316,6 @@
             this.comboBoxDia.Name = "comboBoxDia";
             this.comboBoxDia.Size = new System.Drawing.Size(103, 21);
             this.comboBoxDia.TabIndex = 34;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // id_tipo_gestion
-            // 
-            this.id_tipo_gestion.DataPropertyName = "id_tipo_gestion";
-            this.id_tipo_gestion.DataSource = this.bindingSource1;
-            this.id_tipo_gestion.DisplayMember = "nombre";
-            this.id_tipo_gestion.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.id_tipo_gestion.HeaderText = "id_tipo_gestion";
-            this.id_tipo_gestion.Name = "id_tipo_gestion";
-            this.id_tipo_gestion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.id_tipo_gestion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.id_tipo_gestion.ValueMember = "id";
-            // 
-            // direccion
-            // 
-            this.direccion.DataPropertyName = "direccion";
-            this.direccion.HeaderText = "direccion";
-            this.direccion.Name = "direccion";
             // 
             // Instalaciones
             // 

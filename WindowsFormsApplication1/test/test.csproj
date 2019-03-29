@@ -120,6 +120,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="BD\Entidades.cs" />
+    <Compile Include="BD\EspaciosORM.cs" />
     <Compile Include="BD\HorarisInstalacions.cs" />
     <Compile Include="BD\Instalacions.cs" />
     <Compile Include="BD\ORM.cs" />
@@ -157,6 +158,12 @@
     </Compile>
     <Compile Include="Espacio.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Espacios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Espacios.Designer.cs">
+      <DependentUpon>Espacios.cs</DependentUpon>
     </Compile>
     <Compile Include="Estilo.cs">
       <SubType>Form</SubType>
@@ -270,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Entitats.resx">
       <DependentUpon>Entitats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Espacios.resx">
+      <DependentUpon>Espacios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estilo.resx">
       <DependentUpon>Estilo.cs</DependentUpon>

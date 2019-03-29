@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlowFishCS;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity.Core;
 using System.Data.SqlClient;
@@ -8,8 +9,9 @@ using System.Threading.Tasks;
 
 namespace COMPLETE_FLAT_UI.BD
 {
-    class EntitatsORM
+    public class EntitatsORM
     {
+        
         public static string SelectAllEntitats(ref List<Entidad> llistaEntitats)
         {
             string missatgeRetornar = "";
@@ -46,7 +48,7 @@ namespace COMPLETE_FLAT_UI.BD
             novaEntitat.nif = nif;
             novaEntitat.correo = correu;
             novaEntitat.contrasenya = contrasenya;
-
+            
             //Afegeixo l'objecte a la base de dades i guardo els canvis:
             ORM.bd.Entidad.Add(novaEntitat);
             missatgeRetornar = ORM.SaveChanges();
@@ -88,9 +90,6 @@ namespace COMPLETE_FLAT_UI.BD
 
             return missatge;
         }
-
-
-
 
     }
 }

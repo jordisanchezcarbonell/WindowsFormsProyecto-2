@@ -691,7 +691,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="contrasenya" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="contrasenya" Type="String" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="temporada" Type="Int32" Nullable="false" />
           <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nif" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />

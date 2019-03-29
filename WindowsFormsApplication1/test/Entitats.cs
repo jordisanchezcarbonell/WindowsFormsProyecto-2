@@ -1,4 +1,5 @@
-﻿using MaterialSkin;
+﻿using BlowFishCS;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,12 @@ namespace COMPLETE_FLAT_UI
 {
     public partial class Entitats : Estilo
     {
+        //Aquest objecte és el que utilitzaré per encriptar amb BlowFish:
+        BlowFish blowFish = new BlowFish("04B915BA43FEB5B6");
+        
+        //Creo una constant per guardar la llargada mínima de la contrasenya:
+        const int LLARGADA_MINIMA_CONTRASENYA = 8;
+
         public Entitats()
         {
             InitializeComponent();
@@ -56,22 +63,25 @@ namespace COMPLETE_FLAT_UI
             //Variable on guardaré el número de temporada si he pogut convertir correctament de string a int:
             int numTemporada;
             
-            //Comprovo que les contrasenyes siguin iguals, que tinguin 8 caràcters
+            //Comprovo que les contrasenyes siguin iguals, que tinguin com a mínim 8 caràcters
             if (materialSingleLineTextFieldContrasenya.TextLength == materialSingleLineTextFieldRepetirContrasenya.TextLength
-                 && materialSingleLineTextFieldContrasenya.TextLength == 8)
+                 && materialSingleLineTextFieldContrasenya.TextLength >= LLARGADA_MINIMA_CONTRASENYA)
             {
 
                 //Un cop he comprovat la contrasenya, comprovo que el que hi ha al camp temporada sigui un número (int):
                 if (int.TryParse(materialSingleLineTextFieldTemporada.Text, out numTemporada))
                 {
 
-                    NumeroNif numeroNif = new NumeroNif(materialSingleLineTextFieldNif.Text);
-                    if (numeroNif.EsCorrecto)
+                    //NumeroNif numeroNif = new NumeroNif(materialSingleLineTextFieldNif.Text);numeroNif.EsCorrecto
+                    if (true)
                     {
+                        //Encripto la contrasenya:
+                        string contrasenyaEncriptada = encriptarBlowFish(materialSingleLineTextFieldContrasenya.Text);
+                        
                         //Faig un insert a la base de dades passant-li com a paràmetres el contingut dels camps del formulari:
                         string missatge = BD.EntitatsORM.InsertEntitat(materialSingleLineTextFieldNom.Text, numTemporada,
                             materialSingleLineTextFieldAdreca.Text, materialSingleLineTextFieldNif.Text, materialSingleLineTextFieldCorreo.Text,
-                            materialSingleLineTextFieldContrasenya.Text);
+                            contrasenyaEncriptada);
 
                         if (missatge.Equals(""))
                         {
@@ -114,11 +124,14 @@ namespace COMPLETE_FLAT_UI
             entitatRecuperada.direccion = materialSingleLineTextFieldAdreca.Text;
             entitatRecuperada.nif = materialSingleLineTextFieldNif.Text;
             entitatRecuperada.correo = materialSingleLineTextFieldCorreo.Text;
-            entitatRecuperada.contrasenya = materialSingleLineTextFieldContrasenya.Text;
+            //entitatRecuperada.contrasenya = materialSingleLineTextFieldContrasenya.Text;
+
+            //Encripto la contrasenya modificada:
+            string contrasenyaEncriptada = encriptarBlowFish(materialSingleLineTextFieldContrasenya.Text);
 
             string missatge = BD.EntitatsORM.UpdateEntitat(entitatRecuperada.id, entitatRecuperada.nombre,
                 entitatRecuperada.temporada, entitatRecuperada.direccion, entitatRecuperada.nif, 
-                entitatRecuperada.correo, entitatRecuperada.contrasenya);
+                entitatRecuperada.correo, contrasenyaEncriptada);
 
             if (missatge.Equals(""))
             {
@@ -197,5 +210,23 @@ namespace COMPLETE_FLAT_UI
             Telefons telefons = new Telefons();
             telefons.ShowDialog();
         }
+
+
+        //Mètodes per encriptar i desencriptar:
+        public string encriptarBlowFish(string textEncriptar)
+        {
+            string textEncriptat = blowFish.Encrypt_CBC(textEncriptar);
+
+            return textEncriptat;
+        }
+
+
+        public string desencriptarBlowFish(string textDesencriptar)
+        {
+            string textDesencriptat = blowFish.Encrypt_CBC(textDesencriptar);
+
+            return textDesencriptat;
+        }
+
     }
 }

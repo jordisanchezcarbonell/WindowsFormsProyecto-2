@@ -118,7 +118,7 @@
             // 
             this.comboBoxEsport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxEsport.DataSource = this.bindingSourceTipoGestion;
+            this.comboBoxEsport.DataSource = this.bindingSourceInstalaciones;
             this.comboBoxEsport.DisplayMember = "nombre";
             this.comboBoxEsport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEsport.FormattingEnabled = true;

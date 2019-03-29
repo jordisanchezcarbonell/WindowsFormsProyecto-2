@@ -32,7 +32,6 @@ namespace COMPLETE_FLAT_UI
         private void comboBoxInstalacion_SelectedIndexChanged(object sender, EventArgs e)
         {
             Instalacion int2;
-            //QWEQWE
             if (comboBoxInstalacion.SelectedItem != null)
             {
                 int2 = (Instalacion)comboBoxInstalacion.SelectedItem;
@@ -49,10 +48,7 @@ namespace COMPLETE_FLAT_UI
         {
             if (materialSingleLineTextFieldNombre.Text != "")
             {
-                //(String nom, String adreca, int idTipoGestion)//
-
-
-                mensaje = BD.EspaciosORM.InsertEspacio(materialSingleLineTextFieldNombre.Text, Double.Parse(materialSingleLineTextFieldPrecio.Text), (int)comboBoxInstalacion.SelectedValue, (Boolean)comboBoxExterior.SelectedValue);
+                mensaje = BD.EspaciosORM.InsertEspacio(materialSingleLineTextFieldNombre.Text, Convert.ToDouble(materialSingleLineTextFieldPrecio.Text), (int)comboBoxInstalacion.SelectedValue, (Boolean)comboBoxExterior.SelectedValue);
 
                 if (!mensaje.Equals(""))
                 {
@@ -98,7 +94,6 @@ namespace COMPLETE_FLAT_UI
 
                 if (!mensaje.Equals(""))
                 {
-                    //aaa
                     MessageBox.Show(mensaje, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 

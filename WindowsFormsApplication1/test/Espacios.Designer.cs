@@ -34,6 +34,7 @@
             this.materialSingleLineTextFieldPrecio = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextFieldNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.comboBoxExterior = new System.Windows.Forms.ComboBox();
+            this.bindingSourceEspacios = new System.Windows.Forms.BindingSource(this.components);
             this.materialLabelExterior = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabelPreu = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
@@ -46,15 +47,14 @@
             this.actconcedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actdemandadasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.instalacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceEspacios = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.materialLabelInstalacion = new MaterialSkin.Controls.MaterialLabel();
             this.materialRaisedButtonBorrar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonModificar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonAgregar = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalaciones)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspacios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspacios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspacios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,7 +117,8 @@
             // 
             this.comboBoxExterior.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxExterior.DisplayMember = "nombre";
+            this.comboBoxExterior.DataSource = this.bindingSourceEspacios;
+            this.comboBoxExterior.DisplayMember = "exterior";
             this.comboBoxExterior.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxExterior.FormattingEnabled = true;
             this.comboBoxExterior.Location = new System.Drawing.Point(169, 230);
@@ -126,6 +127,10 @@
             this.comboBoxExterior.Size = new System.Drawing.Size(202, 21);
             this.comboBoxExterior.TabIndex = 33;
             this.comboBoxExterior.ValueMember = "id";
+            // 
+            // bindingSourceEspacios
+            // 
+            this.bindingSourceEspacios.DataSource = typeof(COMPLETE_FLAT_UI.Espacio);
             // 
             // materialLabelExterior
             // 
@@ -233,10 +238,6 @@
             this.instalacionDataGridViewTextBoxColumn.HeaderText = "Instalacion";
             this.instalacionDataGridViewTextBoxColumn.Name = "instalacionDataGridViewTextBoxColumn";
             // 
-            // bindingSourceEspacios
-            // 
-            this.bindingSourceEspacios.DataSource = typeof(COMPLETE_FLAT_UI.Espacio);
-            // 
             // bindingSource1
             // 
             this.bindingSource1.DataSource = typeof(COMPLETE_FLAT_UI.Espacio);
@@ -324,8 +325,8 @@
             this.Text = "Espacios";
             this.Load += new System.EventHandler(this.Espacios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalaciones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspacios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspacios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspacios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

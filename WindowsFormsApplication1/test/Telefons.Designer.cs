@@ -37,15 +37,16 @@
             this.comboBoxEntitats = new System.Windows.Forms.ComboBox();
             this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTelefons = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.razonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_entidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceTelefons = new System.Windows.Forms.BindingSource(this.components);
             this.materialRaisedButtonAfegirTelefon = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonEsborrarTelefon = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonTancar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonModificarTelefon = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonNetejarCamps = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.razonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_entidad = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTelefons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTelefons)).BeginInit();
@@ -155,8 +156,8 @@
             this.dataGridViewTelefons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTelefons.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.telefonoDataGridViewTextBoxColumn,
             this.razonDataGridViewTextBoxColumn,
+            this.telefonoDataGridViewTextBoxColumn,
             this.id_entidad});
             this.dataGridViewTelefons.DataSource = this.bindingSourceTelefons;
             this.dataGridViewTelefons.Location = new System.Drawing.Point(36, 296);
@@ -166,35 +167,6 @@
             this.dataGridViewTelefons.Size = new System.Drawing.Size(377, 150);
             this.dataGridViewTelefons.TabIndex = 7;
             this.dataGridViewTelefons.SelectionChanged += new System.EventHandler(this.dataGridViewTelefons_SelectionChanged);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // telefonoDataGridViewTextBoxColumn
-            // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telèfon";
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // razonDataGridViewTextBoxColumn
-            // 
-            this.razonDataGridViewTextBoxColumn.DataPropertyName = "razon";
-            this.razonDataGridViewTextBoxColumn.HeaderText = "Raó";
-            this.razonDataGridViewTextBoxColumn.Name = "razonDataGridViewTextBoxColumn";
-            this.razonDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // id_entidad
-            // 
-            this.id_entidad.DataPropertyName = "id_entidad";
-            this.id_entidad.HeaderText = "id_entidad";
-            this.id_entidad.Name = "id_entidad";
-            this.id_entidad.ReadOnly = true;
             // 
             // bindingSourceTelefons
             // 
@@ -268,11 +240,65 @@
             this.materialRaisedButtonModificarTelefon.UseVisualStyleBackColor = true;
             this.materialRaisedButtonModificarTelefon.Click += new System.EventHandler(this.materialRaisedButtonModificarTelefon_Click);
             // 
+            // materialRaisedButtonNetejarCamps
+            // 
+            this.materialRaisedButtonNetejarCamps.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialRaisedButtonNetejarCamps.AutoSize = true;
+            this.materialRaisedButtonNetejarCamps.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButtonNetejarCamps.Depth = 0;
+            this.materialRaisedButtonNetejarCamps.Icon = null;
+            this.materialRaisedButtonNetejarCamps.Location = new System.Drawing.Point(353, 143);
+            this.materialRaisedButtonNetejarCamps.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonNetejarCamps.Name = "materialRaisedButtonNetejarCamps";
+            this.materialRaisedButtonNetejarCamps.Primary = true;
+            this.materialRaisedButtonNetejarCamps.Size = new System.Drawing.Size(80, 36);
+            this.materialRaisedButtonNetejarCamps.TabIndex = 12;
+            this.materialRaisedButtonNetejarCamps.Text = "Netejar";
+            this.materialRaisedButtonNetejarCamps.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonNetejarCamps.Click += new System.EventHandler(this.materialRaisedButtonNetejarCamps_Click);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // razonDataGridViewTextBoxColumn
+            // 
+            this.razonDataGridViewTextBoxColumn.DataPropertyName = "razon";
+            this.razonDataGridViewTextBoxColumn.HeaderText = "Raó";
+            this.razonDataGridViewTextBoxColumn.Name = "razonDataGridViewTextBoxColumn";
+            this.razonDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telèfon";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // id_entidad
+            // 
+            this.id_entidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_entidad.DataPropertyName = "id_entidad";
+            this.id_entidad.DataSource = this.bindingSourceEntitats;
+            this.id_entidad.DisplayMember = "nombre";
+            this.id_entidad.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.id_entidad.HeaderText = "Entitat";
+            this.id_entidad.Name = "id_entidad";
+            this.id_entidad.ReadOnly = true;
+            this.id_entidad.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.id_entidad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.id_entidad.ValueMember = "id";
+            // 
             // Telefons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 501);
+            this.Controls.Add(this.materialRaisedButtonNetejarCamps);
             this.Controls.Add(this.materialRaisedButtonModificarTelefon);
             this.Controls.Add(this.materialRaisedButtonTancar);
             this.Controls.Add(this.materialRaisedButtonEsborrarTelefon);
@@ -312,9 +338,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn entidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn identidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bindingSourceEntitats;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonNetejarCamps;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn razonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_entidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn id_entidad;
     }
 }

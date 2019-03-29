@@ -131,12 +131,13 @@ namespace COMPLETE_FLAT_UI
 
         private void netejarCamps()
         {
-            materialSingleLineTextFieldTelefon.Clear();
-            materialSingleLineTextFieldRao.Clear();
-
+            //Primero desselecciono la gridView,i després netejo els camps. Si ho faig al revés, queda text als camps
             dataGridViewTelefons.ClearSelection();
             dataGridViewTelefons.CurrentCell = null;
             comboBoxEntitats.SelectedIndex = -1;
+
+            materialSingleLineTextFieldTelefon.Clear();
+            materialSingleLineTextFieldRao.Clear();
         }
 
         private void dataGridViewTelefons_SelectionChanged(object sender, EventArgs e)
@@ -147,6 +148,11 @@ namespace COMPLETE_FLAT_UI
 
             //Utilitzo el .SelectedValue perquè és el que està vinculat amb el DisplayMember
             comboBoxEntitats.SelectedValue = telefonModificar.id_entidad;
+        }
+
+        private void materialRaisedButtonNetejarCamps_Click(object sender, EventArgs e)
+        {
+            netejarCamps();
         }
     }
 }

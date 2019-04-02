@@ -64,12 +64,12 @@ namespace COMPLETE_FLAT_UI.BD
             return mensaje;
         }
 
-        public static String DeleteInstalacion(Instalacion id)
+        public static String DeleteInstalacion(int id)
         {
             String mensaje = "";
             Instalacion instalacion = ORM.bd.Instalacion.Find(id);
 
-            ORM.bd.Instalacion.Remove(id);
+            ORM.bd.Instalacion.Remove(instalacion);
 
             mensaje = ORM.SaveChanges();
 

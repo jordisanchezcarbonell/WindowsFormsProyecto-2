@@ -58,21 +58,43 @@ namespace COMPLETE_FLAT_UI
                 else
                 {
 
-                    MessageBox.Show("SE HA DADO DE ALTA", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("S'ha donat d'alta", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                 }
             }
             else
             {
-                MessageBox.Show("Posa el nom indicat", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Posa el nom indicat", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
 
         private void materialRaisedButtonModificar_Click(object sender, EventArgs e)
         {
-            mensaje = BD.EspaciosORM.UpdateEspacio((int)dataGridViewEspacios.CurrentRow.Cells[0].Value, materialSingleLineTextFieldNombre.Text, Double.Parse(materialSingleLineTextFieldPrecio.Text), (Boolean)checkBoxExterior.Checked);
+            if (materialSingleLineTextFieldNombre.Text.Equals("") || materialSingleLineTextFieldPrecio.Text.Equals(""))
+            {
+                MessageBox.Show("Introdueix un nom i un preu", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                mensaje = BD.EspaciosORM.UpdateEspacio((int)dataGridViewEspacios.CurrentRow.Cells[0].Value, materialSingleLineTextFieldNombre.Text, Double.Parse(materialSingleLineTextFieldPrecio.Text), (Boolean)checkBoxExterior.Checked);
+
+                if (mensaje.Equals(""))
+
+                {
+                    MessageBox.Show("S'ha modificat correctament!", "MODIFICAT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+                }
+                else
+                {
+                    MessageBox.Show(mensaje, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                }
+            }
         }
 
 
@@ -84,14 +106,14 @@ namespace COMPLETE_FLAT_UI
 
         private void materialRaisedButtonBorrar_Click(object sender, EventArgs e)
         {
-            DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el Registro?", "Eliminar Registro", MessageBoxButtons.YesNo);
+            DialogResult resul = MessageBox.Show("Segur que vols eliminar el registre?", "Eliminar Registre", MessageBoxButtons.YesNo);
             if (resul == DialogResult.Yes)
             {
 
 
                 //aqui el codigo para eliminar el registro
-                Espacio prueba = (Espacio)dataGridViewEspacios.CurrentRow.DataBoundItem;
-                mensaje = BD.EspaciosORM.DeleteEspacio(prueba.id);
+                Espacio espacio = (Espacio)dataGridViewEspacios.CurrentRow.DataBoundItem;
+                mensaje = BD.EspaciosORM.DeleteEspacio(espacio.id);
 
                 if (!mensaje.Equals(""))
                 {
@@ -120,7 +142,7 @@ namespace COMPLETE_FLAT_UI
         private void dataGridViewEspacios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             materialSingleLineTextFieldNombre.Text = dataGridViewEspacios.CurrentRow.Cells[1].Value.ToString();
-                comboBoxInstalacion.SelectedValue = dataGridViewEspacios.CurrentRow.Cells[4].Value;
+            comboBoxInstalacion.SelectedValue = dataGridViewEspacios.CurrentRow.Cells[4].Value;
             materialSingleLineTextFieldPrecio.Text = dataGridViewEspacios.CurrentRow.Cells[2].Value.ToString();
             checkBoxExterior.Checked = Convert.ToBoolean(dataGridViewEspacios.CurrentRow.Cells[3].Value);
         }

@@ -58,7 +58,9 @@ namespace COMPLETE_FLAT_UI
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            materialSingleLineTextFieldNombre.Text = dataGridViewInstalaciones.CurrentRow.Cells[1].Value.ToString();
+            comboBoxEsport.SelectedValue = dataGridViewInstalaciones.CurrentRow.Cells[2].Value;
+            materialSingleLineTextFieldAdreca.Text = dataGridViewInstalaciones.CurrentRow.Cells[3].Value.ToString();
         }
 
         private void Instalaciones_Activated(object sender, EventArgs e)
@@ -83,7 +85,7 @@ namespace COMPLETE_FLAT_UI
                 else
                 {
 
-                    MessageBox.Show("SE HA DADO DE ALTA", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("S'ha donat d'alta correctament", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                 }
@@ -103,7 +105,9 @@ namespace COMPLETE_FLAT_UI
 
 
                 //aqui el codigo para eliminar el registro
-                mensaje = BD.InstalacionsORM.DeleteInstalacion((Instalacion)dataGridViewInstalaciones.CurrentRow.DataBoundItem);
+
+                Instalacion instalacion = (Instalacion)dataGridViewInstalaciones.CurrentRow.DataBoundItem;
+                mensaje = BD.InstalacionsORM.DeleteInstalacion(instalacion.id);
 
                 if (!mensaje.Equals(""))
                 {
@@ -113,7 +117,7 @@ namespace COMPLETE_FLAT_UI
                 }
                 else
                 {
-                    MessageBox.Show(mensaje, "BORRADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("S'ha esborrat correctament", "ESBORRAT", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
 
@@ -124,7 +128,29 @@ namespace COMPLETE_FLAT_UI
 
         private void materialRaisedButtonModificar_Click(object sender, EventArgs e)
         {
-            mensaje = BD.InstalacionsORM.UpdateInstalacion((int)dataGridViewInstalaciones.CurrentRow.Cells[0].Value, materialSingleLineTextFieldNombre.Text, materialSingleLineTextFieldAdreca.Text, (int)comboBoxEsport.SelectedValue);
+
+            if (materialSingleLineTextFieldNombre.Text.Equals("") || materialSingleLineTextFieldAdreca.Text.Equals(""))
+            {
+                MessageBox.Show("Introdueix un nom i una adreça", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                mensaje = BD.InstalacionsORM.UpdateInstalacion((int)dataGridViewInstalaciones.CurrentRow.Cells[0].Value, materialSingleLineTextFieldNombre.Text, materialSingleLineTextFieldAdreca.Text, (int)comboBoxEsport.SelectedValue);
+
+                if (mensaje.Equals(""))
+
+                {
+                    MessageBox.Show("S'ha modificat correctament!", "MODIFICAT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+                }
+                else
+                {
+                    MessageBox.Show(mensaje, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
         }
 
         private void dataGridViewInstalaciones_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

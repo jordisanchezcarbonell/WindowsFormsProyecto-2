@@ -21,6 +21,7 @@ namespace COMPLETE_FLAT_UI
 
         public static bool validarNifEspanyol(string nif)
         {
+            //Font: https://es.stackoverflow.com/questions/67041/validar-pasaporte-y-dni-espa%C3%B1oles
             //bool resultat = Regex.IsMatch(nif, @"/^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$"); --> No funciona pq té la barra davant (és de JavaScript)
             bool resultat = Regex.IsMatch(nif, @"[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]");
 

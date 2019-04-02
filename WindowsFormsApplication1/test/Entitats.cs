@@ -73,28 +73,39 @@ namespace COMPLETE_FLAT_UI
                 {
 
                     //NumeroNif numeroNif = new NumeroNif(materialSingleLineTextFieldNif.Text);numeroNif.EsCorrecto
-                    if (true)
+                    bool resultat = ValidadorsRegEx.validarNifEspanyol(materialSingleLineTextFieldNif.Text);
+                    if (resultat)
                     {
-                        //Encripto la contrasenya:
-                        string contrasenyaEncriptada = encriptarBlowFish(materialSingleLineTextFieldContrasenya.Text);
                         
-                        //Faig un insert a la base de dades passant-li com a paràmetres el contingut dels camps del formulari:
-                        string missatge = BD.EntitatsORM.InsertEntitat(materialSingleLineTextFieldNom.Text, numTemporada,
-                            materialSingleLineTextFieldAdreca.Text, materialSingleLineTextFieldNif.Text, materialSingleLineTextFieldCorreo.Text,
-                            contrasenyaEncriptada);
+                        //Valido el correu electrònic:
+                        if (ValidadorsRegEx.validarCorreu(materialSingleLineTextFieldCorreo.Text)) {
+                            //Encripto la contrasenya:
+                            string contrasenyaEncriptada = encriptarBlowFish(materialSingleLineTextFieldContrasenya.Text);
 
-                        if (missatge.Equals(""))
-                        {
-                            carregarDadesGrid();
+                            //Faig un insert a la base de dades passant-li com a paràmetres el contingut dels camps del formulari:
+                            string missatge = BD.EntitatsORM.InsertEntitat(materialSingleLineTextFieldNom.Text, numTemporada,
+                                materialSingleLineTextFieldAdreca.Text, materialSingleLineTextFieldNif.Text, materialSingleLineTextFieldCorreo.Text,
+                                contrasenyaEncriptada);
+
+                            if (missatge.Equals(""))
+                            {
+                                carregarDadesGrid();
+                            }
+                            else
+                            {
+                                MessageBox.Show(missatge, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show(missatge, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("El correu electrònic no té el format correcte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            materialSingleLineTextFieldCorreo.Clear();
                         }
                     }
                     else
                     {
                         MessageBox.Show("El format del NIF és erroni", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        materialSingleLineTextFieldNif.Clear();
                     }
                 }
                 else

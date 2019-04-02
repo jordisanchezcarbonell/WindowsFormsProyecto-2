@@ -273,6 +273,7 @@
     <Compile Include="Usuario.cs">
       <DependentUpon>ModelEntiEspais.tt</DependentUpon>
     </Compile>
+    <Compile Include="ValidadorsRegEx.cs" />
     <EmbeddedResource Include="Activitats.resx">
       <DependentUpon>Activitats.cs</DependentUpon>
     </EmbeddedResource>

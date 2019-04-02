@@ -123,7 +123,7 @@
     <Compile Include="BD\Entidades.cs" />
     <Compile Include="BD\EspaciosORM.cs" />
     <Compile Include="BD\HorarisInstalacions.cs" />
-    <Compile Include="BD\Instalacions.cs" />
+    <Compile Include="BD\InstalacionsORM.cs" />
     <Compile Include="BD\ORM.cs" />
     <Compile Include="BD\blowfish.cs" />
     <Compile Include="BD\TipusGestio.cs" />

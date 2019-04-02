@@ -33,25 +33,22 @@
             this.bindingSourceInstalaciones = new System.Windows.Forms.BindingSource(this.components);
             this.materialSingleLineTextFieldPrecio = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextFieldNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.comboBoxExterior = new System.Windows.Forms.ComboBox();
             this.bindingSourceEspacios = new System.Windows.Forms.BindingSource(this.components);
             this.materialLabelExterior = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabelPreu = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridViewEspacios = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exteriorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.idinstalacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actconcedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actdemandadasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.instalacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.materialLabelInstalacion = new MaterialSkin.Controls.MaterialLabel();
             this.materialRaisedButtonBorrar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonModificar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonAgregar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.checkBoxExterior = new System.Windows.Forms.CheckBox();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exteriorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idinstalacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspacios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspacios)).BeginInit();
@@ -113,21 +110,6 @@
             this.materialSingleLineTextFieldNombre.TabStop = false;
             this.materialSingleLineTextFieldNombre.UseSystemPasswordChar = false;
             // 
-            // comboBoxExterior
-            // 
-            this.comboBoxExterior.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxExterior.DataSource = this.bindingSourceEspacios;
-            this.comboBoxExterior.DisplayMember = "exterior";
-            this.comboBoxExterior.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxExterior.FormattingEnabled = true;
-            this.comboBoxExterior.Location = new System.Drawing.Point(169, 230);
-            this.comboBoxExterior.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxExterior.Name = "comboBoxExterior";
-            this.comboBoxExterior.Size = new System.Drawing.Size(202, 21);
-            this.comboBoxExterior.TabIndex = 33;
-            this.comboBoxExterior.ValueMember = "id";
-            // 
             // bindingSourceEspacios
             // 
             this.bindingSourceEspacios.DataSource = typeof(COMPLETE_FLAT_UI.Espacio);
@@ -174,69 +156,20 @@
             // dataGridViewEspacios
             // 
             this.dataGridViewEspacios.AutoGenerateColumns = false;
+            this.dataGridViewEspacios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewEspacios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEspacios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nombreDataGridViewTextBoxColumn,
             this.precioDataGridViewTextBoxColumn,
             this.exteriorDataGridViewCheckBoxColumn,
-            this.idinstalacionDataGridViewTextBoxColumn,
-            this.actconcedidaDataGridViewTextBoxColumn,
-            this.actdemandadasDataGridViewTextBoxColumn,
-            this.instalacionDataGridViewTextBoxColumn});
+            this.idinstalacionDataGridViewTextBoxColumn});
             this.dataGridViewEspacios.DataSource = this.bindingSourceEspacios;
             this.dataGridViewEspacios.Location = new System.Drawing.Point(74, 270);
             this.dataGridViewEspacios.Name = "dataGridViewEspacios";
-            this.dataGridViewEspacios.Size = new System.Drawing.Size(641, 275);
+            this.dataGridViewEspacios.Size = new System.Drawing.Size(632, 275);
             this.dataGridViewEspacios.TabIndex = 37;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            // 
-            // exteriorDataGridViewCheckBoxColumn
-            // 
-            this.exteriorDataGridViewCheckBoxColumn.DataPropertyName = "exterior";
-            this.exteriorDataGridViewCheckBoxColumn.HeaderText = "exterior";
-            this.exteriorDataGridViewCheckBoxColumn.Name = "exteriorDataGridViewCheckBoxColumn";
-            // 
-            // idinstalacionDataGridViewTextBoxColumn
-            // 
-            this.idinstalacionDataGridViewTextBoxColumn.DataPropertyName = "id_instalacion";
-            this.idinstalacionDataGridViewTextBoxColumn.HeaderText = "id_instalacion";
-            this.idinstalacionDataGridViewTextBoxColumn.Name = "idinstalacionDataGridViewTextBoxColumn";
-            // 
-            // actconcedidaDataGridViewTextBoxColumn
-            // 
-            this.actconcedidaDataGridViewTextBoxColumn.DataPropertyName = "Act_concedida";
-            this.actconcedidaDataGridViewTextBoxColumn.HeaderText = "Act_concedida";
-            this.actconcedidaDataGridViewTextBoxColumn.Name = "actconcedidaDataGridViewTextBoxColumn";
-            // 
-            // actdemandadasDataGridViewTextBoxColumn
-            // 
-            this.actdemandadasDataGridViewTextBoxColumn.DataPropertyName = "Act_demandadas";
-            this.actdemandadasDataGridViewTextBoxColumn.HeaderText = "Act_demandadas";
-            this.actdemandadasDataGridViewTextBoxColumn.Name = "actdemandadasDataGridViewTextBoxColumn";
-            // 
-            // instalacionDataGridViewTextBoxColumn
-            // 
-            this.instalacionDataGridViewTextBoxColumn.DataPropertyName = "Instalacion";
-            this.instalacionDataGridViewTextBoxColumn.HeaderText = "Instalacion";
-            this.instalacionDataGridViewTextBoxColumn.Name = "instalacionDataGridViewTextBoxColumn";
+            this.dataGridViewEspacios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEspacios_CellContentClick);
             // 
             // bindingSource1
             // 
@@ -304,11 +237,57 @@
             this.materialRaisedButtonAgregar.UseVisualStyleBackColor = true;
             this.materialRaisedButtonAgregar.Click += new System.EventHandler(this.materialRaisedButtonAgregar_Click);
             // 
+            // checkBoxExterior
+            // 
+            this.checkBoxExterior.AutoSize = true;
+            this.checkBoxExterior.Location = new System.Drawing.Point(169, 237);
+            this.checkBoxExterior.Name = "checkBoxExterior";
+            this.checkBoxExterior.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxExterior.TabIndex = 42;
+            this.checkBoxExterior.UseVisualStyleBackColor = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            // 
+            // exteriorDataGridViewCheckBoxColumn
+            // 
+            this.exteriorDataGridViewCheckBoxColumn.DataPropertyName = "exterior";
+            this.exteriorDataGridViewCheckBoxColumn.HeaderText = "exterior";
+            this.exteriorDataGridViewCheckBoxColumn.Name = "exteriorDataGridViewCheckBoxColumn";
+            // 
+            // idinstalacionDataGridViewTextBoxColumn
+            // 
+            this.idinstalacionDataGridViewTextBoxColumn.DataPropertyName = "id_instalacion";
+            this.idinstalacionDataGridViewTextBoxColumn.DataSource = this.bindingSourceInstalaciones;
+            this.idinstalacionDataGridViewTextBoxColumn.DisplayMember = "nombre";
+            this.idinstalacionDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.idinstalacionDataGridViewTextBoxColumn.HeaderText = "Instalacion";
+            this.idinstalacionDataGridViewTextBoxColumn.Name = "idinstalacionDataGridViewTextBoxColumn";
+            this.idinstalacionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idinstalacionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idinstalacionDataGridViewTextBoxColumn.ValueMember = "id";
+            // 
             // Espacios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 557);
+            this.Controls.Add(this.checkBoxExterior);
             this.Controls.Add(this.materialRaisedButtonBorrar);
             this.Controls.Add(this.materialRaisedButtonModificar);
             this.Controls.Add(this.materialRaisedButtonAgregar);
@@ -317,12 +296,12 @@
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabelPreu);
             this.Controls.Add(this.materialLabelExterior);
-            this.Controls.Add(this.comboBoxExterior);
             this.Controls.Add(this.materialSingleLineTextFieldNombre);
             this.Controls.Add(this.materialSingleLineTextFieldPrecio);
             this.Controls.Add(this.comboBoxInstalacion);
             this.Name = "Espacios";
             this.Text = "Espacios";
+            this.Activated += new System.EventHandler(this.Espacios_Activated);
             this.Load += new System.EventHandler(this.Espacios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalaciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspacios)).EndInit();
@@ -338,25 +317,22 @@
         private System.Windows.Forms.ComboBox comboBoxInstalacion;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldPrecio;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldNombre;
-        private System.Windows.Forms.ComboBox comboBoxExterior;
         private MaterialSkin.Controls.MaterialLabel materialLabelExterior;
         private MaterialSkin.Controls.MaterialLabel materialLabelPreu;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private System.Windows.Forms.DataGridView dataGridViewEspacios;
         private MaterialSkin.Controls.MaterialLabel materialLabelInstalacion;
         private System.Windows.Forms.BindingSource bindingSourceInstalaciones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn exteriorDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idinstalacionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn actconcedidaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn actdemandadasDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn instalacionDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.BindingSource bindingSourceEspacios;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonBorrar;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonModificar;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonAgregar;
+        private System.Windows.Forms.CheckBox checkBoxExterior;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn exteriorDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idinstalacionDataGridViewTextBoxColumn;
     }
 }

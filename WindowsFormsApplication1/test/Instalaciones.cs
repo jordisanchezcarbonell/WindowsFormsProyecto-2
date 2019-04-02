@@ -21,7 +21,7 @@ namespace COMPLETE_FLAT_UI
         private void cargardatos()
         {
 
-            bindingSourceInstalaciones.DataSource = BD.Instalacions.SelectAllInstalaciones();
+            bindingSourceInstalaciones.DataSource = BD.InstalacionsORM.SelectAllInstalaciones();
             bindingSourceTipoGestion.DataSource = BD.TipusGestio.SelectAllTipoGestion();
             bindingSourceDiasSemana.DataSource = BD.DiasORM.SelectAllDias();
         }
@@ -73,7 +73,7 @@ namespace COMPLETE_FLAT_UI
                 //(String nom, String adreca, int idTipoGestion)//
 
 
-                mensaje = BD.Instalacions.InsertInstalacion(materialSingleLineTextFieldNombre.Text, materialSingleLineTextFieldAdreca.Text, (int)comboBoxEsport.SelectedValue);
+                mensaje = BD.InstalacionsORM.InsertInstalacion(materialSingleLineTextFieldNombre.Text, materialSingleLineTextFieldAdreca.Text, (int)comboBoxEsport.SelectedValue);
 
                 if (!mensaje.Equals(""))
                 {
@@ -103,7 +103,7 @@ namespace COMPLETE_FLAT_UI
 
 
                 //aqui el codigo para eliminar el registro
-                mensaje = BD.Instalacions.DeleteInstalacion((Instalacion)dataGridViewInstalaciones.CurrentRow.DataBoundItem);
+                mensaje = BD.InstalacionsORM.DeleteInstalacion((Instalacion)dataGridViewInstalaciones.CurrentRow.DataBoundItem);
 
                 if (!mensaje.Equals(""))
                 {
@@ -124,7 +124,7 @@ namespace COMPLETE_FLAT_UI
 
         private void materialRaisedButtonModificar_Click(object sender, EventArgs e)
         {
-            mensaje = BD.Instalacions.UpdateInstalacion((int)dataGridViewInstalaciones.CurrentRow.Cells[0].Value, materialSingleLineTextFieldNombre.Text, materialSingleLineTextFieldAdreca.Text, (int)comboBoxEsport.SelectedValue);
+            mensaje = BD.InstalacionsORM.UpdateInstalacion((int)dataGridViewInstalaciones.CurrentRow.Cells[0].Value, materialSingleLineTextFieldNombre.Text, materialSingleLineTextFieldAdreca.Text, (int)comboBoxEsport.SelectedValue);
         }
 
         private void dataGridViewInstalaciones_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

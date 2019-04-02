@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace COMPLETE_FLAT_UI.BD
 {
-    class Instalacions
+    class InstalacionsORM
     {
 
         public static List<Instalacion> SelectAllInstalaciones()

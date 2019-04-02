@@ -20,7 +20,7 @@ namespace COMPLETE_FLAT_UI
 
         private void Espacios_Load(object sender, EventArgs e)
         {
-            bindingSourceInstalaciones.DataSource = BD.Instalacions.SelectAllInstalaciones();
+            bindingSourceInstalaciones.DataSource = BD.InstalacionsORM.SelectAllInstalaciones();
             bindingSourceEspacios.DataSource = BD.EspaciosORM.SelectAllEspacios();
         }
 
@@ -48,7 +48,7 @@ namespace COMPLETE_FLAT_UI
         {
             if (materialSingleLineTextFieldNombre.Text != "")
             {
-                mensaje = BD.EspaciosORM.InsertEspacio(materialSingleLineTextFieldNombre.Text, Convert.ToDouble(materialSingleLineTextFieldPrecio.Text), (int)comboBoxInstalacion.SelectedValue, (Boolean)comboBoxExterior.SelectedValue);
+                mensaje = BD.EspaciosORM.InsertEspacio(materialSingleLineTextFieldNombre.Text, Convert.ToDouble(materialSingleLineTextFieldPrecio.Text), (int)comboBoxInstalacion.SelectedValue, (Boolean)checkBoxExterior.Checked);
 
                 if (!mensaje.Equals(""))
                 {
@@ -72,7 +72,7 @@ namespace COMPLETE_FLAT_UI
 
         private void materialRaisedButtonModificar_Click(object sender, EventArgs e)
         {
-            mensaje = BD.EspaciosORM.UpdateEspacio((int)dataGridViewEspacios.CurrentRow.Cells[0].Value, materialSingleLineTextFieldNombre.Text, Double.Parse(materialSingleLineTextFieldPrecio.Text), (Boolean)comboBoxInstalacion.SelectedValue);
+            mensaje = BD.EspaciosORM.UpdateEspacio((int)dataGridViewEspacios.CurrentRow.Cells[0].Value, materialSingleLineTextFieldNombre.Text, Double.Parse(materialSingleLineTextFieldPrecio.Text), (Boolean)checkBoxExterior.Checked);
         }
 
 
@@ -90,7 +90,8 @@ namespace COMPLETE_FLAT_UI
 
 
                 //aqui el codigo para eliminar el registro
-                mensaje = BD.EspaciosORM.DeleteEspacio((Espacio)dataGridViewEspacios.CurrentRow.DataBoundItem);
+                Espacio prueba = (Espacio)dataGridViewEspacios.CurrentRow.DataBoundItem;
+                mensaje = BD.EspaciosORM.DeleteEspacio(prueba.id);
 
                 if (!mensaje.Equals(""))
                 {
@@ -100,13 +101,28 @@ namespace COMPLETE_FLAT_UI
                 }
                 else
                 {
-                    MessageBox.Show(mensaje, "BORRADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                    MessageBox.Show("S'ha esborrat correctament!", "BORRADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
 
 
 
             }
+        }
+
+        private void Espacios_Activated(object sender, EventArgs e)
+        {
+            bindingSourceInstalaciones.DataSource = BD.InstalacionsORM.SelectAllInstalaciones();
+            bindingSourceEspacios.DataSource = BD.EspaciosORM.SelectAllEspacios();
+        }
+
+        private void dataGridViewEspacios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            materialSingleLineTextFieldNombre.Text = dataGridViewEspacios.CurrentRow.Cells[1].Value.ToString();
+                comboBoxInstalacion.SelectedValue = dataGridViewEspacios.CurrentRow.Cells[4].Value;
+            materialSingleLineTextFieldPrecio.Text = dataGridViewEspacios.CurrentRow.Cells[2].Value.ToString();
+            checkBoxExterior.Checked = Convert.ToBoolean(dataGridViewEspacios.CurrentRow.Cells[3].Value);
         }
     }
 }

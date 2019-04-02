@@ -51,12 +51,12 @@ namespace COMPLETE_FLAT_UI.BD
             return mensaje;
         }
 
-        public static String DeleteEspacio(Espacio id)
+        public static String DeleteEspacio(int id)
         {
             String mensaje = "";
             Espacio espacio = ORM.bd.Espacio.Find(id);
-
-            ORM.bd.Espacio.Remove(id);
+            
+            ORM.bd.Espacio.Remove(espacio);
 
             mensaje = ORM.SaveChanges();
 

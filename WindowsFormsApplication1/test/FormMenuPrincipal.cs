@@ -224,7 +224,22 @@ namespace COMPLETE_FLAT_UI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Instalaciones frm = new Instalaciones();
+            
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonEquipos_Click(object sender, EventArgs e)
+        {
+            Equipos frm = new Equipos();
             frm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormEnPanel(frm);
         }

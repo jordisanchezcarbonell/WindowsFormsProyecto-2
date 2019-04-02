@@ -14,14 +14,17 @@ namespace COMPLETE_FLAT_UI
 {
     public partial class Entitats : Estilo
     {
+      
+
         public Entitats()
         {
             InitializeComponent();
-            
-     
+           
+            String mensaje = "";
+            bindingSource2.DataSource = BD.Equipos.test(ref mensaje);
 
-
-
+            //bindingSource2.DataSource = BD.Entidades.test(ref mensaje);
+            //telefonosDataGridViewTextBoxColumn1.DataSource = BD.Entidades.test(ref mensaje);
         }
 
         private void BtnCerrar_Click(object sender, EventArgs e)
@@ -31,12 +34,17 @@ namespace COMPLETE_FLAT_UI
 
         private void Entitats_Load(object sender, EventArgs e)
         {
-
+         
         }
 
         private void materialSingleLineTextField2_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

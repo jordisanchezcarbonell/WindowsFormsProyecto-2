@@ -104,7 +104,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activitats.cs" />
+    <Compile Include="Activitats.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Activitats.Designer.cs">
       <DependentUpon>Activitats.cs</DependentUpon>
     </Compile>
@@ -146,7 +148,9 @@
     <Compile Include="Entidad.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entitats.cs" />
+    <Compile Include="Entitats.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Entitats.Designer.cs">
       <DependentUpon>Entitats.cs</DependentUpon>
     </Compile>
@@ -156,11 +160,15 @@
     <Compile Include="Espacio.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Espacios.cs" />
+    <Compile Include="Espacios.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Espacios.Designer.cs">
       <DependentUpon>Espacios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Estilo.cs" />
+    <Compile Include="Estilo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Estilo.Designer.cs">
       <DependentUpon>Estilo.cs</DependentUpon>
     </Compile>
@@ -194,7 +202,9 @@
     <Compile Include="FormMembresia.designer.cs">
       <DependentUpon>FormMembresia.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMenuPrincipal.cs" />
+    <Compile Include="FormMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenuPrincipal.Designer.cs">
       <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
     </Compile>
@@ -207,14 +217,18 @@
     <Compile Include="Instalacion.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Instalaciones.cs" />
+    <Compile Include="Instalaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Instalaciones.Designer.cs">
       <DependentUpon>Instalaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Instalacion_Horario.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
@@ -233,7 +247,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="ModifPerfil.cs" />
+    <Compile Include="ModifPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ModifPerfil.Designer.cs">
       <DependentUpon>ModifPerfil.cs</DependentUpon>
     </Compile>

@@ -42,7 +42,6 @@ namespace COMPLETE_FLAT_UI
         public virtual DbSet<Instalacion> Instalacion { get; set; }
         public virtual DbSet<Instalacion_Horario> Instalacion_Horario { get; set; }
         public virtual DbSet<Sexo> Sexo { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Telefonos> Telefonos { get; set; }
         public virtual DbSet<Tipo_Actividades> Tipo_Actividades { get; set; }
         public virtual DbSet<Tipo_gestion> Tipo_gestion { get; set; }

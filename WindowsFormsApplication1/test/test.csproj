@@ -104,93 +104,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activitats.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Activitats.cs" />
     <Compile Include="Activitats.Designer.cs">
       <DependentUpon>Activitats.cs</DependentUpon>
     </Compile>
     <Compile Include="Act_concedida.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Act_demandadas.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Admin.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="BD\DiasORM.cs" />
     <Compile Include="BD\Entidades.cs" />
+    <Compile Include="BD\EspaciosORM.cs" />
     <Compile Include="BD\HorarisInstalacions.cs" />
-    <Compile Include="BD\Instalacions.cs" />
+    <Compile Include="BD\InstalacionsORM.cs" />
     <Compile Include="BD\ORM.cs" />
     <Compile Include="BD\blowfish.cs" />
+    <Compile Include="BD\TipusGestio.cs" />
     <Compile Include="Categoria.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Categoria_edad.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Categoria_Edat.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Competicion.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Deportes.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Dias_Semana.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Entidad.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entitats.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Entitats.cs" />
     <Compile Include="Entitats.Designer.cs">
       <DependentUpon>Entitats.cs</DependentUpon>
     </Compile>
-    <Compile Include="EntitiEspai.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntitiEspai.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EntitiEspai.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EntitiEspai.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntitiEspai.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="EntyEspi.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntyEspi.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EntyEspi.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntyEspi.tt</DependentUpon>
-    </Compile>
     <Compile Include="Equipo.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Instalacions.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Instalacions.Designer.cs">
-      <DependentUpon>Instalacions.cs</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Espacio.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Estilo.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Espacios.cs" />
+    <Compile Include="Espacios.Designer.cs">
+      <DependentUpon>Espacios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estilo.cs" />
     <Compile Include="Estilo.Designer.cs">
       <DependentUpon>Estilo.cs</DependentUpon>
     </Compile>
@@ -224,58 +194,68 @@
     <Compile Include="FormMembresia.designer.cs">
       <DependentUpon>FormMembresia.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMenuPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormMenuPrincipal.cs" />
     <Compile Include="FormMenuPrincipal.Designer.cs">
       <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Horario_Act_Con.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Horario_Act_Dem.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Instalacion.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Instalaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Instalaciones.cs" />
     <Compile Include="Instalaciones.Designer.cs">
       <DependentUpon>Instalaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Instalacion_Horario.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Login.cs" />
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModifPerfil.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModifPerfil.cs" />
     <Compile Include="ModifPerfil.Designer.cs">
       <DependentUpon>ModifPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sexo.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Telefonos.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Tipo_Actitivades.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+    <Compile Include="Tipo_Actividades.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Tipo_gestion.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs">
-      <DependentUpon>EntitiEspai.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Activitats.resx">
       <DependentUpon>Activitats.cs</DependentUpon>
@@ -283,8 +263,8 @@
     <EmbeddedResource Include="Entitats.resx">
       <DependentUpon>Entitats.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Instalacions.resx">
-      <DependentUpon>Instalacions.cs</DependentUpon>
+    <EmbeddedResource Include="Espacios.resx">
+      <DependentUpon>Espacios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estilo.resx">
       <DependentUpon>Estilo.cs</DependentUpon>
@@ -326,14 +306,53 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="EntitiEspai.edmx">
+    <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EntitiEspai.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="EntitiEspai.edmx.diagram">
-      <DependentUpon>EntitiEspai.edmx</DependentUpon>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Activitats.datasource" />
+    <None Include="Properties\DataSources\Act_concedida.datasource" />
+    <None Include="Properties\DataSources\Act_demandadas.datasource" />
+    <None Include="Properties\DataSources\Admin.datasource" />
+    <None Include="Properties\DataSources\Categoria.datasource" />
+    <None Include="Properties\DataSources\Categoria_edad.datasource" />
+    <None Include="Properties\DataSources\Categoria_Edat.datasource" />
+    <None Include="Properties\DataSources\Competicion.datasource" />
+    <None Include="Properties\DataSources\Deportes.datasource" />
+    <None Include="Properties\DataSources\Dias_Semana.datasource" />
+    <None Include="Properties\DataSources\Entidad.datasource" />
+    <None Include="Properties\DataSources\Entitats.datasource" />
+    <None Include="Properties\DataSources\Equipo.datasource" />
+    <None Include="Properties\DataSources\Espacio.datasource" />
+    <None Include="Properties\DataSources\Estilo.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\FormListaClientes.datasource" />
+    <None Include="Properties\DataSources\FormLogo.datasource" />
+    <None Include="Properties\DataSources\FormMantCliente.datasource" />
+    <None Include="Properties\DataSources\FormMembresia.datasource" />
+    <None Include="Properties\DataSources\FormMenuPrincipal.datasource" />
+    <None Include="Properties\DataSources\Horario_Act_Con.datasource" />
+    <None Include="Properties\DataSources\Horario_Act_Dem.datasource" />
+    <None Include="Properties\DataSources\Instalacion.datasource" />
+    <None Include="Properties\DataSources\Instalaciones.datasource" />
+    <None Include="Properties\DataSources\Instalacions.datasource" />
+    <None Include="Properties\DataSources\Instalacion_Horario.datasource" />
+    <None Include="Properties\DataSources\Login.datasource" />
+    <None Include="Properties\DataSources\ModifPerfil.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\ProyectoBDJordiEntities.datasource" />
+    <None Include="Properties\DataSources\ProyectoBDJordiEntities1.datasource" />
+    <None Include="Properties\DataSources\Sexo.datasource" />
+    <None Include="Properties\DataSources\sysdiagrams.datasource" />
+    <None Include="Properties\DataSources\Telefonos.datasource" />
+    <None Include="Properties\DataSources\Tipo_Actitivades.datasource" />
+    <None Include="Properties\DataSources\Tipo_Actividades.datasource" />
+    <None Include="Properties\DataSources\Tipo_gestion.datasource" />
+    <None Include="Properties\DataSources\Usuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -438,29 +457,20 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EntitiEspai.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntitiEspai.edmx</DependentUpon>
-      <LastGenOutput>EntitiEspai.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="EntitiEspai.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntitiEspai.edmx</DependentUpon>
-      <LastGenOutput>EntitiEspai.cs</LastGenOutput>
-    </Content>
-    <Content Include="EntyEspi.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>EntyEspi.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="EntyEspi.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>EntyEspi.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -15,7 +15,7 @@ namespace COMPLETE_FLAT_UI
     public partial class Instalacion_Horario
     {
         public int id { get; set; }
-        public int id_instalacion { get; set; }
+        public Nullable<int> id_instalacion { get; set; }
         public int id_dia_semana { get; set; }
         public System.DateTime hora_inicio { get; set; }
         public System.DateTime hora_final { get; set; }

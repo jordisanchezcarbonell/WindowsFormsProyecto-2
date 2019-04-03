@@ -13,10 +13,10 @@ namespace COMPLETE_FLAT_UI
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ProyectoBDJordiEntities2 : DbContext
+    public partial class ProyectoBDJordiEntities3 : DbContext
     {
-        public ProyectoBDJordiEntities2()
-            : base("name=ProyectoBDJordiEntities2")
+        public ProyectoBDJordiEntities3()
+            : base("name=ProyectoBDJordiEntities3")
         {
         }
     

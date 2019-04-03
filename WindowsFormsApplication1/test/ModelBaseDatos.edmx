@@ -1101,7 +1101,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ProyectoBDJordiEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ProyectoBDJordiEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Act_concedida" EntityType="Self.Act_concedida" />
           <EntitySet Name="Act_demandadas" EntityType="Self.Act_demandadas" />
           <EntitySet Name="Admin" EntityType="Self.Admin" />
@@ -1221,7 +1221,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ProyectoBDJordiModelStoreContainer" CdmEntityContainer="ProyectoBDJordiEntities2">
+        <EntityContainerMapping StorageEntityContainer="ProyectoBDJordiModelStoreContainer" CdmEntityContainer="ProyectoBDJordiEntities3">
           <EntitySetMapping Name="Act_concedida">
             <EntityTypeMapping TypeName="ProyectoBDJordiModel.Act_concedida">
               <MappingFragment StoreEntitySet="Act_concedida">

@@ -31,6 +31,15 @@
             this.materialLabelNif = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabelCorreo = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridViewDadesEntitats = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nifDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contrasenyaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.temporadaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.equipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,15 +61,6 @@
             this.materialSingleLineTextFieldRepetirContrasenya = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabelRepetirContrasenya = new MaterialSkin.Controls.MaterialLabel();
             this.materialRaisedButtonTelefons = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nifDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contrasenyaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.temporadaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.equipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDadesEntitats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).BeginInit();
             this.SuspendLayout();
@@ -159,9 +159,81 @@
             this.dataGridViewDadesEntitats.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridViewDadesEntitats_DataBindingComplete);
             this.dataGridViewDadesEntitats.SelectionChanged += new System.EventHandler(this.dataGridViewDadesEntitats_SelectionChanged);
             // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // nifDataGridViewTextBoxColumn1
+            // 
+            this.nifDataGridViewTextBoxColumn1.DataPropertyName = "nif";
+            this.nifDataGridViewTextBoxColumn1.HeaderText = "Nif";
+            this.nifDataGridViewTextBoxColumn1.Name = "nifDataGridViewTextBoxColumn1";
+            this.nifDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nifDataGridViewTextBoxColumn1.Width = 70;
+            // 
+            // nombreDataGridViewTextBoxColumn1
+            // 
+            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nom";
+            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
+            this.nombreDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // correoDataGridViewTextBoxColumn1
+            // 
+            this.correoDataGridViewTextBoxColumn1.DataPropertyName = "correo";
+            this.correoDataGridViewTextBoxColumn1.HeaderText = "Correu";
+            this.correoDataGridViewTextBoxColumn1.Name = "correoDataGridViewTextBoxColumn1";
+            this.correoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.correoDataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // contrasenyaDataGridViewTextBoxColumn
+            // 
+            this.contrasenyaDataGridViewTextBoxColumn.DataPropertyName = "contrasenya";
+            this.contrasenyaDataGridViewTextBoxColumn.HeaderText = "Contrasenya";
+            this.contrasenyaDataGridViewTextBoxColumn.Name = "contrasenyaDataGridViewTextBoxColumn";
+            this.contrasenyaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.contrasenyaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // temporadaDataGridViewTextBoxColumn1
+            // 
+            this.temporadaDataGridViewTextBoxColumn1.DataPropertyName = "temporada";
+            this.temporadaDataGridViewTextBoxColumn1.HeaderText = "Temporada";
+            this.temporadaDataGridViewTextBoxColumn1.Name = "temporadaDataGridViewTextBoxColumn1";
+            this.temporadaDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.temporadaDataGridViewTextBoxColumn1.Width = 70;
+            // 
+            // direccionDataGridViewTextBoxColumn1
+            // 
+            this.direccionDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.direccionDataGridViewTextBoxColumn1.DataPropertyName = "direccion";
+            this.direccionDataGridViewTextBoxColumn1.HeaderText = "Adreça";
+            this.direccionDataGridViewTextBoxColumn1.Name = "direccionDataGridViewTextBoxColumn1";
+            this.direccionDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // equipoDataGridViewTextBoxColumn
+            // 
+            this.equipoDataGridViewTextBoxColumn.DataPropertyName = "Equipo";
+            this.equipoDataGridViewTextBoxColumn.HeaderText = "Equipo";
+            this.equipoDataGridViewTextBoxColumn.Name = "equipoDataGridViewTextBoxColumn";
+            this.equipoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.equipoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // telefonosDataGridViewTextBoxColumn
+            // 
+            this.telefonosDataGridViewTextBoxColumn.DataPropertyName = "Telefonos";
+            this.telefonosDataGridViewTextBoxColumn.HeaderText = "Telefonos";
+            this.telefonosDataGridViewTextBoxColumn.Name = "telefonosDataGridViewTextBoxColumn";
+            this.telefonosDataGridViewTextBoxColumn.ReadOnly = true;
+            this.telefonosDataGridViewTextBoxColumn.Visible = false;
+            // 
             // bindingSourceEntitats
             // 
-            this.bindingSourceEntitats.DataSource = typeof(COMPLETE_FLAT_UI.Entidad);
+            this.bindingSourceEntitats.DataSource = typeof(COMPLETE_FLAT_UI.Entitats);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -441,7 +513,7 @@
             this.materialRaisedButtonTelefons.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonTelefons.Depth = 0;
             this.materialRaisedButtonTelefons.Icon = null;
-            this.materialRaisedButtonTelefons.Location = new System.Drawing.Point(644, 313);
+            this.materialRaisedButtonTelefons.Location = new System.Drawing.Point(596, 301);
             this.materialRaisedButtonTelefons.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonTelefons.Name = "materialRaisedButtonTelefons";
             this.materialRaisedButtonTelefons.Primary = true;
@@ -450,78 +522,6 @@
             this.materialRaisedButtonTelefons.Text = "Telèfons";
             this.materialRaisedButtonTelefons.UseVisualStyleBackColor = true;
             this.materialRaisedButtonTelefons.Click += new System.EventHandler(this.materialRaisedButtonTelefons_Click);
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // nifDataGridViewTextBoxColumn1
-            // 
-            this.nifDataGridViewTextBoxColumn1.DataPropertyName = "nif";
-            this.nifDataGridViewTextBoxColumn1.HeaderText = "Nif";
-            this.nifDataGridViewTextBoxColumn1.Name = "nifDataGridViewTextBoxColumn1";
-            this.nifDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nifDataGridViewTextBoxColumn1.Width = 70;
-            // 
-            // nombreDataGridViewTextBoxColumn1
-            // 
-            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nom";
-            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
-            this.nombreDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn1.Width = 200;
-            // 
-            // correoDataGridViewTextBoxColumn1
-            // 
-            this.correoDataGridViewTextBoxColumn1.DataPropertyName = "correo";
-            this.correoDataGridViewTextBoxColumn1.HeaderText = "Correu";
-            this.correoDataGridViewTextBoxColumn1.Name = "correoDataGridViewTextBoxColumn1";
-            this.correoDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.correoDataGridViewTextBoxColumn1.Width = 200;
-            // 
-            // contrasenyaDataGridViewTextBoxColumn
-            // 
-            this.contrasenyaDataGridViewTextBoxColumn.DataPropertyName = "contrasenya";
-            this.contrasenyaDataGridViewTextBoxColumn.HeaderText = "Contrasenya";
-            this.contrasenyaDataGridViewTextBoxColumn.Name = "contrasenyaDataGridViewTextBoxColumn";
-            this.contrasenyaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.contrasenyaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // temporadaDataGridViewTextBoxColumn1
-            // 
-            this.temporadaDataGridViewTextBoxColumn1.DataPropertyName = "temporada";
-            this.temporadaDataGridViewTextBoxColumn1.HeaderText = "Temporada";
-            this.temporadaDataGridViewTextBoxColumn1.Name = "temporadaDataGridViewTextBoxColumn1";
-            this.temporadaDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.temporadaDataGridViewTextBoxColumn1.Width = 70;
-            // 
-            // direccionDataGridViewTextBoxColumn1
-            // 
-            this.direccionDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.direccionDataGridViewTextBoxColumn1.DataPropertyName = "direccion";
-            this.direccionDataGridViewTextBoxColumn1.HeaderText = "Adreça";
-            this.direccionDataGridViewTextBoxColumn1.Name = "direccionDataGridViewTextBoxColumn1";
-            this.direccionDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // equipoDataGridViewTextBoxColumn
-            // 
-            this.equipoDataGridViewTextBoxColumn.DataPropertyName = "Equipo";
-            this.equipoDataGridViewTextBoxColumn.HeaderText = "Equipo";
-            this.equipoDataGridViewTextBoxColumn.Name = "equipoDataGridViewTextBoxColumn";
-            this.equipoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.equipoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // telefonosDataGridViewTextBoxColumn
-            // 
-            this.telefonosDataGridViewTextBoxColumn.DataPropertyName = "Telefonos";
-            this.telefonosDataGridViewTextBoxColumn.HeaderText = "Telefonos";
-            this.telefonosDataGridViewTextBoxColumn.Name = "telefonosDataGridViewTextBoxColumn";
-            this.telefonosDataGridViewTextBoxColumn.ReadOnly = true;
-            this.telefonosDataGridViewTextBoxColumn.Visible = false;
             // 
             // Entitats
             // 

@@ -16,7 +16,7 @@ namespace COMPLETE_FLAT_UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Instalaciones());
+            Application.Run(new Espacios());
         }
     }
 }

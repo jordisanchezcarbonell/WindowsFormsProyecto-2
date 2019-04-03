@@ -101,7 +101,7 @@
             // 
             // bindingSourceTipoGestion
             // 
-            this.bindingSourceTipoGestion.DataSource = typeof(COMPLETE_FLAT_UI.Tipo_gestion);
+            this.bindingSourceTipoGestion.DataSource = typeof(Tipo_gestion);
             this.bindingSourceTipoGestion.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
             // 
             // direccion
@@ -112,7 +112,7 @@
             // 
             // bindingSourceInstalaciones
             // 
-            this.bindingSourceInstalaciones.DataSource = typeof(COMPLETE_FLAT_UI.Instalacion);
+            this.bindingSourceInstalaciones.DataSource = typeof(Instalacion);
             // 
             // comboBoxEsport
             // 

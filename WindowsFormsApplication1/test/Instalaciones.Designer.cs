@@ -47,6 +47,7 @@
             this.materialLabelAdreca = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabelNom = new MaterialSkin.Controls.MaterialLabel();
             this.bindingSourceDiasSemana = new System.Windows.Forms.BindingSource(this.components);
+            this.materialRaisedButtonHorari = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstalaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTipoGestion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalaciones)).BeginInit();
@@ -135,7 +136,7 @@
             this.materialRaisedButtonBorrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonBorrar.Depth = 0;
             this.materialRaisedButtonBorrar.Icon = null;
-            this.materialRaisedButtonBorrar.Location = new System.Drawing.Point(626, 211);
+            this.materialRaisedButtonBorrar.Location = new System.Drawing.Point(508, 207);
             this.materialRaisedButtonBorrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonBorrar.Name = "materialRaisedButtonBorrar";
             this.materialRaisedButtonBorrar.Primary = true;
@@ -151,7 +152,7 @@
             this.materialRaisedButtonModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonModificar.Depth = 0;
             this.materialRaisedButtonModificar.Icon = null;
-            this.materialRaisedButtonModificar.Location = new System.Drawing.Point(626, 155);
+            this.materialRaisedButtonModificar.Location = new System.Drawing.Point(508, 155);
             this.materialRaisedButtonModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonModificar.Name = "materialRaisedButtonModificar";
             this.materialRaisedButtonModificar.Primary = true;
@@ -167,7 +168,7 @@
             this.materialRaisedButtonAgregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonAgregar.Depth = 0;
             this.materialRaisedButtonAgregar.Icon = null;
-            this.materialRaisedButtonAgregar.Location = new System.Drawing.Point(628, 103);
+            this.materialRaisedButtonAgregar.Location = new System.Drawing.Point(508, 100);
             this.materialRaisedButtonAgregar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonAgregar.Name = "materialRaisedButtonAgregar";
             this.materialRaisedButtonAgregar.Primary = true;
@@ -256,11 +257,27 @@
             // 
             this.bindingSourceDiasSemana.DataSource = typeof(COMPLETE_FLAT_UI.Dias_Semana);
             // 
+            // materialRaisedButtonHorari
+            // 
+            this.materialRaisedButtonHorari.AutoSize = true;
+            this.materialRaisedButtonHorari.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButtonHorari.Depth = 0;
+            this.materialRaisedButtonHorari.Icon = null;
+            this.materialRaisedButtonHorari.Location = new System.Drawing.Point(630, 127);
+            this.materialRaisedButtonHorari.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonHorari.Name = "materialRaisedButtonHorari";
+            this.materialRaisedButtonHorari.Primary = true;
+            this.materialRaisedButtonHorari.Size = new System.Drawing.Size(146, 36);
+            this.materialRaisedButtonHorari.TabIndex = 30;
+            this.materialRaisedButtonHorari.Text = "Modificar Horari";
+            this.materialRaisedButtonHorari.UseVisualStyleBackColor = true;
+            // 
             // Instalaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 486);
+            this.Controls.Add(this.materialRaisedButtonHorari);
             this.Controls.Add(this.comboBoxEsport);
             this.Controls.Add(this.materialRaisedButtonBorrar);
             this.Controls.Add(this.materialRaisedButtonModificar);
@@ -304,5 +321,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn id_tipo_gestion;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
         private System.Windows.Forms.BindingSource bindingSourceDiasSemana;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonHorari;
     }
 }

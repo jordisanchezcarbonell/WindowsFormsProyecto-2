@@ -208,6 +208,12 @@
     <Compile Include="FormMenuPrincipal.Designer.cs">
       <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="HorariInstalacio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HorariInstalacio.Designer.cs">
+      <DependentUpon>HorariInstalacio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Horario_Act_Con.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -302,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuPrincipal.resx">
       <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HorariInstalacio.resx">
+      <DependentUpon>HorariInstalacio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Instalaciones.resx">
       <DependentUpon>Instalaciones.cs</DependentUpon>

@@ -219,7 +219,7 @@
             this.materialLabelTipusGestio.AutoSize = true;
             this.materialLabelTipusGestio.Depth = 0;
             this.materialLabelTipusGestio.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelTipusGestio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialLabelTipusGestio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabelTipusGestio.Location = new System.Drawing.Point(57, 172);
             this.materialLabelTipusGestio.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelTipusGestio.Name = "materialLabelTipusGestio";
@@ -232,7 +232,7 @@
             this.materialLabelAdreca.AutoSize = true;
             this.materialLabelAdreca.Depth = 0;
             this.materialLabelAdreca.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelAdreca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialLabelAdreca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabelAdreca.Location = new System.Drawing.Point(57, 135);
             this.materialLabelAdreca.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelAdreca.Name = "materialLabelAdreca";
@@ -245,7 +245,7 @@
             this.materialLabelNom.AutoSize = true;
             this.materialLabelNom.Depth = 0;
             this.materialLabelNom.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelNom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialLabelNom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabelNom.Location = new System.Drawing.Point(57, 100);
             this.materialLabelNom.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelNom.Name = "materialLabelNom";
@@ -271,6 +271,7 @@
             this.materialRaisedButtonHorari.TabIndex = 30;
             this.materialRaisedButtonHorari.Text = "Modificar Horari";
             this.materialRaisedButtonHorari.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonHorari.Click += new System.EventHandler(this.materialRaisedButtonHorari_Click);
             // 
             // Instalaciones
             // 

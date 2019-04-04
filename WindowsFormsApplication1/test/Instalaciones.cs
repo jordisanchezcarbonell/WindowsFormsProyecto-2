@@ -166,5 +166,11 @@ namespace COMPLETE_FLAT_UI
         {
 
         }
+
+        private void materialRaisedButtonHorari_Click(object sender, EventArgs e)
+        {
+            HorariInstalacio hi = new HorariInstalacio();
+            hi.ShowDialog();
+        }
     }
 }

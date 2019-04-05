@@ -40,12 +40,12 @@ namespace COMPLETE_FLAT_UI
         public virtual DbSet<Horario_Act_Con> Horario_Act_Con { get; set; }
         public virtual DbSet<Horario_Act_Dem> Horario_Act_Dem { get; set; }
         public virtual DbSet<Instalacion> Instalacion { get; set; }
-        public virtual DbSet<Instalacion_Horario> Instalacion_Horario { get; set; }
         public virtual DbSet<Sexo> Sexo { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Telefonos> Telefonos { get; set; }
         public virtual DbSet<Tipo_Actividades> Tipo_Actividades { get; set; }
         public virtual DbSet<Tipo_gestion> Tipo_gestion { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<Instalacion_Horario> Instalacion_Horario { get; set; }
     }
 }

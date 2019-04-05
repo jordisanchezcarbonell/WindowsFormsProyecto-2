@@ -139,6 +139,7 @@
             // 
             this.comboBoxDias.DataSource = this.bindingSourceDiasSemana;
             this.comboBoxDias.DisplayMember = "nombre";
+            this.comboBoxDias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDias.FormattingEnabled = true;
             this.comboBoxDias.Location = new System.Drawing.Point(186, 136);
             this.comboBoxDias.Name = "comboBoxDias";

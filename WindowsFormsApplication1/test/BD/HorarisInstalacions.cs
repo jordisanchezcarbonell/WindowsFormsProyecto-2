@@ -8,7 +8,7 @@ namespace COMPLETE_FLAT_UI.BD
 {
     class HorarisInstalacions
     {
-        public static String InsertHorarioInstalacion(int idInstalacion, int idDia, DateTime horaInicio, DateTime horaFin)
+        public static String InsertHorarioInstalacion(int idInstalacion, int idDia, TimeSpan horaInicio, TimeSpan horaFin)
         {
             String mensaje = "";
 
@@ -21,14 +21,14 @@ namespace COMPLETE_FLAT_UI.BD
 
             ORM.bd.Instalacion_Horario.Add(horari);
 
-            ORM.SaveChanges();
+            //ORM.SaveChanges();
 
             mensaje = ORM.SaveChanges();
 
             return mensaje;
         }
 
-        public static String UpdateHorarioInstalacion(int id, DateTime horaInicio, DateTime horaFin)
+        public static String UpdateHorarioInstalacion(int id, TimeSpan horaInicio, TimeSpan horaFin)
         {
             String mensaje = "";
             Instalacion_Horario instalacion = ORM.bd.Instalacion_Horario.Find(id);

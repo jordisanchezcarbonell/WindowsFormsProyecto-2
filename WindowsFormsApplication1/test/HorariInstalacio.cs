@@ -22,10 +22,12 @@ namespace COMPLETE_FLAT_UI
         {
             bindingSourceInstalaciones.DataSource = BD.InstalacionsORM.SelectAllInstalaciones();
             bindingSourceDiasSemana.DataSource = BD.DiasORM.SelectAllDias();
-            dateTimePickerHoraInicio.Format = DateTimePickerFormat.Custom;
-            dateTimePickerHoraInicio.CustomFormat = "HH:mm:ss";
+           /* dateTimePickerHoraInicio.Format = DateTimePickerFormat.Custom;
+            dateTimePickerHoraInicio.CustomFormat = "yyyyMMdd hh:mm:ss tt";
+            dateTimePickerHoraFin.Format = DateTimePickerFormat.Custom;
+            dateTimePickerHoraFin.CustomFormat = "yyyyMMdd hh:mm:ss tt";*/
         }
-/*
+
         private void dateTimePickerHoraInicio_ValueChanged(object sender, EventArgs e)
         {
             var picker = (DateTimePicker)sender;
@@ -46,17 +48,19 @@ namespace COMPLETE_FLAT_UI
 
         private void materialRaisedButtonAceptar_Click(object sender, EventArgs e)
         {
+            
             if (comboBoxInstalacion.SelectedValue.Equals(null) || comboBoxInstalacion.SelectedValue.Equals(null) || dateTimePickerHoraInicio.Value.Equals(null) || dateTimePickerHoraFin.Value.Equals(null))
             {
-                MessageBox.Show("Omple tots els camps", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("S'han d'omplir tots els camps", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                mensaje = BD.HorarisInstalacions.InsertHorarioInstalacion((int)comboBoxInstalacion.SelectedValue, (int)comboBoxDias.SelectedValue, Convert.ToDateTime(dateTimePickerHoraInicio.Text), Convert.ToDateTime(dateTimePickerHoraFin.Text));
+              
+                mensaje = BD.HorarisInstalacions.InsertHorarioInstalacion((int)comboBoxInstalacion.SelectedValue, (int)comboBoxDias.SelectedValue,  dateTimePickerHoraInicio.Value.TimeOfDay, dateTimePickerHoraFin.Value.TimeOfDay);
                 MessageBox.Show("S'ha guardat l'horari", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        */
+        
 
     }
 }

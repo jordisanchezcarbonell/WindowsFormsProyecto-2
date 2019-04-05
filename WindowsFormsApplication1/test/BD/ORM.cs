@@ -93,9 +93,12 @@ namespace COMPLETE_FLAT_UI.BD
             catch (DbUpdateException ex)
             {
                 RejectChanges();
-                SqlException sqlEx = (SqlException)ex.InnerException.InnerException;
-                mensaje = MensajeError(sqlEx);
-            }
+               
+                    SqlException sqlEx = (SqlException)ex.InnerException.InnerException;
+                    sqlEx.ToString();
+                
+                //mensaje = MensajeError(sqlEx);
+                }
 
             return mensaje;
 

@@ -157,7 +157,7 @@ namespace COMPLETE_FLAT_UI
         //METODOS PARA ABRIR OTROS FORMULARIOS Y MOSTRAR FORM DE LOGO Al CERRAR ----------------------------------------------------------
         private void btnListaClientes_Click(object sender, EventArgs e)
         {
-            FormListaClientes fm = new FormListaClientes();
+           
             Entitats EN = new Entitats();
             EN.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormEnPanel(EN);
@@ -224,25 +224,28 @@ namespace COMPLETE_FLAT_UI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+           
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            Equipos equipo = new Equipos();
+            equipo.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormEnPanel(equipo);
         }
 
-        private void buttonEquipos_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            Equipos frm = new Equipos();
-            frm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormEnPanel(frm);
+            Exportacion_Resumen export = new Exportacion_Resumen();
+            export.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormEnPanel(export);
         }
+    
 
         //----------------COLOR Y GRIP DE RECTANGULO INFERIOR
         protected override void OnPaint(PaintEventArgs e)

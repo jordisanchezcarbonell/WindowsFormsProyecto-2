@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
+using System.Diagnostics;
 
 namespace COMPLETE_FLAT_UI
 {
@@ -25,7 +29,7 @@ namespace COMPLETE_FLAT_UI
             bindingSourceTipusCompeticio.DataSource = BD.Equipos.selectcompeticion(ref mensaje);
             bindingSourceCatXedat.DataSource = BD.Equipos.categoria(ref mensaje);
             bindingSourcecategoriasolo.DataSource = BD.Equipos.categoriasolo(ref mensaje);
-            bindingSourcesexo.DataSource = BD.Equipos.Sexo(ref mensaje);
+            bindingSourcesexo.DataSource = BD.SexoORM.SelectSexo(ref mensaje);
             bindingSourceEntitat.DataSource = BD.Equipos.SelectAllEntidades(ref mensaje);
         }
 
@@ -89,17 +93,19 @@ namespace COMPLETE_FLAT_UI
 
 
                 //aqui el codigo para eliminar el registro
-                mensaje = BD.Equipos.DeletEquipo((Equipo)dataGridViewEquips.CurrentRow.DataBoundItem);
+                Equipo Equipotest = (Equipo)dataGridViewEquips.CurrentRow.DataBoundItem;
+                mensaje = BD.Equipos.DeletEquipo(Equipotest.id);
 
                 if (!mensaje.Equals(""))
                 {
-                    MessageBox.Show(mensaje, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    
+                     MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
                 else
                 {
-                    MessageBox.Show(mensaje, "BORRADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("S'ha eliminat correctament", "BORRADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
 
                 }
 
@@ -130,7 +136,18 @@ namespace COMPLETE_FLAT_UI
 
         private void materialRaisedButtonModificar_Click(object sender, EventArgs e)
         {
-            mensaje = BD.Equipos.UpdateHoteles((int)dataGridViewEquips.CurrentRow.Cells[0].Value,materialSingleLineTextFieldNom.Text, (int)comboBoxEsport.SelectedValue, (int)comboBoxTipusCompeticio.SelectedValue, (int)comboBoxCategoriaEdat.SelectedValue, (int)comboBoxCategoria.SelectedValue, (int)comboBoxSexe.SelectedValue,(int)comboBoxEntidad.SelectedValue);
+            mensaje = BD.Equipos.UpdateEquipos((int)dataGridViewEquips.CurrentRow.Cells[0].Value,materialSingleLineTextFieldNom.Text, (int)comboBoxEsport.SelectedValue, (int)comboBoxTipusCompeticio.SelectedValue, (int)comboBoxCategoriaEdat.SelectedValue, (int)comboBoxCategoria.SelectedValue, (int)comboBoxSexe.SelectedValue,(int)comboBoxEntidad.SelectedValue);
+
+            if (mensaje.Equals(""))
+            {
+                MessageBox.Show("S'ha modificat", "Informacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
         }
 
         private void comboBoxTextsize_SelectedIndexChanged(object sender, EventArgs e)
@@ -144,7 +161,7 @@ namespace COMPLETE_FLAT_UI
             {
                 //Enlazamos nuestra comboBox con el nombre de los hoteles.
                 entidad2 = (Entidad)comboBoxEntidad.SelectedItem;
-                bindingSourceEquips.DataSource = entidad2.Equipo.ToList(); //Relacionamos nuestro binding de Hoteles con el item seleccionado en nuestra combo. 
+                bindingSourceEquips.DataSource =  entidad2.correo.ToList(); //Relacionamos nuestro binding de Hoteles con el item seleccionado en nuestra combo. 
             }
         }
 
@@ -158,5 +175,8 @@ namespace COMPLETE_FLAT_UI
 
 
         }
+
+       
+
     }
 }

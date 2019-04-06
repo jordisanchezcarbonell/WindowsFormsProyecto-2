@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlowFishCS;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -8,8 +9,10 @@ using System.Threading.Tasks;
 namespace COMPLETE_FLAT_UI.BD
 {
     class Equipos
- 
+
     {
+         BlowFish b = new BlowFish("04B915BA43FEB5B6");
+
         //SELECT ALL ENTIDADES
         public static List<Entidad> SelectAllEntidades(ref String mensaje)
         {
@@ -150,25 +153,7 @@ namespace COMPLETE_FLAT_UI.BD
         }
 
 
-        public static List<Sexo> Sexo(ref String mensaje)
-        {
-            /*PRIMERO FROM DESPUES EL SELECT*/
-            List<Sexo> _Entidades = new List<Sexo>();
-
-            try
-            {
-
-                _Entidades = (from c in ORM.bd.Sexo
-                              select c).ToList();
-            }
-            catch (SqlException ex)
-            {
-                mensaje = ORM.MensajeError(ex);
-            }
-
-            return _Entidades;
-
-        }
+      
         public static String InsertarEquipo( String Nombre, int id_sport, int id_competicion,int id_competicion_edad,int id_nivell,int id_sexo,int id_entidad)
         {
 
@@ -192,7 +177,7 @@ namespace COMPLETE_FLAT_UI.BD
 
         }
 
-        public static String UpdateHoteles(int id,String Nombre, int id_sport, int id_competicion, int id_competicion_edad, int id_nivell, int id_sexo, int id_entidad)
+        public static String UpdateEquipos(int id,String Nombre, int id_sport, int id_competicion, int id_competicion_edad, int id_nivell, int id_sexo, int id_entidad)
         {
 
             String mensaje = "";
@@ -265,11 +250,12 @@ namespace COMPLETE_FLAT_UI.BD
         }
 */
 
-        public static String DeletEquipo (Equipo delEquipo)
+        public static String DeletEquipo (int id)
         {
 
             String mensaje = "";
-            ORM.bd.Equipo.Remove(delEquipo);
+            Equipo equipo = ORM.bd.Equipo.Find(id);
+            ORM.bd.Equipo.Remove(equipo);
 
             mensaje = ORM.SaveChanges();
 

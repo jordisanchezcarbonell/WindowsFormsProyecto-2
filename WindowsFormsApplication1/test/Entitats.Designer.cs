@@ -233,7 +233,7 @@
             // 
             // bindingSourceEntitats
             // 
-            this.bindingSourceEntitats.DataSource = typeof(COMPLETE_FLAT_UI.Entitats);
+            this.bindingSourceEntitats.DataSource = typeof(COMPLETE_FLAT_UI.Entidad);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -285,7 +285,6 @@
             this.materialSingleLineTextFieldNom.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.materialSingleLineTextFieldNom.Hint = "";
             this.materialSingleLineTextFieldNom.Location = new System.Drawing.Point(200, 113);
-            this.materialSingleLineTextFieldNom.MaxLength = 32767;
             this.materialSingleLineTextFieldNom.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldNom.Name = "materialSingleLineTextFieldNom";
             this.materialSingleLineTextFieldNom.PasswordChar = '\0';
@@ -304,7 +303,6 @@
             this.materialSingleLineTextFieldTemporada.Depth = 0;
             this.materialSingleLineTextFieldTemporada.Hint = "";
             this.materialSingleLineTextFieldTemporada.Location = new System.Drawing.Point(200, 143);
-            this.materialSingleLineTextFieldTemporada.MaxLength = 32767;
             this.materialSingleLineTextFieldTemporada.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldTemporada.Name = "materialSingleLineTextFieldTemporada";
             this.materialSingleLineTextFieldTemporada.PasswordChar = '\0';
@@ -323,7 +321,6 @@
             this.materialSingleLineTextFieldAdreca.Depth = 0;
             this.materialSingleLineTextFieldAdreca.Hint = "";
             this.materialSingleLineTextFieldAdreca.Location = new System.Drawing.Point(200, 178);
-            this.materialSingleLineTextFieldAdreca.MaxLength = 32767;
             this.materialSingleLineTextFieldAdreca.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldAdreca.Name = "materialSingleLineTextFieldAdreca";
             this.materialSingleLineTextFieldAdreca.PasswordChar = '\0';
@@ -342,7 +339,6 @@
             this.materialSingleLineTextFieldNif.Depth = 0;
             this.materialSingleLineTextFieldNif.Hint = "";
             this.materialSingleLineTextFieldNif.Location = new System.Drawing.Point(200, 83);
-            this.materialSingleLineTextFieldNif.MaxLength = 32767;
             this.materialSingleLineTextFieldNif.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldNif.Name = "materialSingleLineTextFieldNif";
             this.materialSingleLineTextFieldNif.PasswordChar = '\0';
@@ -361,7 +357,6 @@
             this.materialSingleLineTextFieldCorreo.Depth = 0;
             this.materialSingleLineTextFieldCorreo.Hint = "";
             this.materialSingleLineTextFieldCorreo.Location = new System.Drawing.Point(200, 213);
-            this.materialSingleLineTextFieldCorreo.MaxLength = 32767;
             this.materialSingleLineTextFieldCorreo.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldCorreo.Name = "materialSingleLineTextFieldCorreo";
             this.materialSingleLineTextFieldCorreo.PasswordChar = '\0';
@@ -377,14 +372,12 @@
             // 
             this.materialRaisedButtonAfegir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialRaisedButtonAfegir.AutoSize = true;
-            this.materialRaisedButtonAfegir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonAfegir.Depth = 0;
-            this.materialRaisedButtonAfegir.Icon = null;
-            this.materialRaisedButtonAfegir.Location = new System.Drawing.Point(585, 120);
+            this.materialRaisedButtonAfegir.Location = new System.Drawing.Point(589, 101);
             this.materialRaisedButtonAfegir.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonAfegir.Name = "materialRaisedButtonAfegir";
             this.materialRaisedButtonAfegir.Primary = true;
-            this.materialRaisedButtonAfegir.Size = new System.Drawing.Size(67, 36);
+            this.materialRaisedButtonAfegir.Size = new System.Drawing.Size(87, 36);
             this.materialRaisedButtonAfegir.TabIndex = 8;
             this.materialRaisedButtonAfegir.Text = "Afegir";
             this.materialRaisedButtonAfegir.UseVisualStyleBackColor = true;
@@ -394,15 +387,13 @@
             // 
             this.materialRaisedButtonModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialRaisedButtonModificar.AutoSize = true;
-            this.materialRaisedButtonModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonModificar.Depth = 0;
-            this.materialRaisedButtonModificar.Icon = null;
-            this.materialRaisedButtonModificar.Location = new System.Drawing.Point(590, 165);
+            this.materialRaisedButtonModificar.Location = new System.Drawing.Point(589, 160);
             this.materialRaisedButtonModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonModificar.Name = "materialRaisedButtonModificar";
             this.materialRaisedButtonModificar.Primary = true;
             this.materialRaisedButtonModificar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialRaisedButtonModificar.Size = new System.Drawing.Size(93, 36);
+            this.materialRaisedButtonModificar.Size = new System.Drawing.Size(87, 36);
             this.materialRaisedButtonModificar.TabIndex = 9;
             this.materialRaisedButtonModificar.Text = "Modificar";
             this.materialRaisedButtonModificar.UseVisualStyleBackColor = true;
@@ -412,14 +403,12 @@
             // 
             this.materialRaisedButtonEsborrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialRaisedButtonEsborrar.AutoSize = true;
-            this.materialRaisedButtonEsborrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonEsborrar.Depth = 0;
-            this.materialRaisedButtonEsborrar.Icon = null;
-            this.materialRaisedButtonEsborrar.Location = new System.Drawing.Point(589, 213);
+            this.materialRaisedButtonEsborrar.Location = new System.Drawing.Point(589, 225);
             this.materialRaisedButtonEsborrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonEsborrar.Name = "materialRaisedButtonEsborrar";
             this.materialRaisedButtonEsborrar.Primary = true;
-            this.materialRaisedButtonEsborrar.Size = new System.Drawing.Size(90, 36);
+            this.materialRaisedButtonEsborrar.Size = new System.Drawing.Size(87, 36);
             this.materialRaisedButtonEsborrar.TabIndex = 10;
             this.materialRaisedButtonEsborrar.Text = "Esborrar";
             this.materialRaisedButtonEsborrar.UseVisualStyleBackColor = true;
@@ -429,14 +418,12 @@
             // 
             this.materialRaisedButtonNetejarCamps.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialRaisedButtonNetejarCamps.AutoSize = true;
-            this.materialRaisedButtonNetejarCamps.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonNetejarCamps.Depth = 0;
-            this.materialRaisedButtonNetejarCamps.Icon = null;
-            this.materialRaisedButtonNetejarCamps.Location = new System.Drawing.Point(700, 150);
+            this.materialRaisedButtonNetejarCamps.Location = new System.Drawing.Point(701, 187);
             this.materialRaisedButtonNetejarCamps.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonNetejarCamps.Name = "materialRaisedButtonNetejarCamps";
             this.materialRaisedButtonNetejarCamps.Primary = true;
-            this.materialRaisedButtonNetejarCamps.Size = new System.Drawing.Size(80, 36);
+            this.materialRaisedButtonNetejarCamps.Size = new System.Drawing.Size(87, 36);
             this.materialRaisedButtonNetejarCamps.TabIndex = 11;
             this.materialRaisedButtonNetejarCamps.Text = "Netejar";
             this.materialRaisedButtonNetejarCamps.UseVisualStyleBackColor = true;
@@ -449,7 +436,6 @@
             this.materialSingleLineTextFieldContrasenya.Depth = 0;
             this.materialSingleLineTextFieldContrasenya.Hint = "";
             this.materialSingleLineTextFieldContrasenya.Location = new System.Drawing.Point(200, 251);
-            this.materialSingleLineTextFieldContrasenya.MaxLength = 32767;
             this.materialSingleLineTextFieldContrasenya.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldContrasenya.Name = "materialSingleLineTextFieldContrasenya";
             this.materialSingleLineTextFieldContrasenya.PasswordChar = '\0';
@@ -481,7 +467,6 @@
             this.materialSingleLineTextFieldRepetirContrasenya.Depth = 0;
             this.materialSingleLineTextFieldRepetirContrasenya.Hint = "";
             this.materialSingleLineTextFieldRepetirContrasenya.Location = new System.Drawing.Point(243, 301);
-            this.materialSingleLineTextFieldRepetirContrasenya.MaxLength = 32767;
             this.materialSingleLineTextFieldRepetirContrasenya.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldRepetirContrasenya.Name = "materialSingleLineTextFieldRepetirContrasenya";
             this.materialSingleLineTextFieldRepetirContrasenya.PasswordChar = '\0';
@@ -510,10 +495,8 @@
             // 
             this.materialRaisedButtonTelefons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialRaisedButtonTelefons.AutoSize = true;
-            this.materialRaisedButtonTelefons.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonTelefons.Depth = 0;
-            this.materialRaisedButtonTelefons.Icon = null;
-            this.materialRaisedButtonTelefons.Location = new System.Drawing.Point(596, 301);
+            this.materialRaisedButtonTelefons.Location = new System.Drawing.Point(589, 301);
             this.materialRaisedButtonTelefons.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonTelefons.Name = "materialRaisedButtonTelefons";
             this.materialRaisedButtonTelefons.Primary = true;

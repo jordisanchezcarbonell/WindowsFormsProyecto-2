@@ -47,6 +47,8 @@
             this.materialLabelAdreca = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabelNom = new MaterialSkin.Controls.MaterialLabel();
             this.bindingSourceDiasSemana = new System.Windows.Forms.BindingSource(this.components);
+            this.materialRaisedButtonHorari = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstalaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTipoGestion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalaciones)).BeginInit();
@@ -101,7 +103,7 @@
             // 
             // bindingSourceTipoGestion
             // 
-            this.bindingSourceTipoGestion.DataSource = typeof(Tipo_gestion);
+            this.bindingSourceTipoGestion.DataSource = typeof(COMPLETE_FLAT_UI.Tipo_gestion);
             this.bindingSourceTipoGestion.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
             // 
             // direccion
@@ -112,7 +114,7 @@
             // 
             // bindingSourceInstalaciones
             // 
-            this.bindingSourceInstalaciones.DataSource = typeof(Instalacion);
+            this.bindingSourceInstalaciones.DataSource = typeof(COMPLETE_FLAT_UI.Instalacion);
             // 
             // comboBoxEsport
             // 
@@ -131,15 +133,14 @@
             // 
             // materialRaisedButtonBorrar
             // 
+            this.materialRaisedButtonBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialRaisedButtonBorrar.AutoSize = true;
-            this.materialRaisedButtonBorrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonBorrar.Depth = 0;
-            this.materialRaisedButtonBorrar.Icon = null;
-            this.materialRaisedButtonBorrar.Location = new System.Drawing.Point(626, 211);
+            this.materialRaisedButtonBorrar.Location = new System.Drawing.Point(508, 207);
             this.materialRaisedButtonBorrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonBorrar.Name = "materialRaisedButtonBorrar";
             this.materialRaisedButtonBorrar.Primary = true;
-            this.materialRaisedButtonBorrar.Size = new System.Drawing.Size(65, 36);
+            this.materialRaisedButtonBorrar.Size = new System.Drawing.Size(83, 36);
             this.materialRaisedButtonBorrar.TabIndex = 28;
             this.materialRaisedButtonBorrar.Text = "Borra";
             this.materialRaisedButtonBorrar.UseVisualStyleBackColor = true;
@@ -147,15 +148,14 @@
             // 
             // materialRaisedButtonModificar
             // 
+            this.materialRaisedButtonModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialRaisedButtonModificar.AutoSize = true;
-            this.materialRaisedButtonModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonModificar.Depth = 0;
-            this.materialRaisedButtonModificar.Icon = null;
-            this.materialRaisedButtonModificar.Location = new System.Drawing.Point(626, 155);
+            this.materialRaisedButtonModificar.Location = new System.Drawing.Point(508, 155);
             this.materialRaisedButtonModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonModificar.Name = "materialRaisedButtonModificar";
             this.materialRaisedButtonModificar.Primary = true;
-            this.materialRaisedButtonModificar.Size = new System.Drawing.Size(85, 36);
+            this.materialRaisedButtonModificar.Size = new System.Drawing.Size(83, 36);
             this.materialRaisedButtonModificar.TabIndex = 27;
             this.materialRaisedButtonModificar.Text = "Modifica";
             this.materialRaisedButtonModificar.UseVisualStyleBackColor = true;
@@ -163,11 +163,10 @@
             // 
             // materialRaisedButtonAgregar
             // 
+            this.materialRaisedButtonAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialRaisedButtonAgregar.AutoSize = true;
-            this.materialRaisedButtonAgregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonAgregar.Depth = 0;
-            this.materialRaisedButtonAgregar.Icon = null;
-            this.materialRaisedButtonAgregar.Location = new System.Drawing.Point(628, 103);
+            this.materialRaisedButtonAgregar.Location = new System.Drawing.Point(508, 100);
             this.materialRaisedButtonAgregar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonAgregar.Name = "materialRaisedButtonAgregar";
             this.materialRaisedButtonAgregar.Primary = true;
@@ -182,7 +181,6 @@
             this.materialSingleLineTextFieldAdreca.Depth = 0;
             this.materialSingleLineTextFieldAdreca.Hint = "";
             this.materialSingleLineTextFieldAdreca.Location = new System.Drawing.Point(206, 135);
-            this.materialSingleLineTextFieldAdreca.MaxLength = 32767;
             this.materialSingleLineTextFieldAdreca.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldAdreca.Name = "materialSingleLineTextFieldAdreca";
             this.materialSingleLineTextFieldAdreca.PasswordChar = '\0';
@@ -200,7 +198,6 @@
             this.materialSingleLineTextFieldNombre.Depth = 0;
             this.materialSingleLineTextFieldNombre.Hint = "";
             this.materialSingleLineTextFieldNombre.Location = new System.Drawing.Point(206, 100);
-            this.materialSingleLineTextFieldNombre.MaxLength = 32767;
             this.materialSingleLineTextFieldNombre.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldNombre.Name = "materialSingleLineTextFieldNombre";
             this.materialSingleLineTextFieldNombre.PasswordChar = '\0';
@@ -256,11 +253,43 @@
             // 
             this.bindingSourceDiasSemana.DataSource = typeof(COMPLETE_FLAT_UI.Dias_Semana);
             // 
+            // materialRaisedButtonHorari
+            // 
+            this.materialRaisedButtonHorari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialRaisedButtonHorari.AutoSize = true;
+            this.materialRaisedButtonHorari.Depth = 0;
+            this.materialRaisedButtonHorari.Location = new System.Drawing.Point(630, 127);
+            this.materialRaisedButtonHorari.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonHorari.Name = "materialRaisedButtonHorari";
+            this.materialRaisedButtonHorari.Primary = true;
+            this.materialRaisedButtonHorari.Size = new System.Drawing.Size(146, 36);
+            this.materialRaisedButtonHorari.TabIndex = 30;
+            this.materialRaisedButtonHorari.Text = "Modificar Horari";
+            this.materialRaisedButtonHorari.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonHorari.Click += new System.EventHandler(this.materialRaisedButtonHorari_Click);
+            // 
+            // materialRaisedButton1
+            // 
+            this.materialRaisedButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialRaisedButton1.AutoSize = true;
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(630, 207);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(83, 36);
+            this.materialRaisedButton1.TabIndex = 31;
+            this.materialRaisedButton1.Text = "Netejar";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
+            // 
             // Instalaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 486);
+            this.Controls.Add(this.materialRaisedButton1);
+            this.Controls.Add(this.materialRaisedButtonHorari);
             this.Controls.Add(this.comboBoxEsport);
             this.Controls.Add(this.materialRaisedButtonBorrar);
             this.Controls.Add(this.materialRaisedButtonModificar);
@@ -304,5 +333,7 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn id_tipo_gestion;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
         private System.Windows.Forms.BindingSource bindingSourceDiasSemana;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonHorari;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
     }
 }

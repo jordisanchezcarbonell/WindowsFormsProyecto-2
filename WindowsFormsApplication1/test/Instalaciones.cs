@@ -24,6 +24,8 @@ namespace COMPLETE_FLAT_UI
             bindingSourceInstalaciones.DataSource = BD.InstalacionsORM.SelectAllInstalaciones();
             bindingSourceTipoGestion.DataSource = BD.TipusGestio.SelectAllTipoGestion();
             bindingSourceDiasSemana.DataSource = BD.DiasORM.SelectAllDias();
+            dataGridViewInstalaciones.AutoResizeColumns();
+            dataGridViewInstalaciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void Instalaciones_Load(object sender, EventArgs e)
@@ -165,6 +167,20 @@ namespace COMPLETE_FLAT_UI
         private void materialSingleLineTextFieldAdreca_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialRaisedButtonHorari_Click(object sender, EventArgs e)
+        {
+            HorariInstalacio hi = new HorariInstalacio();
+            hi.ShowDialog();
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            dataGridViewInstalaciones.ClearSelection();
+            dataGridViewInstalaciones.CurrentCell = null;
+            materialSingleLineTextFieldNombre.Clear();
+            materialSingleLineTextFieldAdreca.Clear();
         }
     }
 }

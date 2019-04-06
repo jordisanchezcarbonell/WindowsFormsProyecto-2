@@ -72,6 +72,10 @@
       <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MahApps.Metro, Version=1.2.4.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
       <HintPath>packages\MahApps.Metro.1.2.4.0\lib\net45\MahApps.Metro.dll</HintPath>
     </Reference>
@@ -82,8 +86,7 @@
       <HintPath>packages\MaterialDesignThemes.2.0.0.638\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\MaterialSkin.Net4.1.0.0\lib\net40\MaterialSkin.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -111,43 +114,50 @@
       <DependentUpon>Activitats.cs</DependentUpon>
     </Compile>
     <Compile Include="Act_concedida.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Act_demandadas.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Admin.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
+    <Compile Include="BD\ActivitatsORM.cs" />
+    <Compile Include="BD\Diasemana.cs" />
     <Compile Include="BD\DiasORM.cs" />
     <Compile Include="BD\EntitatsORM.cs" />
-    <Compile Include="BD\EspaciosORM.cs" />
+    <Compile Include="BD\Equipos.cs" />
+    <Compile Include="BD\Espais.cs" />
+    <Compile Include="BD\Horarioactividades.cs" />
     <Compile Include="BD\HorarisInstalacions.cs" />
     <Compile Include="BD\InstalacionsORM.cs" />
+    <Compile Include="BD\LoginOrm.cs" />
     <Compile Include="BD\ORM.cs" />
     <Compile Include="BD\blowfish.cs" />
+    <Compile Include="BD\SexoORM.cs" />
     <Compile Include="BD\TelefonsORM.cs" />
+    <Compile Include="BD\test.cs" />
     <Compile Include="BD\TipusGestio.cs" />
     <Compile Include="Categoria.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Categoria_edad.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Categoria_Edat.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Competicion.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Deportes.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Dias_Semana.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Entidad.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Entitats.cs">
       <SubType>Form</SubType>
@@ -155,17 +165,17 @@
     <Compile Include="Entitats.Designer.cs">
       <DependentUpon>Entitats.cs</DependentUpon>
     </Compile>
-    <Compile Include="Equipo.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Espacio.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Espacios.cs">
+    <Compile Include="Eqs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Espacios.Designer.cs">
-      <DependentUpon>Espacios.cs</DependentUpon>
+    <Compile Include="Eqs.Designer.cs">
+      <DependentUpon>Eqs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipo.cs">
+      <DependentUpon>Model1entiti.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Espacio.cs">
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Estilo.cs">
       <SubType>Form</SubType>
@@ -173,17 +183,17 @@
     <Compile Include="Estilo.Designer.cs">
       <DependentUpon>Estilo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Exportacion Resumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exportacion Resumen.Designer.cs">
+      <DependentUpon>Exportacion Resumen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormListaClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormListaClientes.designer.cs">
-      <DependentUpon>FormListaClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogo.cs">
       <SubType>Form</SubType>
@@ -191,32 +201,38 @@
     <Compile Include="FormLogo.designer.cs">
       <DependentUpon>FormLogo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMantCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMantCliente.designer.cs">
-      <DependentUpon>FormMantCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormMembresia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMembresia.designer.cs">
-      <DependentUpon>FormMembresia.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenuPrincipal.Designer.cs">
       <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="HorariInstalacio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HorariInstalacio.Designer.cs">
+      <DependentUpon>HorariInstalacio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Horario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Horario.Designer.cs">
+      <DependentUpon>Horario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos.Designer.cs">
+      <DependentUpon>Equipos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Horario_Act_Con.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Horario_Act_Dem.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Instalacion.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Instalaciones.cs">
       <SubType>Form</SubType>
@@ -225,7 +241,7 @@
       <DependentUpon>Instalaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Instalacion_Horario.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -233,20 +249,20 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModelBaseDatos.Context.cs">
+    <Compile Include="Model1entiti.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBaseDatos.Context.tt</DependentUpon>
+      <DependentUpon>Model1entiti.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelBaseDatos.cs">
+    <Compile Include="Model1entiti.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelBaseDatos.Designer.cs">
+    <Compile Include="Model1entiti.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBaseDatos.edmx</DependentUpon>
+      <DependentUpon>Model1entiti.edmx</DependentUpon>
     </Compile>
     <Compile Include="ModifPerfil.cs">
       <SubType>Form</SubType>
@@ -256,11 +272,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes.cs" />
     <Compile Include="Sexo.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Telefonos.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Telefons.cs">
       <SubType>Form</SubType>
@@ -269,13 +289,13 @@
       <DependentUpon>Telefons.cs</DependentUpon>
     </Compile>
     <Compile Include="Tipo_Actividades.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Tipo_gestion.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs">
-      <DependentUpon>ModelBaseDatos.tt</DependentUpon>
+      <DependentUpon>Model1entiti.tt</DependentUpon>
     </Compile>
     <Compile Include="ValidadorsRegEx.cs" />
     <EmbeddedResource Include="Activitats.resx">
@@ -284,29 +304,32 @@
     <EmbeddedResource Include="Entitats.resx">
       <DependentUpon>Entitats.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Espacios.resx">
-      <DependentUpon>Espacios.cs</DependentUpon>
+    <EmbeddedResource Include="Eqs.resx">
+      <DependentUpon>Eqs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estilo.resx">
       <DependentUpon>Estilo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Exportacion Resumen.resx">
+      <DependentUpon>Exportacion Resumen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormListaClientes.resx">
-      <DependentUpon>FormListaClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogo.resx">
       <DependentUpon>FormLogo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMantCliente.resx">
-      <DependentUpon>FormMantCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMembresia.resx">
-      <DependentUpon>FormMembresia.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormMenuPrincipal.resx">
       <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos.resx">
+      <DependentUpon>Equipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HorariInstalacio.resx">
+      <DependentUpon>HorariInstalacio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Horario.resx">
+      <DependentUpon>Horario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Instalaciones.resx">
       <DependentUpon>Instalaciones.cs</DependentUpon>
@@ -330,12 +353,12 @@
     <EmbeddedResource Include="Telefons.resx">
       <DependentUpon>Telefons.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="ModelBaseDatos.edmx">
+    <EntityDeploy Include="Model1entiti.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelBaseDatos.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1entiti.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ModelBaseDatos.edmx.diagram">
-      <DependentUpon>ModelBaseDatos.edmx</DependentUpon>
+    <None Include="Model1entiti.edmx.diagram">
+      <DependentUpon>Model1entiti.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Activitats.datasource" />
@@ -351,9 +374,9 @@
     <None Include="Properties\DataSources\Entidad.datasource" />
     <None Include="Properties\DataSources\Entitats.datasource" />
     <None Include="Properties\DataSources\Equipo.datasource" />
+    <None Include="Properties\DataSources\Equipos.datasource" />
     <None Include="Properties\DataSources\Espacio.datasource" />
     <None Include="Properties\DataSources\Estilo.datasource" />
-    <None Include="Properties\DataSources\Form1.datasource" />
     <None Include="Properties\DataSources\FormListaClientes.datasource" />
     <None Include="Properties\DataSources\FormLogo.datasource" />
     <None Include="Properties\DataSources\FormMantCliente.datasource" />
@@ -363,18 +386,12 @@
     <None Include="Properties\DataSources\Horario_Act_Dem.datasource" />
     <None Include="Properties\DataSources\Instalacion.datasource" />
     <None Include="Properties\DataSources\Instalaciones.datasource" />
-    <None Include="Properties\DataSources\Instalacions.datasource" />
     <None Include="Properties\DataSources\Instalacion_Horario.datasource" />
     <None Include="Properties\DataSources\Login.datasource" />
     <None Include="Properties\DataSources\ModifPerfil.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
-    <None Include="Properties\DataSources\ProyectoBDJordiEntities.datasource" />
-    <None Include="Properties\DataSources\ProyectoBDJordiEntities1.datasource" />
     <None Include="Properties\DataSources\Sexo.datasource" />
-    <None Include="Properties\DataSources\sysdiagrams.datasource" />
     <None Include="Properties\DataSources\Telefonos.datasource" />
-    <None Include="Properties\DataSources\Tipo_Actitivades.datasource" />
-    <None Include="Properties\DataSources\Tipo_Actividades.datasource" />
     <None Include="Properties\DataSources\Tipo_gestion.datasource" />
     <None Include="Properties\DataSources\Usuario.datasource" />
     <None Include="Properties\Settings.settings">
@@ -484,15 +501,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModelBaseDatos.Context.tt">
+    <Content Include="Model1entiti.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelBaseDatos.edmx</DependentUpon>
-      <LastGenOutput>ModelBaseDatos.Context.cs</LastGenOutput>
+      <DependentUpon>Model1entiti.edmx</DependentUpon>
+      <LastGenOutput>Model1entiti.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ModelBaseDatos.tt">
+    <Content Include="Model1entiti.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelBaseDatos.edmx</DependentUpon>
-      <LastGenOutput>ModelBaseDatos.cs</LastGenOutput>
+      <DependentUpon>Model1entiti.edmx</DependentUpon>
+      <LastGenOutput>Model1entiti.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

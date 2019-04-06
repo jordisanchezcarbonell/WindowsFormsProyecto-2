@@ -38,7 +38,7 @@ namespace COMPLETE_FLAT_UI
         public virtual Categoria_edad Categoria_edad { get; set; }
         public virtual Competicion Competicion { get; set; }
         public virtual Deportes Deportes { get; set; }
-        public virtual Entidad Entidad { get; set; }
         public virtual Sexo Sexo { get; set; }
+        public virtual Entidad Entidad { get; set; }
     }
 }

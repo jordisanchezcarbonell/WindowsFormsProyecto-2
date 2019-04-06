@@ -34,20 +34,21 @@
             this.aaaaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.textboxnom = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.textboxcontra = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label1 = new System.Windows.Forms.Label();
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonCancelar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialSingleLineTextField5 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField6 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.checkBoxRegistroCondicionesLegales = new MaterialSkin.Controls.MaterialCheckBox();
+            this.buttonRegistroAceptar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.textBoxRegistroConfirmarCorreo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.textBoxRegistroCorreo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.textBoxRegistroConfirmarContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.textBoxRegistroContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.textBoxRegistroNombreUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
@@ -86,20 +87,20 @@
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(185, 319);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(60, 18);
+            this.materialLabel1.Size = new System.Drawing.Size(61, 19);
             this.materialLabel1.TabIndex = 1;
             this.materialLabel1.Text = "Usuario";
             // 
             // materialLabel2
             // 
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel2.Location = new System.Drawing.Point(185, 361);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
@@ -107,21 +108,21 @@
             this.materialLabel2.TabIndex = 2;
             this.materialLabel2.Text = "Contraseña";
             // 
-            // materialSingleLineTextField1
+            // textboxnom
             // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(309, 319);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(197, 23);
-            this.materialSingleLineTextField1.TabIndex = 3;
-            this.materialSingleLineTextField1.TabStop = false;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.textboxnom.Depth = 0;
+            this.textboxnom.Hint = "";
+            this.textboxnom.Location = new System.Drawing.Point(309, 319);
+            this.textboxnom.MouseState = MaterialSkin.MouseState.HOVER;
+            this.textboxnom.Name = "textboxnom";
+            this.textboxnom.PasswordChar = '\0';
+            this.textboxnom.SelectedText = "";
+            this.textboxnom.SelectionLength = 0;
+            this.textboxnom.SelectionStart = 0;
+            this.textboxnom.Size = new System.Drawing.Size(197, 23);
+            this.textboxnom.TabIndex = 3;
+            this.textboxnom.TabStop = false;
+            this.textboxnom.UseSystemPasswordChar = false;
             // 
             // textboxcontra
             // 
@@ -178,205 +179,219 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonCancelar);
             this.panel1.Controls.Add(this.materialLabel8);
-            this.panel1.Controls.Add(this.materialCheckBox1);
-            this.panel1.Controls.Add(this.materialRaisedButton3);
-            this.panel1.Controls.Add(this.materialSingleLineTextField5);
-            this.panel1.Controls.Add(this.materialSingleLineTextField4);
-            this.panel1.Controls.Add(this.materialSingleLineTextField3);
-            this.panel1.Controls.Add(this.materialSingleLineTextField2);
-            this.panel1.Controls.Add(this.materialSingleLineTextField6);
+            this.panel1.Controls.Add(this.checkBoxRegistroCondicionesLegales);
+            this.panel1.Controls.Add(this.buttonRegistroAceptar);
+            this.panel1.Controls.Add(this.textBoxRegistroConfirmarCorreo);
+            this.panel1.Controls.Add(this.textBoxRegistroCorreo);
+            this.panel1.Controls.Add(this.textBoxRegistroConfirmarContraseña);
+            this.panel1.Controls.Add(this.textBoxRegistroContraseña);
+            this.panel1.Controls.Add(this.textBoxRegistroNombreUsuario);
             this.panel1.Controls.Add(this.materialLabel5);
             this.panel1.Controls.Add(this.materialLabel4);
             this.panel1.Controls.Add(this.materialLabel3);
             this.panel1.Controls.Add(this.materialLabel6);
             this.panel1.Controls.Add(this.materialLabel7);
-            this.panel1.Location = new System.Drawing.Point(1, 31);
+            this.panel1.Location = new System.Drawing.Point(0, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(781, 420);
+            this.panel1.Size = new System.Drawing.Size(965, 423);
             this.panel1.TabIndex = 13;
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Depth = 0;
+            this.buttonCancelar.Location = new System.Drawing.Point(516, 373);
+            this.buttonCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Primary = true;
+            this.buttonCancelar.Size = new System.Drawing.Size(100, 23);
+            this.buttonCancelar.TabIndex = 26;
+            this.buttonCancelar.Text = "Cancel·lar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // materialLabel8
             // 
             this.materialLabel8.AutoSize = true;
             this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabel8.Location = new System.Drawing.Point(53, 27);
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel8.Location = new System.Drawing.Point(46, 30);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(64, 18);
+            this.materialLabel8.Size = new System.Drawing.Size(65, 19);
             this.materialLabel8.TabIndex = 25;
             this.materialLabel8.Text = "Registro";
             // 
-            // materialCheckBox1
+            // checkBoxRegistroCondicionesLegales
             // 
-            this.materialCheckBox1.AutoSize = true;
-            this.materialCheckBox1.Depth = 0;
-            this.materialCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.materialCheckBox1.Location = new System.Drawing.Point(378, 334);
-            this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox1.Name = "materialCheckBox1";
-            this.materialCheckBox1.Ripple = true;
-            this.materialCheckBox1.Size = new System.Drawing.Size(225, 30);
-            this.materialCheckBox1.TabIndex = 24;
-            this.materialCheckBox1.Text = "Aceptro las condiciones legales";
-            this.materialCheckBox1.UseVisualStyleBackColor = true;
+            this.checkBoxRegistroCondicionesLegales.AutoSize = true;
+            this.checkBoxRegistroCondicionesLegales.Depth = 0;
+            this.checkBoxRegistroCondicionesLegales.Font = new System.Drawing.Font("Roboto", 10F);
+            this.checkBoxRegistroCondicionesLegales.Location = new System.Drawing.Point(378, 334);
+            this.checkBoxRegistroCondicionesLegales.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBoxRegistroCondicionesLegales.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkBoxRegistroCondicionesLegales.MouseState = MaterialSkin.MouseState.HOVER;
+            this.checkBoxRegistroCondicionesLegales.Name = "checkBoxRegistroCondicionesLegales";
+            this.checkBoxRegistroCondicionesLegales.Ripple = true;
+            this.checkBoxRegistroCondicionesLegales.Size = new System.Drawing.Size(213, 30);
+            this.checkBoxRegistroCondicionesLegales.TabIndex = 24;
+            this.checkBoxRegistroCondicionesLegales.Text = "Accepto les condicions legals";
+            this.checkBoxRegistroCondicionesLegales.UseVisualStyleBackColor = true;
             // 
-            // materialRaisedButton3
+            // buttonRegistroAceptar
             // 
-            this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(528, 385);
-            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton3.Name = "materialRaisedButton3";
-            this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(75, 23);
-            this.materialRaisedButton3.TabIndex = 23;
-            this.materialRaisedButton3.Text = "Aceptar";
-            this.materialRaisedButton3.UseVisualStyleBackColor = true;
-            this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
+            this.buttonRegistroAceptar.Depth = 0;
+            this.buttonRegistroAceptar.Location = new System.Drawing.Point(435, 373);
+            this.buttonRegistroAceptar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.buttonRegistroAceptar.Name = "buttonRegistroAceptar";
+            this.buttonRegistroAceptar.Primary = true;
+            this.buttonRegistroAceptar.Size = new System.Drawing.Size(75, 23);
+            this.buttonRegistroAceptar.TabIndex = 23;
+            this.buttonRegistroAceptar.Text = "Aceptar";
+            this.buttonRegistroAceptar.UseVisualStyleBackColor = true;
+            this.buttonRegistroAceptar.Click += new System.EventHandler(this.materialRaisedButton3_Click);
             // 
-            // materialSingleLineTextField5
+            // textBoxRegistroConfirmarCorreo
             // 
-            this.materialSingleLineTextField5.Depth = 0;
-            this.materialSingleLineTextField5.Hint = "";
-            this.materialSingleLineTextField5.Location = new System.Drawing.Point(352, 291);
-            this.materialSingleLineTextField5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField5.Name = "materialSingleLineTextField5";
-            this.materialSingleLineTextField5.PasswordChar = '\0';
-            this.materialSingleLineTextField5.SelectedText = "";
-            this.materialSingleLineTextField5.SelectionLength = 0;
-            this.materialSingleLineTextField5.SelectionStart = 0;
-            this.materialSingleLineTextField5.Size = new System.Drawing.Size(251, 23);
-            this.materialSingleLineTextField5.TabIndex = 22;
-            this.materialSingleLineTextField5.UseSystemPasswordChar = false;
+            this.textBoxRegistroConfirmarCorreo.Depth = 0;
+            this.textBoxRegistroConfirmarCorreo.Hint = "";
+            this.textBoxRegistroConfirmarCorreo.Location = new System.Drawing.Point(352, 291);
+            this.textBoxRegistroConfirmarCorreo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.textBoxRegistroConfirmarCorreo.Name = "textBoxRegistroConfirmarCorreo";
+            this.textBoxRegistroConfirmarCorreo.PasswordChar = '\0';
+            this.textBoxRegistroConfirmarCorreo.SelectedText = "";
+            this.textBoxRegistroConfirmarCorreo.SelectionLength = 0;
+            this.textBoxRegistroConfirmarCorreo.SelectionStart = 0;
+            this.textBoxRegistroConfirmarCorreo.Size = new System.Drawing.Size(251, 23);
+            this.textBoxRegistroConfirmarCorreo.TabIndex = 22;
+            this.textBoxRegistroConfirmarCorreo.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField4
+            // textBoxRegistroCorreo
             // 
-            this.materialSingleLineTextField4.Depth = 0;
-            this.materialSingleLineTextField4.Hint = "";
-            this.materialSingleLineTextField4.Location = new System.Drawing.Point(352, 247);
-            this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField4.Name = "materialSingleLineTextField4";
-            this.materialSingleLineTextField4.PasswordChar = '\0';
-            this.materialSingleLineTextField4.SelectedText = "";
-            this.materialSingleLineTextField4.SelectionLength = 0;
-            this.materialSingleLineTextField4.SelectionStart = 0;
-            this.materialSingleLineTextField4.Size = new System.Drawing.Size(251, 23);
-            this.materialSingleLineTextField4.TabIndex = 21;
-            this.materialSingleLineTextField4.UseSystemPasswordChar = false;
+            this.textBoxRegistroCorreo.Depth = 0;
+            this.textBoxRegistroCorreo.Hint = "";
+            this.textBoxRegistroCorreo.Location = new System.Drawing.Point(352, 247);
+            this.textBoxRegistroCorreo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.textBoxRegistroCorreo.Name = "textBoxRegistroCorreo";
+            this.textBoxRegistroCorreo.PasswordChar = '\0';
+            this.textBoxRegistroCorreo.SelectedText = "";
+            this.textBoxRegistroCorreo.SelectionLength = 0;
+            this.textBoxRegistroCorreo.SelectionStart = 0;
+            this.textBoxRegistroCorreo.Size = new System.Drawing.Size(251, 23);
+            this.textBoxRegistroCorreo.TabIndex = 21;
+            this.textBoxRegistroCorreo.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField3
+            // textBoxRegistroConfirmarContraseña
             // 
-            this.materialSingleLineTextField3.Depth = 0;
-            this.materialSingleLineTextField3.Hint = "";
-            this.materialSingleLineTextField3.Location = new System.Drawing.Point(352, 203);
-            this.materialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField3.Name = "materialSingleLineTextField3";
-            this.materialSingleLineTextField3.PasswordChar = '*';
-            this.materialSingleLineTextField3.SelectedText = "";
-            this.materialSingleLineTextField3.SelectionLength = 0;
-            this.materialSingleLineTextField3.SelectionStart = 0;
-            this.materialSingleLineTextField3.Size = new System.Drawing.Size(251, 23);
-            this.materialSingleLineTextField3.TabIndex = 20;
-            this.materialSingleLineTextField3.UseSystemPasswordChar = false;
+            this.textBoxRegistroConfirmarContraseña.Depth = 0;
+            this.textBoxRegistroConfirmarContraseña.Hint = "";
+            this.textBoxRegistroConfirmarContraseña.Location = new System.Drawing.Point(352, 203);
+            this.textBoxRegistroConfirmarContraseña.MouseState = MaterialSkin.MouseState.HOVER;
+            this.textBoxRegistroConfirmarContraseña.Name = "textBoxRegistroConfirmarContraseña";
+            this.textBoxRegistroConfirmarContraseña.PasswordChar = '*';
+            this.textBoxRegistroConfirmarContraseña.SelectedText = "";
+            this.textBoxRegistroConfirmarContraseña.SelectionLength = 0;
+            this.textBoxRegistroConfirmarContraseña.SelectionStart = 0;
+            this.textBoxRegistroConfirmarContraseña.Size = new System.Drawing.Size(251, 23);
+            this.textBoxRegistroConfirmarContraseña.TabIndex = 20;
+            this.textBoxRegistroConfirmarContraseña.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField2
+            // textBoxRegistroContraseña
             // 
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Hint = "";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(352, 156);
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '*';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(251, 23);
-            this.materialSingleLineTextField2.TabIndex = 19;
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.textBoxRegistroContraseña.Depth = 0;
+            this.textBoxRegistroContraseña.Hint = "";
+            this.textBoxRegistroContraseña.Location = new System.Drawing.Point(352, 156);
+            this.textBoxRegistroContraseña.MouseState = MaterialSkin.MouseState.HOVER;
+            this.textBoxRegistroContraseña.Name = "textBoxRegistroContraseña";
+            this.textBoxRegistroContraseña.PasswordChar = '*';
+            this.textBoxRegistroContraseña.SelectedText = "";
+            this.textBoxRegistroContraseña.SelectionLength = 0;
+            this.textBoxRegistroContraseña.SelectionStart = 0;
+            this.textBoxRegistroContraseña.Size = new System.Drawing.Size(251, 23);
+            this.textBoxRegistroContraseña.TabIndex = 19;
+            this.textBoxRegistroContraseña.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField6
+            // textBoxRegistroNombreUsuario
             // 
-            this.materialSingleLineTextField6.Depth = 0;
-            this.materialSingleLineTextField6.Hint = "";
-            this.materialSingleLineTextField6.Location = new System.Drawing.Point(352, 108);
-            this.materialSingleLineTextField6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField6.Name = "materialSingleLineTextField6";
-            this.materialSingleLineTextField6.PasswordChar = '\0';
-            this.materialSingleLineTextField6.SelectedText = "";
-            this.materialSingleLineTextField6.SelectionLength = 0;
-            this.materialSingleLineTextField6.SelectionStart = 0;
-            this.materialSingleLineTextField6.Size = new System.Drawing.Size(251, 23);
-            this.materialSingleLineTextField6.TabIndex = 18;
-            this.materialSingleLineTextField6.UseSystemPasswordChar = false;
+            this.textBoxRegistroNombreUsuario.Depth = 0;
+            this.textBoxRegistroNombreUsuario.Hint = "";
+            this.textBoxRegistroNombreUsuario.Location = new System.Drawing.Point(352, 108);
+            this.textBoxRegistroNombreUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.textBoxRegistroNombreUsuario.Name = "textBoxRegistroNombreUsuario";
+            this.textBoxRegistroNombreUsuario.PasswordChar = '\0';
+            this.textBoxRegistroNombreUsuario.SelectedText = "";
+            this.textBoxRegistroNombreUsuario.SelectionLength = 0;
+            this.textBoxRegistroNombreUsuario.SelectionStart = 0;
+            this.textBoxRegistroNombreUsuario.Size = new System.Drawing.Size(251, 23);
+            this.textBoxRegistroNombreUsuario.TabIndex = 18;
+            this.textBoxRegistroNombreUsuario.UseSystemPasswordChar = false;
             // 
             // materialLabel5
             // 
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabel5.Location = new System.Drawing.Point(172, 291);
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel5.Location = new System.Drawing.Point(128, 293);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(106, 18);
+            this.materialLabel5.Size = new System.Drawing.Size(206, 19);
             this.materialLabel5.TabIndex = 17;
-            this.materialLabel5.Text = "Repetir Correo";
+            this.materialLabel5.Text = "Confirmar Adreça electrònica";
             // 
             // materialLabel4
             // 
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabel4.Location = new System.Drawing.Point(172, 247);
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(128, 247);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(55, 18);
+            this.materialLabel4.Size = new System.Drawing.Size(135, 19);
             this.materialLabel4.TabIndex = 16;
-            this.materialLabel4.Text = "Correo";
+            this.materialLabel4.Text = "Adreça electrònica";
             // 
             // materialLabel3
             // 
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabel3.Location = new System.Drawing.Point(172, 207);
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(128, 207);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(136, 18);
+            this.materialLabel3.Size = new System.Drawing.Size(162, 19);
             this.materialLabel3.TabIndex = 15;
-            this.materialLabel3.Text = "Repetir Contraseña";
+            this.materialLabel3.Text = "Confirmar contrasenya";
             // 
             // materialLabel6
             // 
             this.materialLabel6.AutoSize = true;
             this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabel6.Location = new System.Drawing.Point(172, 160);
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel6.Location = new System.Drawing.Point(128, 160);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(85, 18);
+            this.materialLabel6.Size = new System.Drawing.Size(93, 19);
             this.materialLabel6.TabIndex = 14;
-            this.materialLabel6.Text = "Contraseña";
+            this.materialLabel6.Text = "Contrasenya";
             // 
             // materialLabel7
             // 
             this.materialLabel7.AutoSize = true;
             this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabel7.Location = new System.Drawing.Point(172, 113);
+            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel7.Location = new System.Drawing.Point(128, 112);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(68, 18);
+            this.materialLabel7.Size = new System.Drawing.Size(52, 19);
             this.materialLabel7.TabIndex = 13;
-            this.materialLabel7.Text = "Usuario2";
+            this.materialLabel7.Text = "Usuari";
             // 
             // pictureBox1
             // 
@@ -392,19 +407,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 446);
+            this.ClientSize = new System.Drawing.Size(962, 446);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.materialRaisedButton2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.materialRaisedButton1);
             this.Controls.Add(this.textboxcontra);
-            this.Controls.Add(this.materialSingleLineTextField1);
+            this.Controls.Add(this.textboxnom);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
+            this.MaximizeBox = false;
             this.Name = "Login";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load_1);
+            this.Load += new System.EventHandler(this.Login_Load);
             this.materialContextMenuStrip1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -420,25 +436,26 @@
         private System.Windows.Forms.ToolStripMenuItem aaaaToolStripMenuItem1;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField textboxnom;
         private MaterialSkin.Controls.MaterialSingleLineTextField textboxcontra;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
         private System.Windows.Forms.Panel panel1;
-        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox1;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField5;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField6;
+        private MaterialSkin.Controls.MaterialCheckBox checkBoxRegistroCondicionesLegales;
+        private MaterialSkin.Controls.MaterialRaisedButton buttonRegistroAceptar;
+        private MaterialSkin.Controls.MaterialSingleLineTextField textBoxRegistroConfirmarCorreo;
+        private MaterialSkin.Controls.MaterialSingleLineTextField textBoxRegistroCorreo;
+        private MaterialSkin.Controls.MaterialSingleLineTextField textBoxRegistroConfirmarContraseña;
+        private MaterialSkin.Controls.MaterialSingleLineTextField textBoxRegistroContraseña;
+        private MaterialSkin.Controls.MaterialSingleLineTextField textBoxRegistroNombreUsuario;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
+        private MaterialSkin.Controls.MaterialRaisedButton buttonCancelar;
     }
 }

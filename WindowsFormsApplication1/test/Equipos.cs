@@ -74,9 +74,10 @@ namespace COMPLETE_FLAT_UI
                     {
 
                         MessageBox.Show("SE HA DADO DE ALTA", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                         cargardatos();
 
-                    }
+
+                }
             }
             else
             {
@@ -105,7 +106,8 @@ namespace COMPLETE_FLAT_UI
                 else
                 {
                     MessageBox.Show("S'ha eliminat correctament", "BORRADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                   
+                    cargardatos();
+
 
                 }
 
@@ -141,6 +143,8 @@ namespace COMPLETE_FLAT_UI
             if (mensaje.Equals(""))
             {
                 MessageBox.Show("S'ha modificat", "Informacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cargardatos();
+
             }
             else
             {

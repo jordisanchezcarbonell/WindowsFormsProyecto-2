@@ -88,6 +88,7 @@ namespace COMPLETE_FLAT_UI
                 {
 
                     MessageBox.Show("S'ha donat d'alta correctament", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargardatos();
 
 
                 }
@@ -120,6 +121,7 @@ namespace COMPLETE_FLAT_UI
                 else
                 {
                     MessageBox.Show("S'ha esborrat correctament", "ESBORRAT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargardatos();
 
                 }
 
@@ -143,6 +145,7 @@ namespace COMPLETE_FLAT_UI
 
                 {
                     MessageBox.Show("S'ha modificat correctament!", "MODIFICAT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargardatos();
 
 
 

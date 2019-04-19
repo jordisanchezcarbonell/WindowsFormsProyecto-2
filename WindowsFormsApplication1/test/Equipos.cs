@@ -73,7 +73,7 @@ namespace COMPLETE_FLAT_UI
                     else
                     {
 
-                        MessageBox.Show("SE HA DADO DE ALTA", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("S'ha donat d'alta", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                          cargardatos();
 
 
@@ -88,7 +88,7 @@ namespace COMPLETE_FLAT_UI
 
         private void materialRaisedButtonEsborrar_Click(object sender, EventArgs e)
         {
-            DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el Registro?", "Eliminar Registro", MessageBoxButtons.YesNo);
+            DialogResult resul = MessageBox.Show("Segur que vol eliminar el Registre?", "Eliminar Registre", MessageBoxButtons.YesNo);
             if (resul == DialogResult.Yes)
             {
 
@@ -105,7 +105,7 @@ namespace COMPLETE_FLAT_UI
                 }
                 else
                 {
-                    MessageBox.Show("S'ha eliminat correctament", "BORRADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("S'ha eliminat correctament", "Esborrat", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cargardatos();
 
 
@@ -142,7 +142,7 @@ namespace COMPLETE_FLAT_UI
 
             if (mensaje.Equals(""))
             {
-                MessageBox.Show("S'ha modificat", "Informacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("S'ha modificat", "Informació", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cargardatos();
 
             }

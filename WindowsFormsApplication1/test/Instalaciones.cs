@@ -102,7 +102,7 @@ namespace COMPLETE_FLAT_UI
 
         private void materialRaisedButtonBorrar_Click(object sender, EventArgs e)
         {
-            DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el Registro?", "Eliminar Registro", MessageBoxButtons.YesNo);
+            DialogResult resul = MessageBox.Show("Segur que vol eliminar la instal·lació ?", "Eliminar instal·lació", MessageBoxButtons.YesNo);
             if (resul == DialogResult.Yes)
             {
 

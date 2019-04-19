@@ -80,7 +80,6 @@
             this.materialSingleLineTextFieldPrecio.Depth = 0;
             this.materialSingleLineTextFieldPrecio.Hint = "";
             this.materialSingleLineTextFieldPrecio.Location = new System.Drawing.Point(169, 175);
-            this.materialSingleLineTextFieldPrecio.MaxLength = 32767;
             this.materialSingleLineTextFieldPrecio.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldPrecio.Name = "materialSingleLineTextFieldPrecio";
             this.materialSingleLineTextFieldPrecio.PasswordChar = '\0';
@@ -98,7 +97,6 @@
             this.materialSingleLineTextFieldNombre.Depth = 0;
             this.materialSingleLineTextFieldNombre.Hint = "";
             this.materialSingleLineTextFieldNombre.Location = new System.Drawing.Point(169, 128);
-            this.materialSingleLineTextFieldNombre.MaxLength = 32767;
             this.materialSingleLineTextFieldNombre.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldNombre.Name = "materialSingleLineTextFieldNombre";
             this.materialSingleLineTextFieldNombre.PasswordChar = '\0';
@@ -156,6 +154,9 @@
             // dataGridViewEspacios
             // 
             this.dataGridViewEspacios.AllowUserToAddRows = false;
+            this.dataGridViewEspacios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewEspacios.AutoGenerateColumns = false;
             this.dataGridViewEspacios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewEspacios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -224,46 +225,43 @@
             this.materialLabelInstalacion.Name = "materialLabelInstalacion";
             this.materialLabelInstalacion.Size = new System.Drawing.Size(83, 19);
             this.materialLabelInstalacion.TabIndex = 38;
-            this.materialLabelInstalacion.Text = "Instalacion";
+            this.materialLabelInstalacion.Text = "Instal·lació";
             // 
             // materialRaisedButtonBorrar
             // 
+            this.materialRaisedButtonBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialRaisedButtonBorrar.AutoSize = true;
-            this.materialRaisedButtonBorrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonBorrar.Depth = 0;
-            this.materialRaisedButtonBorrar.Icon = null;
             this.materialRaisedButtonBorrar.Location = new System.Drawing.Point(621, 204);
             this.materialRaisedButtonBorrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonBorrar.Name = "materialRaisedButtonBorrar";
             this.materialRaisedButtonBorrar.Primary = true;
-            this.materialRaisedButtonBorrar.Size = new System.Drawing.Size(65, 36);
+            this.materialRaisedButtonBorrar.Size = new System.Drawing.Size(83, 36);
             this.materialRaisedButtonBorrar.TabIndex = 41;
-            this.materialRaisedButtonBorrar.Text = "Borra";
+            this.materialRaisedButtonBorrar.Text = "Esborrar";
             this.materialRaisedButtonBorrar.UseVisualStyleBackColor = true;
             this.materialRaisedButtonBorrar.Click += new System.EventHandler(this.materialRaisedButtonBorrar_Click);
             // 
             // materialRaisedButtonModificar
             // 
+            this.materialRaisedButtonModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialRaisedButtonModificar.AutoSize = true;
-            this.materialRaisedButtonModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonModificar.Depth = 0;
-            this.materialRaisedButtonModificar.Icon = null;
-            this.materialRaisedButtonModificar.Location = new System.Drawing.Point(621, 148);
+            this.materialRaisedButtonModificar.Location = new System.Drawing.Point(623, 152);
             this.materialRaisedButtonModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonModificar.Name = "materialRaisedButtonModificar";
             this.materialRaisedButtonModificar.Primary = true;
-            this.materialRaisedButtonModificar.Size = new System.Drawing.Size(85, 36);
+            this.materialRaisedButtonModificar.Size = new System.Drawing.Size(83, 36);
             this.materialRaisedButtonModificar.TabIndex = 40;
-            this.materialRaisedButtonModificar.Text = "Modifica";
+            this.materialRaisedButtonModificar.Text = "Modificar";
             this.materialRaisedButtonModificar.UseVisualStyleBackColor = true;
             this.materialRaisedButtonModificar.Click += new System.EventHandler(this.materialRaisedButtonModificar_Click);
             // 
             // materialRaisedButtonAgregar
             // 
+            this.materialRaisedButtonAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialRaisedButtonAgregar.AutoSize = true;
-            this.materialRaisedButtonAgregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButtonAgregar.Depth = 0;
-            this.materialRaisedButtonAgregar.Icon = null;
             this.materialRaisedButtonAgregar.Location = new System.Drawing.Point(623, 96);
             this.materialRaisedButtonAgregar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonAgregar.Name = "materialRaisedButtonAgregar";

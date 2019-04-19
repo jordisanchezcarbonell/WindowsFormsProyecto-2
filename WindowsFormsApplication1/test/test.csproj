@@ -127,6 +127,7 @@
     <Compile Include="BD\DiasORM.cs" />
     <Compile Include="BD\EntitatsORM.cs" />
     <Compile Include="BD\Equipos.cs" />
+    <Compile Include="BD\EspaciosORM.cs" />
     <Compile Include="BD\Espais.cs" />
     <Compile Include="BD\Horarioactividades.cs" />
     <Compile Include="BD\HorarisInstalacions.cs" />
@@ -176,6 +177,12 @@
     </Compile>
     <Compile Include="Espacio.cs">
       <DependentUpon>Model1entiti.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Espacios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Espacios.Designer.cs">
+      <DependentUpon>Espacios.cs</DependentUpon>
     </Compile>
     <Compile Include="Estilo.cs">
       <SubType>Form</SubType>
@@ -306,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Eqs.resx">
       <DependentUpon>Eqs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Espacios.resx">
+      <DependentUpon>Espacios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estilo.resx">
       <DependentUpon>Estilo.cs</DependentUpon>

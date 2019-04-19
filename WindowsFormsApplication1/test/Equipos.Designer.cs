@@ -321,7 +321,7 @@
             this.materialRaisedButtonAfegir.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonAfegir.Name = "materialRaisedButtonAfegir";
             this.materialRaisedButtonAfegir.Primary = true;
-            this.materialRaisedButtonAfegir.Size = new System.Drawing.Size(85, 23);
+            this.materialRaisedButtonAfegir.Size = new System.Drawing.Size(87, 36);
             this.materialRaisedButtonAfegir.TabIndex = 13;
             this.materialRaisedButtonAfegir.Text = "Afegir";
             this.materialRaisedButtonAfegir.UseVisualStyleBackColor = true;
@@ -335,7 +335,7 @@
             this.materialRaisedButtonModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonModificar.Name = "materialRaisedButtonModificar";
             this.materialRaisedButtonModificar.Primary = true;
-            this.materialRaisedButtonModificar.Size = new System.Drawing.Size(85, 23);
+            this.materialRaisedButtonModificar.Size = new System.Drawing.Size(87, 36);
             this.materialRaisedButtonModificar.TabIndex = 14;
             this.materialRaisedButtonModificar.Text = "Modificar";
             this.materialRaisedButtonModificar.UseVisualStyleBackColor = true;
@@ -349,7 +349,7 @@
             this.materialRaisedButtonEsborrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonEsborrar.Name = "materialRaisedButtonEsborrar";
             this.materialRaisedButtonEsborrar.Primary = true;
-            this.materialRaisedButtonEsborrar.Size = new System.Drawing.Size(85, 23);
+            this.materialRaisedButtonEsborrar.Size = new System.Drawing.Size(87, 36);
             this.materialRaisedButtonEsborrar.TabIndex = 15;
             this.materialRaisedButtonEsborrar.Text = "Esborrar";
             this.materialRaisedButtonEsborrar.UseVisualStyleBackColor = true;
@@ -465,13 +465,13 @@
             // 
             this.materialRaisedButtonvaciar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialRaisedButtonvaciar.Depth = 0;
-            this.materialRaisedButtonvaciar.Location = new System.Drawing.Point(489, 255);
+            this.materialRaisedButtonvaciar.Location = new System.Drawing.Point(489, 251);
             this.materialRaisedButtonvaciar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonvaciar.Name = "materialRaisedButtonvaciar";
             this.materialRaisedButtonvaciar.Primary = true;
-            this.materialRaisedButtonvaciar.Size = new System.Drawing.Size(85, 23);
+            this.materialRaisedButtonvaciar.Size = new System.Drawing.Size(87, 36);
             this.materialRaisedButtonvaciar.TabIndex = 23;
-            this.materialRaisedButtonvaciar.Text = "Vaciar";
+            this.materialRaisedButtonvaciar.Text = "Netejar";
             this.materialRaisedButtonvaciar.UseVisualStyleBackColor = true;
             this.materialRaisedButtonvaciar.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 

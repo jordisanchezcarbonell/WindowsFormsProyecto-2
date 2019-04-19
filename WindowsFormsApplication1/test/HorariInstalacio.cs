@@ -55,6 +55,11 @@ namespace COMPLETE_FLAT_UI
             {
                 MessageBox.Show("S'han d'omplir tots els camps", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if(dateTimePickerHoraInicio.Value > dateTimePickerHoraFin.Value)
+            {
+                MessageBox.Show("La hora d'inici ha de ser anterior a la de final", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             else
             {
                 DateTime dt = dateTimePickerHoraInicio.Value;

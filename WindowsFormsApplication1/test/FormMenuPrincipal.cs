@@ -73,7 +73,7 @@ namespace COMPLETE_FLAT_UI
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta¡¡", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Està segur de tancar?", "Alerta¡¡", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -81,7 +81,7 @@ namespace COMPLETE_FLAT_UI
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta¡¡", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Està segur de tancar?", "Alerta¡¡", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -247,7 +247,20 @@ namespace COMPLETE_FLAT_UI
             export.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormEnPanel(export);
         }
-    
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Espacios export = new Espacios();
+            export.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormEnPanel(export);
+
+        }
+
+        private void lbFecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         //----------------COLOR Y GRIP DE RECTANGULO INFERIOR
         protected override void OnPaint(PaintEventArgs e)

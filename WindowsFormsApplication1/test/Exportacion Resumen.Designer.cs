@@ -237,7 +237,7 @@
             this.materialRaisedButtonTesT.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonTesT.Name = "materialRaisedButtonTesT";
             this.materialRaisedButtonTesT.Primary = true;
-            this.materialRaisedButtonTesT.Size = new System.Drawing.Size(85, 23);
+            this.materialRaisedButtonTesT.Size = new System.Drawing.Size(87, 36);
             this.materialRaisedButtonTesT.TabIndex = 25;
             this.materialRaisedButtonTesT.Text = "Exportar";
             this.materialRaisedButtonTesT.UseVisualStyleBackColor = true;

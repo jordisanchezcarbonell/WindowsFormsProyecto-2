@@ -18,10 +18,17 @@ namespace COMPLETE_FLAT_UI
             InitializeComponent();
         }
 
-        private void Espacios_Load(object sender, EventArgs e)
+        private void cargardatos()
         {
             bindingSourceInstalaciones.DataSource = BD.InstalacionsORM.SelectAllInstalaciones();
             bindingSourceEspacios.DataSource = BD.EspaciosORM.SelectAllEspacios();
+            dataGridViewEspacios.AutoResizeColumns();
+            dataGridViewEspacios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void Espacios_Load(object sender, EventArgs e)
+        {
+            cargardatos();
         }
 
         private void materialSingleLineTextField2_Click(object sender, EventArgs e)
@@ -58,7 +65,7 @@ namespace COMPLETE_FLAT_UI
                 else
                 {
 
-                    MessageBox.Show("S'ha donat d'alta", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("S'ha donat d'alta", "Informació", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                 }
@@ -124,7 +131,7 @@ namespace COMPLETE_FLAT_UI
                 else
                 {
                 
-                    MessageBox.Show("S'ha esborrat correctament!", "BORRADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("S'ha esborrat correctament!", "Esborrat", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
 
@@ -135,8 +142,7 @@ namespace COMPLETE_FLAT_UI
 
         private void Espacios_Activated(object sender, EventArgs e)
         {
-            bindingSourceInstalaciones.DataSource = BD.InstalacionsORM.SelectAllInstalaciones();
-            bindingSourceEspacios.DataSource = BD.EspaciosORM.SelectAllEspacios();
+            cargardatos();
         }
 
         private void dataGridViewEspacios_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -142,7 +142,7 @@
             this.materialRaisedButtonBorrar.Primary = true;
             this.materialRaisedButtonBorrar.Size = new System.Drawing.Size(83, 36);
             this.materialRaisedButtonBorrar.TabIndex = 28;
-            this.materialRaisedButtonBorrar.Text = "Borra";
+            this.materialRaisedButtonBorrar.Text = "Esborrar";
             this.materialRaisedButtonBorrar.UseVisualStyleBackColor = true;
             this.materialRaisedButtonBorrar.Click += new System.EventHandler(this.materialRaisedButtonBorrar_Click);
             // 
@@ -157,7 +157,7 @@
             this.materialRaisedButtonModificar.Primary = true;
             this.materialRaisedButtonModificar.Size = new System.Drawing.Size(83, 36);
             this.materialRaisedButtonModificar.TabIndex = 27;
-            this.materialRaisedButtonModificar.Text = "Modifica";
+            this.materialRaisedButtonModificar.Text = "Modificar";
             this.materialRaisedButtonModificar.UseVisualStyleBackColor = true;
             this.materialRaisedButtonModificar.Click += new System.EventHandler(this.materialRaisedButtonModificar_Click);
             // 

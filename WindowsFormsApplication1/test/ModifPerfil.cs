@@ -111,7 +111,7 @@ namespace COMPLETE_FLAT_UI
 
         private void materialRaisedButtonEsborrar_Click(object sender, EventArgs e)
         {
-            DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el Registro?", "Eliminar Registro", MessageBoxButtons.YesNo);
+            DialogResult resul = MessageBox.Show("Segur que vol eliminar l'usuari ?", "Eliminar usuari", MessageBoxButtons.YesNo);
             if (resul == DialogResult.Yes)
             {
 
@@ -142,7 +142,7 @@ namespace COMPLETE_FLAT_UI
             mensaje = BD.LoginOrm.UpgradeAdmin((int)dataGridViewAdmin.CurrentRow.Cells[0].Value, materialSingleLineTextFieldUsuari.Text, materialSingleLineTextFieldCorreu.Text, blowFish.Encrypt_CBC(materialSingleLineTextFieldContrasenya.Text));
             if (mensaje.Equals(""))
             {
-                MessageBox.Show("S'ha actualitzat", "Informacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("S'ha actualitzat", "Informació", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cargardatos();
 
             }

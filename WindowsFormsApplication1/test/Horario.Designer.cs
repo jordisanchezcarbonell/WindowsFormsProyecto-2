@@ -60,6 +60,11 @@
             this.comboBoxDia = new System.Windows.Forms.ComboBox();
             this.bindingSourceDiadelasemana = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idactconcedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.iddiasemanaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.horainicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horafinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceHorariocon = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourcedemandada = new System.Windows.Forms.BindingSource(this.components);
             this.materialSingleLineTextFieldnom = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -80,11 +85,6 @@
             this.materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idactconcedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.iddiasemanaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.horainicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horafinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialRaisedButtonTancar = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActividadconc)).BeginInit();
@@ -112,7 +112,7 @@
             this.idusuarioDataGridViewTextBoxColumn,
             this.idespacioDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bindingSourceActividadconc;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 350);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 351);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(643, 194);
             this.dataGridView1.TabIndex = 0;
@@ -292,7 +292,7 @@
             this.comboBoxHorariFi.DataSource = this.bindingSourceHorariotest;
             this.comboBoxHorariFi.DisplayMember = "hora_final";
             this.comboBoxHorariFi.FormattingEnabled = true;
-            this.comboBoxHorariFi.Location = new System.Drawing.Point(1036, 257);
+            this.comboBoxHorariFi.Location = new System.Drawing.Point(900, 265);
             this.comboBoxHorariFi.Name = "comboBoxHorariFi";
             this.comboBoxHorariFi.Size = new System.Drawing.Size(218, 21);
             this.comboBoxHorariFi.TabIndex = 20;
@@ -309,7 +309,7 @@
             this.materialLabel7.Depth = 0;
             this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabel7.Location = new System.Drawing.Point(911, 259);
+            this.materialLabel7.Location = new System.Drawing.Point(775, 267);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
             this.materialLabel7.Size = new System.Drawing.Size(75, 19);
@@ -322,7 +322,7 @@
             this.comboBoxHorarioInicio.DataSource = this.bindingSourceHorariotest;
             this.comboBoxHorarioInicio.DisplayMember = "hora_inicio";
             this.comboBoxHorarioInicio.FormattingEnabled = true;
-            this.comboBoxHorarioInicio.Location = new System.Drawing.Point(1036, 200);
+            this.comboBoxHorarioInicio.Location = new System.Drawing.Point(900, 208);
             this.comboBoxHorarioInicio.Name = "comboBoxHorarioInicio";
             this.comboBoxHorarioInicio.Size = new System.Drawing.Size(218, 21);
             this.comboBoxHorarioInicio.TabIndex = 18;
@@ -336,7 +336,7 @@
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabel6.Location = new System.Drawing.Point(911, 202);
+            this.materialLabel6.Location = new System.Drawing.Point(775, 210);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(91, 19);
@@ -346,7 +346,7 @@
             // materialRaisedButton1
             // 
             this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(569, 273);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(569, 281);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
@@ -371,7 +371,7 @@
             this.materialLabel8.Depth = 0;
             this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabel8.Location = new System.Drawing.Point(911, 149);
+            this.materialLabel8.Location = new System.Drawing.Point(775, 157);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
             this.materialLabel8.Size = new System.Drawing.Size(39, 19);
@@ -384,7 +384,7 @@
             this.comboBoxDia.DataSource = this.bindingSourceDiadelasemana;
             this.comboBoxDia.DisplayMember = "nombre";
             this.comboBoxDia.FormattingEnabled = true;
-            this.comboBoxDia.Location = new System.Drawing.Point(1036, 147);
+            this.comboBoxDia.Location = new System.Drawing.Point(900, 155);
             this.comboBoxDia.Name = "comboBoxDia";
             this.comboBoxDia.Size = new System.Drawing.Size(218, 21);
             this.comboBoxDia.TabIndex = 23;
@@ -405,11 +405,53 @@
             this.horainicioDataGridViewTextBoxColumn,
             this.horafinDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.bindingSourceHorariocon;
-            this.dataGridView2.Location = new System.Drawing.Point(710, 350);
+            this.dataGridView2.Location = new System.Drawing.Point(710, 351);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(747, 194);
+            this.dataGridView2.Size = new System.Drawing.Size(564, 194);
             this.dataGridView2.TabIndex = 24;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            // 
+            // idactconcedidaDataGridViewTextBoxColumn
+            // 
+            this.idactconcedidaDataGridViewTextBoxColumn.DataPropertyName = "id_act_concedida";
+            this.idactconcedidaDataGridViewTextBoxColumn.DataSource = this.bindingSourceActividadconc;
+            this.idactconcedidaDataGridViewTextBoxColumn.DisplayMember = "nombre";
+            this.idactconcedidaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.idactconcedidaDataGridViewTextBoxColumn.HeaderText = "Actividad";
+            this.idactconcedidaDataGridViewTextBoxColumn.Name = "idactconcedidaDataGridViewTextBoxColumn";
+            this.idactconcedidaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idactconcedidaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idactconcedidaDataGridViewTextBoxColumn.ValueMember = "id";
+            // 
+            // iddiasemanaDataGridViewTextBoxColumn
+            // 
+            this.iddiasemanaDataGridViewTextBoxColumn.DataPropertyName = "id_dia_semana";
+            this.iddiasemanaDataGridViewTextBoxColumn.DataSource = this.bindingSourceDiadelasemana;
+            this.iddiasemanaDataGridViewTextBoxColumn.DisplayMember = "nombre";
+            this.iddiasemanaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.iddiasemanaDataGridViewTextBoxColumn.HeaderText = "Dia";
+            this.iddiasemanaDataGridViewTextBoxColumn.Name = "iddiasemanaDataGridViewTextBoxColumn";
+            this.iddiasemanaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.iddiasemanaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.iddiasemanaDataGridViewTextBoxColumn.ValueMember = "id";
+            // 
+            // horainicioDataGridViewTextBoxColumn
+            // 
+            this.horainicioDataGridViewTextBoxColumn.DataPropertyName = "hora_inicio";
+            this.horainicioDataGridViewTextBoxColumn.HeaderText = "Hora inici";
+            this.horainicioDataGridViewTextBoxColumn.Name = "horainicioDataGridViewTextBoxColumn";
+            // 
+            // horafinDataGridViewTextBoxColumn
+            // 
+            this.horafinDataGridViewTextBoxColumn.DataPropertyName = "hora_fin";
+            this.horafinDataGridViewTextBoxColumn.HeaderText = "Hora Fi";
+            this.horafinDataGridViewTextBoxColumn.Name = "horafinDataGridViewTextBoxColumn";
             // 
             // bindingSourceHorariocon
             // 
@@ -517,7 +559,7 @@
             // materialRaisedButtonhorario
             // 
             this.materialRaisedButtonhorario.Depth = 0;
-            this.materialRaisedButtonhorario.Location = new System.Drawing.Point(1321, 109);
+            this.materialRaisedButtonhorario.Location = new System.Drawing.Point(1247, 108);
             this.materialRaisedButtonhorario.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonhorario.Name = "materialRaisedButtonhorario";
             this.materialRaisedButtonhorario.Primary = true;
@@ -533,7 +575,7 @@
             this.materialLabel11.Depth = 0;
             this.materialLabel11.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabel11.Location = new System.Drawing.Point(911, 104);
+            this.materialLabel11.Location = new System.Drawing.Point(775, 117);
             this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel11.Name = "materialLabel11";
             this.materialLabel11.Size = new System.Drawing.Size(63, 19);
@@ -545,7 +587,7 @@
             this.comboBox2.DataSource = this.bindingSourceActividadconc;
             this.comboBox2.DisplayMember = "nombre";
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(1036, 105);
+            this.comboBox2.Location = new System.Drawing.Point(900, 118);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(218, 21);
             this.comboBox2.TabIndex = 34;
@@ -558,7 +600,7 @@
             this.materialLabel12.Depth = 0;
             this.materialLabel12.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabel12.Location = new System.Drawing.Point(12, 318);
+            this.materialLabel12.Location = new System.Drawing.Point(12, 319);
             this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel12.Name = "materialLabel12";
             this.materialLabel12.Size = new System.Drawing.Size(145, 19);
@@ -571,7 +613,7 @@
             this.materialLabel13.Depth = 0;
             this.materialLabel13.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialLabel13.Location = new System.Drawing.Point(718, 318);
+            this.materialLabel13.Location = new System.Drawing.Point(718, 319);
             this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel13.Name = "materialLabel13";
             this.materialLabel13.Size = new System.Drawing.Size(161, 19);
@@ -607,7 +649,7 @@
             // materialRaisedButton2
             // 
             this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(1321, 257);
+            this.materialRaisedButton2.Location = new System.Drawing.Point(1247, 259);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
@@ -620,7 +662,7 @@
             // materialRaisedButton3
             // 
             this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(1321, 176);
+            this.materialRaisedButton3.Location = new System.Drawing.Point(1247, 170);
             this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton3.Name = "materialRaisedButton3";
             this.materialRaisedButton3.Primary = true;
@@ -630,57 +672,15 @@
             this.materialRaisedButton3.UseVisualStyleBackColor = true;
             this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            // 
-            // idactconcedidaDataGridViewTextBoxColumn
-            // 
-            this.idactconcedidaDataGridViewTextBoxColumn.DataPropertyName = "id_act_concedida";
-            this.idactconcedidaDataGridViewTextBoxColumn.DataSource = this.bindingSourceActividadconc;
-            this.idactconcedidaDataGridViewTextBoxColumn.DisplayMember = "nombre";
-            this.idactconcedidaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.idactconcedidaDataGridViewTextBoxColumn.HeaderText = "Actividad";
-            this.idactconcedidaDataGridViewTextBoxColumn.Name = "idactconcedidaDataGridViewTextBoxColumn";
-            this.idactconcedidaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idactconcedidaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.idactconcedidaDataGridViewTextBoxColumn.ValueMember = "id";
-            // 
-            // iddiasemanaDataGridViewTextBoxColumn
-            // 
-            this.iddiasemanaDataGridViewTextBoxColumn.DataPropertyName = "id_dia_semana";
-            this.iddiasemanaDataGridViewTextBoxColumn.DataSource = this.bindingSourceDiadelasemana;
-            this.iddiasemanaDataGridViewTextBoxColumn.DisplayMember = "nombre";
-            this.iddiasemanaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.iddiasemanaDataGridViewTextBoxColumn.HeaderText = "Dia";
-            this.iddiasemanaDataGridViewTextBoxColumn.Name = "iddiasemanaDataGridViewTextBoxColumn";
-            this.iddiasemanaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.iddiasemanaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iddiasemanaDataGridViewTextBoxColumn.ValueMember = "id";
-            // 
-            // horainicioDataGridViewTextBoxColumn
-            // 
-            this.horainicioDataGridViewTextBoxColumn.DataPropertyName = "hora_inicio";
-            this.horainicioDataGridViewTextBoxColumn.HeaderText = "Hora inici";
-            this.horainicioDataGridViewTextBoxColumn.Name = "horainicioDataGridViewTextBoxColumn";
-            // 
-            // horafinDataGridViewTextBoxColumn
-            // 
-            this.horafinDataGridViewTextBoxColumn.DataPropertyName = "hora_fin";
-            this.horafinDataGridViewTextBoxColumn.HeaderText = "Hora Fi";
-            this.horafinDataGridViewTextBoxColumn.Name = "horafinDataGridViewTextBoxColumn";
-            // 
             // materialRaisedButtonTancar
             // 
             this.materialRaisedButtonTancar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialRaisedButtonTancar.Depth = 0;
-            this.materialRaisedButtonTancar.Location = new System.Drawing.Point(1392, 609);
+            this.materialRaisedButtonTancar.Location = new System.Drawing.Point(1247, 563);
             this.materialRaisedButtonTancar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonTancar.Name = "materialRaisedButtonTancar";
             this.materialRaisedButtonTancar.Primary = true;
-            this.materialRaisedButtonTancar.Size = new System.Drawing.Size(65, 37);
+            this.materialRaisedButtonTancar.Size = new System.Drawing.Size(82, 37);
             this.materialRaisedButtonTancar.TabIndex = 41;
             this.materialRaisedButtonTancar.Text = "Tancar";
             this.materialRaisedButtonTancar.UseVisualStyleBackColor = true;
@@ -690,7 +690,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1485, 675);
+            this.ClientSize = new System.Drawing.Size(1373, 631);
             this.Controls.Add(this.materialRaisedButtonTancar);
             this.Controls.Add(this.materialRaisedButton3);
             this.Controls.Add(this.materialRaisedButton2);

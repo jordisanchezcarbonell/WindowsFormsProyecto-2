@@ -1,4 +1,5 @@
 ﻿using BespokeFusion;
+using BlowFishCS;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
@@ -15,6 +16,7 @@ namespace COMPLETE_FLAT_UI
 {
     public partial class Login : MaterialForm
     {
+        BlowFish blowFish = new BlowFish("04B915BA43FEB5B6");
         private String mensaje = "";
         public Login()
         {
@@ -41,7 +43,7 @@ namespace COMPLETE_FLAT_UI
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
           
-            if (BD.LoginOrm.selectAdmins(textboxnom.Text,textboxcontra.Text) != null)
+            if (BD.LoginOrm.selectAdmins(textboxnom.Text, blowFish.Encrypt_CBC(textboxcontra.Text)) != null)
             {                
                 FormMenuPrincipal p = new FormMenuPrincipal();
                 p.Show();
@@ -66,7 +68,7 @@ namespace COMPLETE_FLAT_UI
                         {
                             mensaje = BD.LoginOrm.InsertarAdmin(textBoxRegistroNombreUsuario.Text,
                                                                 textBoxRegistroCorreo.Text,
-                                                                textBoxRegistroContraseña.Text);
+                                                                blowFish.Encrypt_CBC(textBoxRegistroContraseña.Text));
                             MessageBox.Show("¡Te has dado de alta correctamente!", "ÉXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             cerrarFormRegistro();
                         }

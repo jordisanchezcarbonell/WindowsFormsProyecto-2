@@ -78,9 +78,9 @@
             this.materialLabelInstalacio.Location = new System.Drawing.Point(37, 83);
             this.materialLabelInstalacio.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelInstalacio.Name = "materialLabelInstalacio";
-            this.materialLabelInstalacio.Size = new System.Drawing.Size(75, 19);
+            this.materialLabelInstalacio.Size = new System.Drawing.Size(83, 19);
             this.materialLabelInstalacio.TabIndex = 31;
-            this.materialLabelInstalacio.Text = "Instalació";
+            this.materialLabelInstalacio.Text = "Instal·lació";
             // 
             // materialLabelHoraInici
             // 

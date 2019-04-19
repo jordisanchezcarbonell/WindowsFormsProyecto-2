@@ -38,14 +38,14 @@
             this.materialSingleLineTextFieldUsuari = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabelUsuari = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridViewAdmin = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceAdmin = new System.Windows.Forms.BindingSource(this.components);
             this.materialRaisedButtonAfegir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonModificar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonEsborrar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonvaciar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAdmin)).BeginInit();
             this.SuspendLayout();
@@ -185,66 +185,6 @@
             this.dataGridViewAdmin.TabIndex = 14;
             this.dataGridViewAdmin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAdmin_CellClick);
             // 
-            // bindingSourceAdmin
-            // 
-            this.bindingSourceAdmin.DataSource = typeof(COMPLETE_FLAT_UI.Admin);
-            // 
-            // materialRaisedButtonAfegir
-            // 
-            this.materialRaisedButtonAfegir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialRaisedButtonAfegir.Depth = 0;
-            this.materialRaisedButtonAfegir.Location = new System.Drawing.Point(568, 111);
-            this.materialRaisedButtonAfegir.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButtonAfegir.Name = "materialRaisedButtonAfegir";
-            this.materialRaisedButtonAfegir.Primary = true;
-            this.materialRaisedButtonAfegir.Size = new System.Drawing.Size(85, 23);
-            this.materialRaisedButtonAfegir.TabIndex = 15;
-            this.materialRaisedButtonAfegir.Text = "Afegir";
-            this.materialRaisedButtonAfegir.UseVisualStyleBackColor = true;
-            this.materialRaisedButtonAfegir.Click += new System.EventHandler(this.materialRaisedButtonAfegir_Click);
-            // 
-            // materialRaisedButtonModificar
-            // 
-            this.materialRaisedButtonModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialRaisedButtonModificar.Depth = 0;
-            this.materialRaisedButtonModificar.Location = new System.Drawing.Point(568, 151);
-            this.materialRaisedButtonModificar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButtonModificar.Name = "materialRaisedButtonModificar";
-            this.materialRaisedButtonModificar.Primary = true;
-            this.materialRaisedButtonModificar.Size = new System.Drawing.Size(85, 23);
-            this.materialRaisedButtonModificar.TabIndex = 16;
-            this.materialRaisedButtonModificar.Text = "Modificar";
-            this.materialRaisedButtonModificar.UseVisualStyleBackColor = true;
-            this.materialRaisedButtonModificar.Click += new System.EventHandler(this.materialRaisedButtonModificar_Click);
-            // 
-            // materialRaisedButtonEsborrar
-            // 
-            this.materialRaisedButtonEsborrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialRaisedButtonEsborrar.Depth = 0;
-            this.materialRaisedButtonEsborrar.Location = new System.Drawing.Point(568, 193);
-            this.materialRaisedButtonEsborrar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButtonEsborrar.Name = "materialRaisedButtonEsborrar";
-            this.materialRaisedButtonEsborrar.Primary = true;
-            this.materialRaisedButtonEsborrar.Size = new System.Drawing.Size(85, 23);
-            this.materialRaisedButtonEsborrar.TabIndex = 17;
-            this.materialRaisedButtonEsborrar.Text = "Esborrar";
-            this.materialRaisedButtonEsborrar.UseVisualStyleBackColor = true;
-            this.materialRaisedButtonEsborrar.Click += new System.EventHandler(this.materialRaisedButtonEsborrar_Click);
-            // 
-            // materialRaisedButtonvaciar
-            // 
-            this.materialRaisedButtonvaciar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialRaisedButtonvaciar.Depth = 0;
-            this.materialRaisedButtonvaciar.Location = new System.Drawing.Point(568, 242);
-            this.materialRaisedButtonvaciar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButtonvaciar.Name = "materialRaisedButtonvaciar";
-            this.materialRaisedButtonvaciar.Primary = true;
-            this.materialRaisedButtonvaciar.Size = new System.Drawing.Size(85, 23);
-            this.materialRaisedButtonvaciar.TabIndex = 24;
-            this.materialRaisedButtonvaciar.Text = "Vaciar";
-            this.materialRaisedButtonvaciar.UseVisualStyleBackColor = true;
-            this.materialRaisedButtonvaciar.Click += new System.EventHandler(this.materialRaisedButtonvaciar_Click);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -262,6 +202,66 @@
             this.correoDataGridViewTextBoxColumn.DataPropertyName = "correo";
             this.correoDataGridViewTextBoxColumn.HeaderText = "correo";
             this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
+            // 
+            // bindingSourceAdmin
+            // 
+            this.bindingSourceAdmin.DataSource = typeof(COMPLETE_FLAT_UI.Admin);
+            // 
+            // materialRaisedButtonAfegir
+            // 
+            this.materialRaisedButtonAfegir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialRaisedButtonAfegir.Depth = 0;
+            this.materialRaisedButtonAfegir.Location = new System.Drawing.Point(568, 101);
+            this.materialRaisedButtonAfegir.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonAfegir.Name = "materialRaisedButtonAfegir";
+            this.materialRaisedButtonAfegir.Primary = true;
+            this.materialRaisedButtonAfegir.Size = new System.Drawing.Size(87, 36);
+            this.materialRaisedButtonAfegir.TabIndex = 15;
+            this.materialRaisedButtonAfegir.Text = "Afegir";
+            this.materialRaisedButtonAfegir.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonAfegir.Click += new System.EventHandler(this.materialRaisedButtonAfegir_Click);
+            // 
+            // materialRaisedButtonModificar
+            // 
+            this.materialRaisedButtonModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialRaisedButtonModificar.Depth = 0;
+            this.materialRaisedButtonModificar.Location = new System.Drawing.Point(568, 148);
+            this.materialRaisedButtonModificar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonModificar.Name = "materialRaisedButtonModificar";
+            this.materialRaisedButtonModificar.Primary = true;
+            this.materialRaisedButtonModificar.Size = new System.Drawing.Size(87, 36);
+            this.materialRaisedButtonModificar.TabIndex = 16;
+            this.materialRaisedButtonModificar.Text = "Modificar";
+            this.materialRaisedButtonModificar.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonModificar.Click += new System.EventHandler(this.materialRaisedButtonModificar_Click);
+            // 
+            // materialRaisedButtonEsborrar
+            // 
+            this.materialRaisedButtonEsborrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialRaisedButtonEsborrar.Depth = 0;
+            this.materialRaisedButtonEsborrar.Location = new System.Drawing.Point(568, 193);
+            this.materialRaisedButtonEsborrar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonEsborrar.Name = "materialRaisedButtonEsborrar";
+            this.materialRaisedButtonEsborrar.Primary = true;
+            this.materialRaisedButtonEsborrar.Size = new System.Drawing.Size(87, 36);
+            this.materialRaisedButtonEsborrar.TabIndex = 17;
+            this.materialRaisedButtonEsborrar.Text = "Esborrar";
+            this.materialRaisedButtonEsborrar.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonEsborrar.Click += new System.EventHandler(this.materialRaisedButtonEsborrar_Click);
+            // 
+            // materialRaisedButtonvaciar
+            // 
+            this.materialRaisedButtonvaciar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialRaisedButtonvaciar.Depth = 0;
+            this.materialRaisedButtonvaciar.Location = new System.Drawing.Point(568, 242);
+            this.materialRaisedButtonvaciar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonvaciar.Name = "materialRaisedButtonvaciar";
+            this.materialRaisedButtonvaciar.Primary = true;
+            this.materialRaisedButtonvaciar.Size = new System.Drawing.Size(87, 36);
+            this.materialRaisedButtonvaciar.TabIndex = 24;
+            this.materialRaisedButtonvaciar.Text = "Vaciar";
+            this.materialRaisedButtonvaciar.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonvaciar.Click += new System.EventHandler(this.materialRaisedButtonvaciar_Click);
             // 
             // ModifPerfil
             // 
